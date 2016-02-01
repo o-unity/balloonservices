@@ -4,7 +4,7 @@ class ConfigHolder(object):
         print("invoke ConfigHolder()")
 
     def printconfig(self):
-        print("kkkk")
+        print("kkka")
         pass
 
 
