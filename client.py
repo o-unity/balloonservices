@@ -1,4 +1,7 @@
 
+from modules.ConfigHolder import *
+
+
 class ConfigHolder(object):
     def __init__(self):
         print("invoke ConfigHolder()")
@@ -10,7 +13,7 @@ class ConfigHolder(object):
 
 class WebSocket(ConfigHolder):
     def __init__(self):
-        super(WebSocket, self).__init__()
+        super().__init__()
         print("invoke WebSocket()")
 
         if not hasattr(ConfigHolder, 'socket'):
@@ -23,7 +26,7 @@ class WebSocket(ConfigHolder):
 
 class Submit(WebSocket):
     def __init__(self):
-        super(Submit, self).__init__()
+        super().__init__()
         print("invoke Submit()")
 
     def submit(self):
@@ -32,7 +35,7 @@ class Submit(WebSocket):
 
 class Image(Submit):
     def __init__(self, imagepath):
-        super(Image, self).__init__()
+        super().__init__()
         print("invoke Image")
 
         self.imagepath = imagepath
@@ -50,7 +53,7 @@ class Image(Submit):
 
 class GPS(Submit):
     def __init__(self, imagepath):
-        super(Image, self).__init__()
+        super().__init__()
         print("invoke Image")
 
         self.imagepath = imagepath
