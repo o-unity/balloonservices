@@ -17,7 +17,6 @@ class Instance(object):
         self.js['image']['path'] = path
 
 
-
 class Socket(object):
     def __init__(self, wsdata):
         self.wsdata = wsdata
