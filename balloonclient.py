@@ -53,7 +53,7 @@ class WebSocket(object):
 
 
 ws = WebSocket()
-ws.host = "zaugg.myftp.org"
+ws.host = "ballon.myftp.org"
 ws.port = "5000"
 
 sock = ws.connect()
