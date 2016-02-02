@@ -3,18 +3,23 @@ import json
 __author__ = 'andi'
 
 
-class Image():
-    def __init__(self):
-        pass
+class Image(object):
+    def __init__(self, **kwargs):
+        self.kwargs = kwargs
+
+    @property
+    def serialize(self):
+        ser = {}
+        ser['path'] = self.kwargs['path']
+        return ser
 
 
 class Instance(object):
     def __init__(self):
         self.js = {}
 
-    def image(self, path):
-        self.js['image'] = {}
-        self.js['image']['path'] = path
+    def image(self, **kwargs):
+        self.js['image'] = Image(**kwargs).serialize
 
 
 class Socket(object):
@@ -53,9 +58,9 @@ class WebSocket(object):
 
 
 ws = WebSocket()
-ws.host = "ballon.myftp.org"
+ws.host = 'ballon.myftp.org'
 ws.port = "5000"
 
 sock = ws.connect()
-sock.add().image("path/to/image.png")
+sock.add().image(path="path/to/image.png", resize=True)
 sock.submit()
