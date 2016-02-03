@@ -3,13 +3,11 @@
 ## info
     http://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent
 
-## Prerequisits for socketserver (2.7)
+## Prerequisits
+    pip install flask
     pip install flask-socketio
     pip install coverage
     pip install eventlet
-
-
-## Prerequisits for client (3.5)
 
 
 ## Testcoverage

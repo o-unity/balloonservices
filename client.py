@@ -1,74 +1,66 @@
+import json
 
-from modules.ConfigHolder import *
+__author__ = 'andi'
 
 
-class ConfigHolder(object):
+class Image(object):
+    def __init__(self, **kwargs):
+        self.kwargs = kwargs
+
+    @property
+    def serialize(self):
+        ser = {}
+        ser['path'] = self.kwargs['path']
+        return ser
+
+
+class Instance(object):
     def __init__(self):
-        print("invoke ConfigHolder()")
+        self.js = {}
 
-    def printconfig(self):
-        print("kkka")
+    def image(self, **kwargs):
+        self.js['image'] = Image(**kwargs).serialize
+
+
+class Socket(object):
+    def __init__(self, wsdata):
+        self.wsdata = wsdata
+        self.open()
+        self.instance = []
+
+    def open(self):
         pass
 
-
-class WebSocket(ConfigHolder):
-    def __init__(self):
-        super().__init__()
-        print("invoke WebSocket()")
-
-        if not hasattr(ConfigHolder, 'socket'):
-            print("jjjjj")
-            ConfigHolder.socket = 1
-
-    def printout(self, t):
-        print(t)
-
-
-class Submit(WebSocket):
-    def __init__(self):
-        super().__init__()
-        print("invoke Submit()")
+    def add(self):
+        inst = Instance()
+        self.instance.append(inst)
+        return inst
 
     def submit(self):
-        self.printout("submit!!!! %s - %s" % (self.imagepath, self.ip))
+        for sub in self.instance:
+            print(json.dumps(sub.js, indent=4))
 
 
-class Image(Submit):
-    def __init__(self, imagepath):
-        super().__init__()
-        print("invoke Image")
+class WebSocket(object):
+    def __init__(self):
+        self.wsdata = {}
 
-        self.imagepath = imagepath
-#        self.sObject = self.create()
+    def connect(self):
+        return Socket(self.wsdata)
 
-    def create(self):
-        self.read()
+    def sethost(self, value):
+        self.wsdata['host'] = value
 
-    def read(self):
-        pass
+    def gethost(self):
+        return self.wsdata['host']
 
-    def hello(self):
-        print("hello!")
+    host = property(gethost, sethost)
 
 
-class GPS(Submit):
-    def __init__(self, imagepath):
-        super().__init__()
-        print("invoke Image")
+ws = WebSocket()
+ws.host = 'ballon.myftp.org'
+ws.port = "5000"
 
-        self.imagepath = imagepath
-#        self.sObject = self.create()
-
-    def create(self):
-        self.read()
-
-    def read(self):
-        pass
-
-    def hello(self):
-        print("hello!")
-
-
-ConfigHolder.ip = "192.168.1.10"
-Image("images/test.png").submit()
-Image("images/test2.png").submit()
+sock = ws.connect()
+sock.add().image(path="path/to/image.png", resize=True)
+sock.submit()
