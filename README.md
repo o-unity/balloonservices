@@ -8,6 +8,7 @@
     pip install flask-socketio
     pip install coverage
     pip install eventlet
+    pip install websocket-client
 
 
 ## Testcoverage
