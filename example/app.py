@@ -70,6 +70,7 @@ def index():
 def test_message(message):
     session['receive_count'] = session.get('receive_count', 0) + 1
     print(message)
+    message['data'] += " - answer!!!"
     emit('my response',
          {'data': message['data'], 'count': session['receive_count']})
 
@@ -77,6 +78,7 @@ def test_message(message):
 @socketio.on('my broadcast event', namespace='/test')
 def test_broadcast_message(message):
     session['receive_count'] = session.get('receive_count', 0) + 1
+    print(message)
     emit('my response',
          {'data': message['data'], 'count': session['receive_count']},
          broadcast=True)
