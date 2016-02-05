@@ -21,14 +21,13 @@ class Namespace(LoggingNamespace):
     def on_error(self, data):
         print('error')
 
-    def on_my_response(*args):
+    def on_response(*args):
         print('on_aaa_response', args)
 
 
-#with SocketIO('http://0.0.0.0', 5000, Namespace) as socketIO:
 socketIO = SocketIO('localhost', 5000, Namespace)
 nsp = socketIO.define(Namespace, '/test')
-nsp.emit('my event', {'data': 'personal data, YES! it works'})
+nsp.emit('image', {'data': 'personal data, YES! it works'})
 socketIO.wait(seconds=10)
 
 
