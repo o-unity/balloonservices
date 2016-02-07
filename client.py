@@ -1,4 +1,6 @@
 import json
+import time
+from threading import Thread
 
 __author__ = 'andi'
 
@@ -11,6 +13,7 @@ class Image(object):
     def serialize(self):
         ser = {}
         ser['path'] = self.kwargs['path']
+        ser['resize'] = self.kwargs['resize']
         return ser
 
 
@@ -57,10 +60,35 @@ class WebSocket(object):
     host = property(gethost, sethost)
 
 
+# ----------------------------------
+
+class ImageCollector(object):
+    def __init__(self, resize=False):
+        self.resize = resize
+        self.collect()
+
+    def collect(self):
+        ct = 0
+        while ct < 3600:
+            ct += 1
+            time.sleep(5)
+            self.register("path/to/image.png")
+
+    def register(self, path):
+        sock.add().image(path=path, resize=self.resize)
+        sock.submit()
+
+
+
 ws = WebSocket()
 ws.host = 'ballon.myftp.org'
 ws.port = "5000"
-
 sock = ws.connect()
-sock.add().image(path="path/to/image.png", resize=True)
-sock.submit()
+
+t = Thread(target=ImageCollector, args=(True, ))
+t.start()
+
+print("done")
+
+#sock.add().image(path="path/to/image.png", resize=True)
+#sock.submit()
