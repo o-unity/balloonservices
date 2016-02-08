@@ -30,6 +30,8 @@ class Socket(object):
         self.wsdata = wsdata
         self.open()
         self.instance = []
+        self.register = []
+        self.regit = []
 
     def open(self):
         pass
@@ -41,7 +43,18 @@ class Socket(object):
 
     def submit(self):
         for sub in self.instance:
-            print(json.dumps(sub.js, indent=4))
+            self.register = sub.js
+        self.instance = []
+
+    def setregister(self, param):
+        if len(param):
+            self.regit.append(param)
+            print("setregister called! %s, count objects: %s" % (param, len(self.regit)))
+
+    def getregister(self):
+        pass
+
+    register = property(getregister, setregister)
 
 
 class WebSocket(object):
