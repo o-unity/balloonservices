@@ -50,8 +50,11 @@ class Socket(object):
         if len(param):
             self.regit.append(param)
             print("setregister called! %s, count objects: %s" % (param, len(self.regit)))
+            for c in self.register:
+                print("test")
 
     def getregister(self):
+        print("call getregister")
         pass
 
     register = property(getregister, setregister)
