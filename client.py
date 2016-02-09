@@ -1,6 +1,8 @@
+from lib.owsocketio import *
 import json
 import time
 from threading import Thread
+import wrapt
 
 __author__ = 'andi'
 
@@ -16,6 +18,8 @@ class Image(object):
         ser['resize'] = self.kwargs['resize']
         return ser
 
+# --------------------------------------- //
+
 
 class Instance(object):
     def __init__(self):
@@ -24,17 +28,35 @@ class Instance(object):
     def image(self, **kwargs):
         self.js['image'] = Image(**kwargs).serialize
 
+# --------------------------------------- //
+
+
+class SocketNamespace(LoggingNamespace):
+    _connected = True
+
+    def on_connect(self):
+        print('connected')
+
+    def on_error(self, data):
+        print('error')
+
+    def on_response(*args):
+        print('on_aaa_response', args)
+
+# --------------------------------------- //
+
 
 class Socket(object):
     def __init__(self, wsdata):
         self.wsdata = wsdata
-        self.open()
+        self.nsp = self.open()
         self.instance = []
         self.register = []
-        self.regit = []
+        self.queue = []
 
     def open(self):
-        pass
+        socketio = OWSocketIO(self.wsdata['host'], self.wsdata['port'], SocketNamespace)
+        return socketio.define(SocketNamespace, self.wsdata['namespace'])
 
     def add(self):
         inst = Instance()
@@ -46,18 +68,18 @@ class Socket(object):
             self.register = sub.js
         self.instance = []
 
-    def setregister(self, param):
+    def setregister(self, param=""):
         if len(param):
-            self.regit.append(param)
-            print("setregister called! %s, count objects: %s" % (param, len(self.regit)))
-            for c in self.register:
-                print("test")
+            self.queue.append(param)
+#            print("setregister called! %s, count objects: %s" % (param, len(self.queue)))
 
     def getregister(self):
         print("call getregister")
         pass
 
     register = property(getregister, setregister)
+
+# --------------------------------------- //
 
 
 class WebSocket(object):
@@ -73,10 +95,24 @@ class WebSocket(object):
     def gethost(self):
         return self.wsdata['host']
 
+    def setport(self, value):
+        self.wsdata['port'] = int(value)
+
+    def getport(self):
+        return self.wsdata['port']
+
+    def setnamespace(self, value):
+        self.wsdata['namespace'] = value
+
+    def getnamespace(self):
+        return self.wsdata['namespace']
+
     host = property(gethost, sethost)
+    port = property(getport, setport)
+    namespace = property(getnamespace, setnamespace)
 
+# --------------------------------------- //
 
-# ----------------------------------
 
 class ImageCollector(object):
     def __init__(self, resize=False):
@@ -94,11 +130,13 @@ class ImageCollector(object):
         sock.add().image(path=path, resize=self.resize)
         sock.submit()
 
+# --------------------------------------- //
 
 
 ws = WebSocket()
-ws.host = 'ballon.myftp.org'
-ws.port = "5000"
+ws.host = 'localhost'
+ws.port = 5000
+ws.namespace = "/api"
 sock = ws.connect()
 
 t = Thread(target=ImageCollector, args=(True, ))
@@ -106,5 +144,4 @@ t.start()
 
 print("done")
 
-#sock.add().image(path="path/to/image.png", resize=True)
-#sock.submit()
+

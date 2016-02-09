@@ -1,6 +1,6 @@
 from lib.owsocketio import *
 import threading
-import logging
+#import logging
 
 __version__ = '0.1'
 
@@ -19,6 +19,6 @@ class Namespace(LoggingNamespace):
 
 
 socketIO = OWSocketIO('localhost', 5000, Namespace)
-nsp = socketIO.define(Namespace, '/test')
+nsp = socketIO.define(Namespace, '/api')
 nsp.emit('image', {'data': 'personal data, YES! it works'})
 socketIO.wait(seconds=10)

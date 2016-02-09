@@ -22,7 +22,7 @@ def index():
     return render_template('index.html')
 
 
-@socketio.on('image', namespace='/test')
+@socketio.on('image', namespace='/api')
 def test_message(message):
     session['receive_count'] = session.get('receive_count', 0) + 1
     print(message)
@@ -31,7 +31,7 @@ def test_message(message):
          {'data': message['data'], 'count': session['receive_count']})
 
 
-@socketio.on('disconnect request', namespace='/test')
+@socketio.on('disconnect request', namespace='/api')
 def disconnect_request():
     session['receive_count'] = session.get('receive_count', 0) + 1
     emit('my response',
@@ -39,12 +39,12 @@ def disconnect_request():
     disconnect()
 
 
-@socketio.on('connect', namespace='/test')
+@socketio.on('connect', namespace='/api')
 def test_connect():
     emit('my response', {'data': 'Connected', 'count': 0})
 
 
-@socketio.on('disconnect', namespace='/test')
+@socketio.on('disconnect', namespace='/api')
 def test_disconnect():
     print('Client disconnected', request.sid)
 

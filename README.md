@@ -2,6 +2,9 @@
 
 ## info
     http://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent
+    
+## virtualenv
+    source ballonservice/bin/activate
 
 ## Prerequisits
     pip install flask
@@ -9,6 +12,7 @@
     pip install coverage
     pip install eventlet
     pip install -U socketIO-client
+    pip install decorator
 
 
 ## Testcoverage
