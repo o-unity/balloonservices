@@ -1,11 +1,10 @@
 from lib.owsocketio import *
+from threading import Thread
 import json
 import time
-from threading import Thread
-import wrapt
 from collections import OrderedDict
 
-__author__ = 'andi'
+__author__ = 'over.unity'
 
 
 class Image(object):
@@ -23,6 +22,7 @@ class Image(object):
 class Instance(object):
     def __init__(self):
         self.obj = None
+        self._hash = None
 
     def setattr(self, attr, value):
         self.obj.prop[attr] = value
@@ -33,6 +33,12 @@ class Instance(object):
     def gettype(self):
         return self.obj.gettype()
 
+    def sethash(self, d):
+        self._hash = hash(repr(d))
+
+    def gethash(self):
+        return self._hash
+
     def dict(self):
         d = dict()
         d['obj'] = dict()
@@ -42,7 +48,8 @@ class Instance(object):
         for prop, value in self.obj.attr.items():
             d['obj'][prop] = value
 
-        d['checksum'] = hash(repr(d))
+        self.sethash(d)
+        d['checksum'] = self.gethash()
         return d
 
     def image(self, **kwargs):
@@ -69,8 +76,9 @@ class ObjectCount(object):
 # --------------------------------------- //
 
 
-class SocketNamespace(LoggingNamespace):
+class SocketNamespace(BaseNamespace):
     _connected = True
+    _lock = False
 
     def on_connect(self):
         print('connected')
@@ -79,23 +87,42 @@ class SocketNamespace(LoggingNamespace):
         print('error')
 
     def on_response(*args):
-        print(args)
+        sock.unlockbyhash(args[1])
+
 
 # --------------------------------------- //
 
 
-class Socket(object):
+class Socket(SocketNamespace):
     def __init__(self, wsdata):
         self.wsdata = wsdata
+        self.socketio = None
         self.nsp = self.open()
         self.instance = []
         self.register = []
         self.queue = []
         self.oc = ObjectCount()
+        self._sock = False
+
+    def unlockbyhash(self, hash):
+        for key, obj in enumerate(self.queue):
+            if hash == obj.gethash():
+                del self.queue[key]
+                self.unlock()
+
+    def unlock(self):
+        print("unlock")
+        self._lock = False
+
+    def lock(self):
+        self._lock = True
+
+    def getlock(self):
+        return self._lock
 
     def open(self):
-        socketio = OWSocketIO(self.wsdata['host'], self.wsdata['port'], SocketNamespace)
-        return socketio.define(SocketNamespace, self.wsdata['namespace'])
+        self.socketio = OWSocketIO(self.wsdata['host'], self.wsdata['port'], SocketNamespace)
+        return self.socketio.define(SocketNamespace, self.wsdata['namespace'])
 
     def add(self):
         inst = Instance()
@@ -110,13 +137,20 @@ class Socket(object):
 
     def addqueue(self, obj):
         self.queue.append(obj)
-        self.emit(self.sortbycount(self.queue)[0])
+        self.sortbycount()
+        print("add to queue, current objects: %s" % len(self.queue))
+
+        if not self.getlock():
+            self.lock()
+            self.emit(self.queue[0])
 
     def emit(self, qobj):
         self.nsp.emit(qobj.gettype(), qobj.dict())
+        self.socketio.wait(seconds=1)
 
-    def sortbycount(self, queue):
-        return sorted(queue, key=lambda x: x.obj.prop['count'], reverse=True)
+    def sortbycount(self):
+        self.queue = sorted(self.queue, key=lambda x: x.obj.prop['count'], reverse=True)
+
 
 # --------------------------------------- //
 
@@ -176,10 +210,13 @@ ws = WebSocket()
 ws.host = 'localhost'
 ws.port = 5000
 ws.namespace = "/api"
+
 sock = ws.connect()
+
 
 t = Thread(target=ImageCollector, args=(True, ))
 t.start()
+
 
 print("done")
 

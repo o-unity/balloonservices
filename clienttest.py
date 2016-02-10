@@ -1,6 +1,6 @@
 from lib.owsocketio import *
 import threading
-#import logging
+import logging
 
 __version__ = '0.1'
 

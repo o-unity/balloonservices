@@ -1,4 +1,4 @@
-from socketIO_client import SocketIO, LoggingNamespace, LoggingMixin
+from socketIO_client import SocketIO, LoggingNamespace, LoggingMixin, BaseNamespace
 import time
 
 
