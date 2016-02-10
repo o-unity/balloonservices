@@ -3,30 +3,68 @@ import json
 import time
 from threading import Thread
 import wrapt
+from collections import OrderedDict
 
 __author__ = 'andi'
 
 
 class Image(object):
     def __init__(self, **kwargs):
-        self.kwargs = kwargs
+        self.attr = kwargs
+        self.prop = {}
 
-    @property
-    def serialize(self):
-        ser = {}
-        ser['path'] = self.kwargs['path']
-        ser['resize'] = self.kwargs['resize']
-        return ser
+    def gettype(self):
+        return "image"
+
 
 # --------------------------------------- //
 
 
 class Instance(object):
     def __init__(self):
-        self.js = {}
+        self.obj = None
+
+    def setattr(self, attr, value):
+        self.obj.prop[attr] = value
+
+    def getcount(self):
+        return self.obj.prop['count']
+
+    def gettype(self):
+        return self.obj.gettype()
+
+    def dict(self):
+        d = dict()
+        d['obj'] = dict()
+        for prop, value in self.obj.prop.items():
+            d[prop] = value
+
+        for prop, value in self.obj.attr.items():
+            d['obj'][prop] = value
+
+        d['checksum'] = hash(repr(d))
+        return d
 
     def image(self, **kwargs):
-        self.js['image'] = Image(**kwargs).serialize
+        self.obj = Image(**kwargs)
+        return self.obj
+
+# --------------------------------------- //
+
+
+class ObjectCount(object):
+    def __init__(self):
+        self.objcount = 0
+        self._objcount = 0
+
+    def setobjcount(self, value):
+        pass
+
+    def getobjcount(self):
+        self._objcount += 1
+        return self._objcount
+
+    objcount = property(getobjcount, setobjcount)
 
 # --------------------------------------- //
 
@@ -41,7 +79,7 @@ class SocketNamespace(LoggingNamespace):
         print('error')
 
     def on_response(*args):
-        print('on_aaa_response', args)
+        print(args)
 
 # --------------------------------------- //
 
@@ -53,6 +91,7 @@ class Socket(object):
         self.instance = []
         self.register = []
         self.queue = []
+        self.oc = ObjectCount()
 
     def open(self):
         socketio = OWSocketIO(self.wsdata['host'], self.wsdata['port'], SocketNamespace)
@@ -64,20 +103,20 @@ class Socket(object):
         return inst
 
     def submit(self):
-        for sub in self.instance:
-            self.register = sub.js
+        for obj in self.instance:
+            obj.setattr("count", self.oc.objcount)
+            self.addqueue(obj)
         self.instance = []
 
-    def setregister(self, param=""):
-        if len(param):
-            self.queue.append(param)
-#            print("setregister called! %s, count objects: %s" % (param, len(self.queue)))
+    def addqueue(self, obj):
+        self.queue.append(obj)
+        self.emit(self.sortbycount(self.queue)[0])
 
-    def getregister(self):
-        print("call getregister")
-        pass
+    def emit(self, qobj):
+        self.nsp.emit(qobj.gettype(), qobj.dict())
 
-    register = property(getregister, setregister)
+    def sortbycount(self, queue):
+        return sorted(queue, key=lambda x: x.obj.prop['count'], reverse=True)
 
 # --------------------------------------- //
 
@@ -123,8 +162,8 @@ class ImageCollector(object):
         ct = 0
         while ct < 3600:
             ct += 1
-            time.sleep(5)
             self.register("path/to/image.png")
+            time.sleep(5)
 
     def register(self, path):
         sock.add().image(path=path, resize=self.resize)

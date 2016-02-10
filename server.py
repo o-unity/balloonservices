@@ -24,11 +24,8 @@ def index():
 
 @socketio.on('image', namespace='/api')
 def test_message(message):
-    session['receive_count'] = session.get('receive_count', 0) + 1
     print(message)
-    message['data'] += " - answer!!!"
-    emit('response',
-         {'data': message['data'], 'count': session['receive_count']})
+    emit('response', message['checksum'])
 
 
 @socketio.on('disconnect request', namespace='/api')
