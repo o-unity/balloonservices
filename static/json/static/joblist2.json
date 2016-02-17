@@ -1,0 +1,2432 @@
+[
+  {
+    "Jobnetz":"Auswertung ",
+    "jobgroupname":"Vermittlerdaten Export",
+    "ctrlmjobname":"vmdexp",
+    "Job_Name":"Abfrage durchführen",
+    "id":"srvmdexp020",
+    "BOID_Syrius":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "SST_ID":"S-3490"
+  },
+  {
+    "Jobnetz":"Auswertung ",
+    "jobgroupname":"Vermittlerdaten Export",
+    "ctrlmjobname":"vmdexp",
+    "Job_Name":"Abfrage durchführen",
+    "id":"srvmdexp030",
+    "BOID_Syrius":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "SST_ID":"S-3490"
+  },
+  {
+    "Jobnetz":"Auswertung ",
+    "jobgroupname":"Vermittlerdaten Export",
+    "ctrlmjobname":"vmdexp",
+    "Job_Name":"Abfrage durchführen",
+    "id":"srvmdexp040",
+    "BOID_Syrius":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "SST_ID":"S-3490"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"BlueCare Export",
+    "ctrlmjobname":"blcexp",
+    "Job_Name":"Export BlueCare Bestandesdaten",
+    "id":"srblcexp010",
+    "BOID_Syrius":-500000,
+    "Internalname":"BCBestanddatenExport",
+    "SST_ID":"S-3030"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"BlueCare Export",
+    "ctrlmjobname":"blcexp",
+    "Job_Name":"Export BlueCare Leistungsdaten",
+    "id":"srblcexp020",
+    "BOID_Syrius":-500001,
+    "Internalname":"Export BlueCare Leistungsdaten Preprocess",
+    "SST_ID":"S-3030"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"BlueCare Export",
+    "ctrlmjobname":"blcexp",
+    "Job_Name":"Export BlueCare Leistungsdaten",
+    "id":"srblcexp030",
+    "BOID_Syrius":-500001,
+    "Internalname":"Bestandsdaten im BlueCare-Format exportieren (BAA basis Asylanten Basel)",
+    "SST_ID":"S-3030"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"Medgate Export",
+    "ctrlmjobname":"medexp",
+    "Job_Name":"MedgateKundendatenExportBatch",
+    "id":"srmedexp010",
+    "BOID_Syrius":-1005143,
+    "Internalname":"MedgateKundendatenExportBatch",
+    "SST_ID":"S-2590"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"Medgate Import",
+    "ctrlmjobname":"medimp",
+    "Job_Name":"Import Medgatedaten",
+    "id":"srmedimp020",
+    "BOID_Syrius":-1005081,
+    "Internalname":"1005081",
+    "SST_ID":"S-2990"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"RVK Export",
+    "ctrlmjobname":"rvkexp",
+    "Job_Name":"UNIMEDES Deckungsexport",
+    "id":"srrvkexp011",
+    "BOID_Syrius":-1000020,
+    "Internalname":"1000020",
+    "SST_ID":"S-2302"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"RVK Export",
+    "ctrlmjobname":"rvkexp",
+    "Job_Name":"UNIMEDES Leistungsexport",
+    "id":"srrvkexp021",
+    "BOID_Syrius":-1000040,
+    "Internalname":"1000040",
+    "SST_ID":"S-2302"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"RVK Export",
+    "ctrlmjobname":"rvkexp",
+    "Job_Name":"UNIMEDES Versichertenexport",
+    "id":"srrvkexp031",
+    "BOID_Syrius":-1000060,
+    "Internalname":"1000060",
+    "SST_ID":"S-2302"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"RVK Import",
+    "ctrlmjobname":"rvkimp",
+    "Job_Name":"AVM-Zuteilung ImportBatch mit Patientenstatus Preprocess",
+    "id":"srrvkimp010",
+    "BOID_Syrius":-500132,
+    "Internalname":"AVMZuteilungImport",
+    "SST_ID":"S-2300"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"RVK Import",
+    "ctrlmjobname":"rvkimp",
+    "Job_Name":"AVM-Zuteilung ImportBatch HMO Praxen Preprocess",
+    "id":"srrvkimp020",
+    "BOID_Syrius":-500132,
+    "Internalname":"AVMZuteilungImport",
+    "SST_ID":"S-2300"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"RVK Import",
+    "ctrlmjobname":"rvkimp",
+    "Job_Name":"AVM-Zuteilung ImportBatch ohne Patientenstatus Preprocess",
+    "id":"srrvkimp030",
+    "BOID_Syrius":-500132,
+    "Internalname":"AVMZuteilungImport",
+    "SST_ID":"S-2300"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"RVK Import",
+    "ctrlmjobname":"rvkimp",
+    "Job_Name":"AVM-Vertragsprodukte mit ungültigem Hausarzt Preprocess",
+    "id":"srrvkimp040",
+    "BOID_Syrius":-5928,
+    "Internalname":"avmVPungueltigLstErb",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"Sanacare Export",
+    "ctrlmjobname":"sacexp",
+    "Job_Name":"Export SanaCare Bestandesdaten",
+    "id":"srsacexp010",
+    "BOID_Syrius":-1005171,
+    "Internalname":"EXP_SANACARE_BESTAND",
+    "SST_ID":"S-3190"
+  },
+  {
+    "Jobnetz":"AVM",
+    "jobgroupname":"Sanacare Export",
+    "ctrlmjobname":"sacexp",
+    "Job_Name":"Export Sanacare Leistungsdaten",
+    "id":"srsacexp020",
+    "BOID_Syrius":-1005121,
+    "Internalname":"EXPORT_SANACARE_LST_DATEN",
+    "SST_ID":"S-3190"
+  },
+  {
+    "Jobnetz":"Buchhaltung allgemein",
+    "jobgroupname":"Auswertung Asylbewerber",
+    "ctrlmjobname":"ausasb",
+    "Job_Name":"Statistik Asylbewerber-Kollektivverträge Preprocess",
+    "id":"prausasb010",
+    "BOID_Syrius":-1000321,
+    "Internalname":"1000321",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung allgemein",
+    "jobgroupname":"Auswertung Asylbewerber",
+    "ctrlmjobname":"ausasb",
+    "Job_Name":"Statistik Asylbewerber-Kollektivverträge",
+    "id":"srausasb011",
+    "BOID_Syrius":-1000321,
+    "Internalname":"1000321",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung allgemein",
+    "jobgroupname":"Auswertung Asylbewerber",
+    "ctrlmjobname":"ausasb",
+    "Job_Name":"Statistik Asylbewerber-Kollektivverträge Postprocess",
+    "id":"poausasb012",
+    "BOID_Syrius":-1000321,
+    "Internalname":"1000321",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung allgemein",
+    "jobgroupname":"Auswertung Zahlungen",
+    "ctrlmjobname":"auszah",
+    "Job_Name":"Zahlungen auflisten",
+    "id":"srauszah020",
+    "BOID_Syrius":-401,
+    "Internalname":"401",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung allgemein",
+    "jobgroupname":"Auswertung Zahlungen",
+    "ctrlmjobname":"auszah",
+    "Job_Name":"Zahlungen auflisten Preprocess",
+    "id":"srauszah010",
+    "BOID_Syrius":-401,
+    "Internalname":"401",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Auswertung Jahresabschluss",
+    "ctrlmjobname":"ausjab",
+    "Job_Name":"Altersbaum exportieren",
+    "id":"srausjab010",
+    "BOID_Syrius":-500104,
+    "Internalname":"500104",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Auswertung Jahresabschluss",
+    "ctrlmjobname":"ausjab",
+    "Job_Name":"ASR-Nachweis erstellen",
+    "id":"srausjab020",
+    "BOID_Syrius":-1005123,
+    "Internalname":"1005123",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Provisorischer Jahresabschluss",
+    "ctrlmjobname":"jahabd",
+    "Job_Name":"Jahresabschluss",
+    "id":"srjahabp010",
+    "BOID_Syrius":-6900,
+    "Internalname":"6900",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Definitiver Jahresabschluss",
+    "ctrlmjobname":"jahabd",
+    "Job_Name":"Definitiver Jahresabschluss",
+    "id":"srjahabd010",
+    "BOID_Syrius":-7000,
+    "Internalname":"7000",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Provisorischer Jahresabschluss",
+    "ctrlmjobname":"jahabp",
+    "Job_Name":"Jahresabschluss",
+    "id":"srjahabp010",
+    "BOID_Syrius":-6900,
+    "Internalname":"6900",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Buchungsstoff erstellen Jahresabschluss",
+    "ctrlmjobname":"jahbse",
+    "Job_Name":"Buchungsstoff erstellen",
+    "id":"srjahbse010",
+    "BOID_Syrius":-53,
+    "Internalname":"53",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Buchungsstoff exportieren",
+    "ctrlmjobname":"jahbsx",
+    "Job_Name":"Buchungsstoff exportieren",
+    "id":"srjahabs020",
+    "BOID_Syrius":-6800,
+    "Internalname":"6800",
+    "SST_ID":"S-2510"
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Saldonachweis erstellen Process",
+    "id":"srsnwabs010",
+    "BOID_Syrius":-238,
+    "Internalname":"238",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Saldonachweis exportieren Moove Process",
+    "id":"srsnwabs020",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Saldonachweis exportieren Vivao Process",
+    "id":"srsnwabs030",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Saldonachweis exportieren Sympany Versicherung AG Process",
+    "id":"srsnwabs040",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Saldonachweis exportieren Sympany Versicherung SV Process",
+    "id":"srsnwabs050",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Saldonachweis exportieren Sympany Versicherung UZ Process",
+    "id":"srsnwabs060",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Saldonachweis exportieren Sympany Versicherung UO Process",
+    "id":"srsnwabs070",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Jahresabschluss",
+    "jobgroupname":"Saldonachweis Jahresabschluss",
+    "ctrlmjobname":"snwabs",
+    "Job_Name":"Vorausbezahlte Prämien auswerten Process",
+    "id":"srsnwabs080",
+    "BOID_Syrius":-240,
+    "Internalname":"240",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Abschreiben_Ausbuchen",
+    "ctrlmjobname":"absaus",
+    "Job_Name":"Abschreibungen und Ausbuchungen erstellen",
+    "id":"srabsaus010",
+    "BOID_Syrius":-122,
+    "Internalname":"122",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Abschreiben_Ausbuchen",
+    "ctrlmjobname":"absaus",
+    "Job_Name":"Abschreibungen und Ausbuchungen erstellen",
+    "id":"srabsaus020",
+    "BOID_Syrius":-122,
+    "Internalname":"122",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Abschreiben_Ausbuchen",
+    "ctrlmjobname":"absaus",
+    "Job_Name":"Abschreibungen und Ausbuchungen erstellen",
+    "id":"srabsaus030",
+    "BOID_Syrius":-122,
+    "Internalname":"122",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Abschreiben_Ausbuchen",
+    "ctrlmjobname":"absaus",
+    "Job_Name":"Auswertung Abschreibung/Ausbuchung",
+    "id":"srabsaus040",
+    "BOID_Syrius":-120,
+    "Internalname":"120",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Auswertung MEV",
+    "ctrlmjobname":"ausmev",
+    "Job_Name":"Altersbaum exportieren",
+    "id":"srausmev010",
+    "BOID_Syrius":-500104,
+    "Internalname":"500104",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Auswertung MEV",
+    "ctrlmjobname":"ausmev",
+    "Job_Name":"ASR-Nachweis erstellen",
+    "id":"srausmev020",
+    "BOID_Syrius":-1005123,
+    "Internalname":"1005123",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"OPs und Sammel-OPs auflisten KLAV",
+    "ctrlmjobname":"veraup",
+    "Job_Name":"OPs und Sammel-OPs auflisten - KLAV",
+    "id":"srausmev030",
+    "BOID_Syrius":-400,
+    "Internalname":"400",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"OPs und Sammel-OPs auflisten KUV",
+    "ctrlmjobname":"veraup",
+    "Job_Name":"OPs und Sammel-OPs auflisten - KUV",
+    "id":"srausmev040",
+    "BOID_Syrius":-400,
+    "Internalname":"400",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Buchungsstoff erstellen",
+    "ctrlmjobname":"bsters",
+    "Job_Name":"Buchungsstoff erstellen ",
+    "id":"srbsters010",
+    "BOID_Syrius":-53,
+    "Internalname":"53",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Buchungsstoff exportieren",
+    "ctrlmjobname":"bstexp",
+    "Job_Name":"Buchungsstoff verdichten",
+    "id":"srbstexp010",
+    "BOID_Syrius":-57,
+    "Internalname":"57",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Buchungsstoff exportieren",
+    "ctrlmjobname":"bstexp",
+    "Job_Name":"Buchungsstoff exportieren",
+    "id":"srbstexp020",
+    "BOID_Syrius":-6800,
+    "Internalname":"6800",
+    "SST_ID":"S-2510"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Saldonachweis MEV",
+    "ctrlmjobname":"snwmev",
+    "Job_Name":"Saldonachweis erstellen",
+    "id":"srsnwmev010",
+    "BOID_Syrius":-238,
+    "Internalname":"238",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Saldonachweis MEV",
+    "ctrlmjobname":"snwmev",
+    "Job_Name":"Saldonachweis exportieren",
+    "id":"srsnwmev020",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Saldonachweis MEV",
+    "ctrlmjobname":"snwmev",
+    "Job_Name":"Saldonachweis exportieren",
+    "id":"srsnwmev030",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Saldonachweis MEV",
+    "ctrlmjobname":"snwmev",
+    "Job_Name":"Saldonachweis exportieren",
+    "id":"srsnwmev040",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Saldonachweis MEV",
+    "ctrlmjobname":"snwmev",
+    "Job_Name":"Saldonachweis exportieren",
+    "id":"srsnwmev050",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Saldonachweis MEV",
+    "ctrlmjobname":"snwmev",
+    "Job_Name":"Saldonachweis exportieren",
+    "id":"srsnwmev060",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Saldonachweis MEV",
+    "ctrlmjobname":"snwmev",
+    "Job_Name":"Saldonachweis exportieren",
+    "id":"srsnwmev070",
+    "BOID_Syrius":-500062,
+    "Internalname":"500062",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Prognose Abschreibung",
+    "ctrlmjobname":"sopaus",
+    "Job_Name":"Abschreibungen und Ausbuchungen erstellen",
+    "id":"srsopaus010",
+    "BOID_Syrius":-122,
+    "Internalname":"122",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Prognose Abschreibung",
+    "ctrlmjobname":"sopaus",
+    "Job_Name":"Abschreibungen und Ausbuchungen erstellen",
+    "id":"srsopaus020",
+    "BOID_Syrius":-122,
+    "Internalname":"122",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Prognose Abschreibung",
+    "ctrlmjobname":"sopaus",
+    "Job_Name":"Abschreibungen und Ausbuchungen erstellen",
+    "id":"srsopaus030",
+    "BOID_Syrius":-122,
+    "Internalname":"122",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Buchhaltung Monatsendverarbeitung",
+    "jobgroupname":"Prognose Abschreibung",
+    "ctrlmjobname":"sopaus",
+    "Job_Name":"ASR mit überschrittener Fälligkeit auflisten",
+    "id":"srsopaus040",
+    "BOID_Syrius":-1005002,
+    "Internalname":"1005002",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Business Services P",
+    "jobgroupname":"Bonusmodell Import",
+    "ctrlmjobname":"opsimp",
+    "Job_Name":"OP Import Preprocess",
+    "id":"srbonimp010",
+    "BOID_Syrius":-85,
+    "Internalname":"85",
+    "SST_ID":"S-3500"
+  },
+  {
+    "Jobnetz":"Business Services P",
+    "jobgroupname":"Bonusmodell Import",
+    "ctrlmjobname":"opsimp",
+    "Job_Name":"OP Import verarbeiten Preprocess",
+    "id":"srbonimp020",
+    "BOID_Syrius":-86,
+    "Internalname":"86",
+    "SST_ID":"S-3500"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (jährlich)",
+    "ctrlmjobname":"dpjexp",
+    "Job_Name":"Versichertengruppen-Record OKP Vivao",
+    "id":"srdpjexp010",
+    "BOID_Syrius":-1000009,
+    "Internalname":"1000009",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (jährlich)",
+    "ctrlmjobname":"dpjexp",
+    "Job_Name":"Leistungs-Record OKP/VVG Vivao",
+    "id":"srdpjexp020",
+    "BOID_Syrius":-1000010,
+    "Internalname":"1000010",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (jährlich)",
+    "ctrlmjobname":"dpjexp",
+    "Job_Name":"Versichertengruppen-Record OKP Moove ",
+    "id":"srdpjexp030",
+    "BOID_Syrius":-1000009,
+    "Internalname":"1000009",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (jährlich)",
+    "ctrlmjobname":"dpjexp",
+    "Job_Name":"Leistungs-Record OKP/VVG Moove ",
+    "id":"srdpjexp040",
+    "BOID_Syrius":-1000010,
+    "Internalname":"1000010",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (monatlich)",
+    "ctrlmjobname":"dpmexp",
+    "Job_Name":"Versichertengruppen-Record OKP Vivao",
+    "id":"srdpmexp010",
+    "BOID_Syrius":-1000009,
+    "Internalname":"1000009",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (monatlich)",
+    "ctrlmjobname":"dpmexp",
+    "Job_Name":"Leistungs-Record OKP/VVG Vivao",
+    "id":"srdpmexp020",
+    "BOID_Syrius":-1000010,
+    "Internalname":"1000010",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (monatlich)",
+    "ctrlmjobname":"dpmexp",
+    "Job_Name":"Versichertengruppen-Record OKP Moove ",
+    "id":"srdpmexp030",
+    "BOID_Syrius":-1000009,
+    "Internalname":"1000009",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"Datenpool Export (monatlich)",
+    "ctrlmjobname":"dpmexp",
+    "Job_Name":"Leistungs-Record OKP/VVG Moove ",
+    "id":"srdpmexp040",
+    "BOID_Syrius":-1000010,
+    "Internalname":"1000010",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Deckungsart",
+    "id":"srkskimp010",
+    "BOID_Syrius":-1000007,
+    "Internalname":"1000007",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Franchise",
+    "id":"srkskimp020",
+    "BOID_Syrius":-1000004,
+    "Internalname":"1000004",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Gemeindenummer des BSV",
+    "id":"srkskimp030",
+    "BOID_Syrius":-1000002,
+    "Internalname":"1000002",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Lebens-Altersgruppe",
+    "id":"srkskimp040",
+    "BOID_Syrius":-1000000,
+    "Internalname":"1000000",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Leistungsart",
+    "id":"srkskimp050",
+    "BOID_Syrius":-1000011,
+    "Internalname":"1000011",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Schadenart",
+    "id":"srkskimp060",
+    "BOID_Syrius":-1000005,
+    "Internalname":"1000005",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Sex Code",
+    "id":"srkskimp070",
+    "BOID_Syrius":-1000001,
+    "Internalname":"1000001",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Unfallrisiko",
+    "id":"srkskimp080",
+    "BOID_Syrius":-1000003,
+    "Internalname":"1000003",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK Versicherungsmodel",
+    "id":"srkskimp090",
+    "BOID_Syrius":-1000008,
+    "Internalname":"1000008",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK VVG Produkt Typen",
+    "id":"srkskimp0100",
+    "BOID_Syrius":-1000006,
+    "Internalname":"1000006",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Datenpool",
+    "jobgroupname":"KSK Import",
+    "ctrlmjobname":"kskimp",
+    "Job_Name":"Import KSK ZIL",
+    "id":"srkskimp0110",
+    "BOID_Syrius":-1000013,
+    "Internalname":"1000013",
+    "SST_ID":"S-2630"
+  },
+  {
+    "Jobnetz":"Dokumentendruck",
+    "jobgroupname":"Dokumente drucken",
+    "ctrlmjobname":"dokdru",
+    "Job_Name":"Dokument Bestellung verarbeiten Preprocess",
+    "id":"srdokdru010",
+    "BOID_Syrius":-63,
+    "Internalname":"63",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Dokumentendruck",
+    "jobgroupname":"Policen drucken P",
+    "ctrlmjobname":"poldrp",
+    "Job_Name":"Police (Neu) Preprocess",
+    "id":"srpoldrp010",
+    "BOID_Syrius":-58,
+    "Internalname":"58",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Dokumentendruck",
+    "jobgroupname":"Policen drucken U",
+    "ctrlmjobname":"poldru",
+    "Job_Name":"Police Kollektivvertrag Anonym Preprocess",
+    "id":"srpoldru010",
+    "BOID_Syrius":-52,
+    "Internalname":"52",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"3. Kindrabatt",
+    "ctrlmjobname":"3kindr",
+    "Job_Name":"Familienrabatt berechnen",
+    "id":"sr3kindr010",
+    "BOID_Syrius":-500079,
+    "Internalname":"FamilienrabattBerechnen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"3. Kindrabatt",
+    "ctrlmjobname":"3kindr",
+    "Job_Name":"Familienrabatt berechnen",
+    "id":"sr3kindr020",
+    "BOID_Syrius":-500079,
+    "Internalname":"FamilienrabattBerechnen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"3. Kindrabatt",
+    "ctrlmjobname":"3kindr",
+    "Job_Name":"Familienrabatt berechnen",
+    "id":"sr3kindr030",
+    "BOID_Syrius":-500079,
+    "Internalname":"FamilienrabattBerechnen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Abgerechneter Forecast",
+    "ctrlmjobname":"abgrfc",
+    "Job_Name":"JEV Folgejahre auf abgerechneten Forecast prüfen",
+    "id":"srabgrfc010",
+    "BOID_Syrius":-500069,
+    "Internalname":"-500069",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Forecast EV erstellen",
+    "ctrlmjobname":"forcev",
+    "Job_Name":"EV ForeCast erstellen",
+    "id":"srforcev010",
+    "BOID_Syrius":-381,
+    "Internalname":"EV_FORECAST_CREATE",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Forecast KVA erstellen",
+    "ctrlmjobname":"forkva",
+    "Job_Name":"KV Anonym ForeCast erstellen",
+    "id":"srforkva010",
+    "BOID_Syrius":-382,
+    "Internalname":"KVANONYM_FORECAST_CREATE",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Jahresendverarbeitung",
+    "ctrlmjobname":"jahend",
+    "Job_Name":"Jahresendverarbeitung EV",
+    "id":"srjahend010",
+    "BOID_Syrius":-9,
+    "Internalname":"9",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Temp. KV Vertragskopien abarbeiten",
+    "ctrlmjobname":"kolkop",
+    "Job_Name":"Temp. KV Vertragskopien abarbeiten - ALK_BONUS_COM",
+    "id":"srkolkop010",
+    "BOID_Syrius":-71,
+    "Internalname":"70",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Kollektivvertrag Austritt",
+    "ctrlmjobname":"kolver",
+    "Job_Name":"Kollektivvertrag Austritt",
+    "id":"srkolver010",
+    "BOID_Syrius":-239,
+    "Internalname":"239",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"KVNamentlich-Produkte erstellen",
+    "ctrlmjobname":"kvprer",
+    "Job_Name":"KVNamentlich-Produkte erstellen",
+    "id":"srkvrper010",
+    "BOID_Syrius":-500087,
+    "Internalname":"KVNamentlichProdukteErstellen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Leistungsfreiheitsrabatt",
+    "ctrlmjobname":"lfrrab",
+    "Job_Name":"Leistungsfreiheitsrabatt prüfen - ALK_BONUS_COM",
+    "id":"srlfrrab010",
+    "BOID_Syrius":-500158,
+    "Internalname":"LeistungsfreiheitsrabattBatch",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Minimalprämie RV",
+    "ctrlmjobname":"minprm",
+    "Job_Name":"Forecast nach Minimalprämienübernahme von RV in die Zukunft neu berechnen",
+    "id":"srminprm010",
+    "BOID_Syrius":-500130,
+    "Internalname":"KVAForeCastBerechnen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Nettopreisimport",
+    "ctrlmjobname":"nepimp",
+    "Job_Name":"VertragsProdukt NettoPreis ändern (Import)",
+    "id":"srnepimp010",
+    "BOID_Syrius":-500101,
+    "Internalname":"VertragsProduktIstPreisChangeBatch",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Nettopreisübersteuerung",
+    "ctrlmjobname":"nepueb",
+    "Job_Name":"Vertragsprodukt Übersteuerung entfernen",
+    "id":"srnepueb010",
+    "BOID_Syrius":-124,
+    "Internalname":"124",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Policendruck JEV",
+    "ctrlmjobname":"poljev",
+    "Job_Name":"Police (Neu)",
+    "id":"srpoljev010",
+    "BOID_Syrius":-58,
+    "Internalname":"58",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Preistabellen Export",
+    "ctrlmjobname":"prtexp",
+    "Job_Name":"Export Preistabellen",
+    "id":"srprtexp010",
+    "BOID_Syrius":-301,
+    "Internalname":"301",
+    "SST_ID":"SFE-S-2830"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Preistabellen Import",
+    "ctrlmjobname":"prtimp",
+    "Job_Name":"Import Preistabellen",
+    "id":"srprtimp010",
+    "BOID_Syrius":-300,
+    "Internalname":"300",
+    "SST_ID":"SFE-S-2830"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"RV-Produkte erstellen",
+    "ctrlmjobname":"rvprer",
+    "Job_Name":"RV-Produkte erstellen",
+    "id":"srrvrper010",
+    "BOID_Syrius":-500086,
+    "Internalname":"RVProdukteErstellen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Steuerkarte importieren",
+    "ctrlmjobname":"stkimp",
+    "Job_Name":"JEV TA Steuerkarte importieren",
+    "id":"srstkimp020",
+    "BOID_Syrius":-129,
+    "Internalname":"129",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Übersteuerte Vertragskriterien",
+    "ctrlmjobname":"uebvkr",
+    "Job_Name":"Übersteuerte Vertragskriterien überführen",
+    "id":"sruebvkr010",
+    "BOID_Syrius":-10905,
+    "Internalname":"UebKrUeberfuehrBatch",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Verträge ohne VP beenden",
+    "ctrlmjobname":"verbee",
+    "Job_Name":"Verträge ohne VP beenden",
+    "id":"srverbee010",
+    "BOID_Syrius":-500081,
+    "Internalname":"VertragOhneProdBeenden",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Verträge bereinigen",
+    "ctrlmjobname":"verber",
+    "Job_Name":"Verträge ohne Vertragsprodukt",
+    "id":"srverber010",
+    "BOID_Syrius":-5924,
+    "Internalname":"Vertr o. VP",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Verträge umstellen",
+    "ctrlmjobname":"verums",
+    "Job_Name":"Verträge umstellen",
+    "id":"srverums010",
+    "BOID_Syrius":-108,
+    "Internalname":"108",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Vertragsprodukte beenden",
+    "ctrlmjobname":"vprebe",
+    "Job_Name":"Vertragsprodukte beenden",
+    "id":"srvprebe010",
+    "BOID_Syrius":-10901,
+    "Internalname":"VertragsProdukteBeenden",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Vertragsprodukt wechseln",
+    "ctrlmjobname":"vprwec",
+    "Job_Name":"Vertragsprodukt wechseln",
+    "id":"srvprwec010",
+    "BOID_Syrius":-500089,
+    "Internalname":"VertragsProduktWechseln",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Vertragsbedingungen auf KV",
+    "ctrlmjobname":"vrtbed",
+    "Job_Name":"Vertragsbedingungen auf KV aendern",
+    "id":"srvrtbed010",
+    "BOID_Syrius":-10502,
+    "Internalname":"10502",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"Vertrag validieren",
+    "ctrlmjobname":"verval",
+    "Job_Name":"Vertrag validieren Preprocess",
+    "id":"prverval009",
+    "BOID_Syrius":-123,
+    "Internalname":"123",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Jahresumstellung U",
+    "jobgroupname":"Stufenanpassung KMU Pool",
+    "ctrlmjobname":"stukmu",
+    "Job_Name":"Leistungsfreiheitsrabatt",
+    "id":"srstukmu010",
+    "BOID_Syrius":-500158,
+    "Internalname":"LeistungsfreiheitsrabattBatch",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Leistungsabrechnung",
+    "jobgroupname":"Leistungsabrechnung Krankenversicherung",
+    "ctrlmjobname":"lstabp",
+    "Job_Name":"Leistungsabrechnung",
+    "id":"srlstabp010",
+    "BOID_Syrius":-10,
+    "Internalname":"10",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Leistungsabrechnung",
+    "jobgroupname":"Leistungsabrechnung Krankenversicherung",
+    "ctrlmjobname":"lstabp",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"srlstabp020",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Lohndeklaration",
+    "jobgroupname":"Lohndeklaration",
+    "ctrlmjobname":"lohdek",
+    "Job_Name":"Lohndeklaration erstellen",
+    "id":"srlohdek010",
+    "BOID_Syrius":-10000,
+    "Internalname":"10000",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Lohndeklaration",
+    "jobgroupname":"Lohndeklaration",
+    "ctrlmjobname":"lohdek",
+    "Job_Name":"Lohndeklaration mahnen",
+    "id":"srlohdek020",
+    "BOID_Syrius":-10001,
+    "Internalname":"10001",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Lohndeklaration",
+    "jobgroupname":"Lohndeklaration",
+    "ctrlmjobname":"lohdek",
+    "Job_Name":"Lohndeklaration / -mahnung drucken",
+    "id":"srlohdek030",
+    "BOID_Syrius":-10002,
+    "Internalname":"10002",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Mahnung und Betreibung",
+    "jobgroupname":"CIP - Syrius",
+    "ctrlmjobname":"cipsyr",
+    "Job_Name":"CIP Betreibungsänderungen importieren Preprocess",
+    "id":"prcipsyr029",
+    "BOID_Syrius":-1005140,
+    "Internalname":"CIPImport",
+    "SST_ID":"S-2541"
+  },
+  {
+    "Jobnetz":"Mahnung und Betreibung",
+    "jobgroupname":"Mahnlauf",
+    "ctrlmjobname":"mahlau",
+    "Job_Name":"Mahnlauf auslösen",
+    "id":"srmahlau010",
+    "BOID_Syrius":-6601,
+    "Internalname":"jobnumber=\"-6601\"",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Mahnung und Betreibung",
+    "jobgroupname":"Mahnlauf",
+    "ctrlmjobname":"mahlau",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"srmahlau020",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Mahnung und Betreibung",
+    "jobgroupname":"Syrius - CIP",
+    "ctrlmjobname":"syrcip",
+    "Job_Name":"S-2540 Export von Mahndaten / Betreibungen / Zahlungen Preprocess",
+    "id":"srsyrcip019",
+    "BOID_Syrius":-1001220,
+    "Internalname":"1001220",
+    "SST_ID":"S-2540"
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Abo Bestellung",
+    "ctrlmjobname":"abobes",
+    "Job_Name":"Abo generieren",
+    "id":"srabobes010",
+    "BOID_Syrius":-61,
+    "Internalname":"61",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Abo Bestellung",
+    "ctrlmjobname":"abobes",
+    "Job_Name":"Abo-Dokumente bestellen",
+    "id":"srabobes020",
+    "BOID_Syrius":-62,
+    "Internalname":"62",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Abo Bestellung",
+    "ctrlmjobname":"abobes",
+    "Job_Name":"Dokument Bestellung verarbeiten",
+    "id":"srabobes030",
+    "BOID_Syrius":-63,
+    "Internalname":"63",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Auswertung Notizen",
+    "ctrlmjobname":"ausnot",
+    "Job_Name":"Notiz Ablauf Liste",
+    "id":"srausnot010",
+    "BOID_Syrius":-500099,
+    "Internalname":"NotizAblaufListe",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Bereinigung Partner",
+    "ctrlmjobname":"berpar",
+    "Job_Name":"Familienangehörige ohne abhängige Adresse",
+    "id":"srberpar010",
+    "BOID_Syrius":-5906,
+    "Internalname":"FamAngehoerig",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Betreuer wechseln",
+    "ctrlmjobname":"betwec",
+    "Job_Name":"Betreuer ersetzen",
+    "id":"srbetwec010",
+    "BOID_Syrius":-500152,
+    "Internalname":"BetreuerErsetzen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Falldossier beenden",
+    "ctrlmjobname":"fdoend",
+    "Job_Name":"Falldossier beenden",
+    "id":"srfdoend010",
+    "BOID_Syrius":-7100,
+    "Internalname":"7100",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Falldossier prüfen",
+    "ctrlmjobname":"fdopru",
+    "Job_Name":"Falldossierprüfung",
+    "id":"srfdopru010",
+    "BOID_Syrius":-500131,
+    "Internalname":"FalldossierPruefung",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Partnerumteilung OE",
+    "ctrlmjobname":"parumt",
+    "Job_Name":"EV in andere OE umteilen",
+    "id":"srparumt010",
+    "BOID_Syrius":-81,
+    "Internalname":"81",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Partnerumteilung OE",
+    "ctrlmjobname":"parumt",
+    "Job_Name":"EV in andere OE umteilen CH",
+    "id":"srparumt020",
+    "BOID_Syrius":-1001200,
+    "Internalname":"1001200",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"Risikoausgleich Export",
+    "ctrlmjobname":"risexp",
+    "Job_Name":"BSVRisikoausgleichBatch Export",
+    "id":"srrisexp010",
+    "BOID_Syrius":-1000220,
+    "Internalname":"1000220",
+    "SST_ID":"S-3370"
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"ZEMRA Export",
+    "ctrlmjobname":"zemexp",
+    "Job_Name":"Export Spitaltage",
+    "id":"srzemexp010",
+    "BOID_Syrius":-1005178,
+    "Internalname":"ExportSpitaltage",
+    "SST_ID":"S-3330"
+  },
+  {
+    "Jobnetz":"Partner",
+    "jobgroupname":"ZEMRA Import",
+    "ctrlmjobname":"zemimp",
+    "Job_Name":"Import Spitaltage",
+    "id":"srzemimp030",
+    "BOID_Syrius":-1005177,
+    "Internalname":"ImportSpitaltage",
+    "SST_ID":"S-3330"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Arbeitgeberbeitrag",
+    "ctrlmjobname":"agbeit",
+    "Job_Name":"Reduktionsträger Abrechnung",
+    "id":"pragbeit010",
+    "BOID_Syrius":-64,
+    "Internalname":"",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso EV",
+    "ctrlmjobname":"inkein",
+    "Job_Name":"EV Inkasso Preprocess",
+    "id":"srinkein020",
+    "BOID_Syrius":-350,
+    "Internalname":"350",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso EV",
+    "ctrlmjobname":"inkein",
+    "Job_Name":"OPs und Sammel-OPs drucken Preprocess",
+    "id":"srinkein030",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso KVA",
+    "ctrlmjobname":"inkkva",
+    "Job_Name":"Kollektiv Abrechnung",
+    "id":"srinkkva010",
+    "BOID_Syrius":-38,
+    "Internalname":"38",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso KVA",
+    "ctrlmjobname":"inkkva",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"poinkkva020",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso KVA Definitiv",
+    "ctrlmjobname":"inkkvd",
+    "Job_Name":"Kollektiv Abrechnung",
+    "id":"srinkkvd010",
+    "BOID_Syrius":-38,
+    "Internalname":"38",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso KVA Definitiv",
+    "ctrlmjobname":"inkkvd",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"srinkein020",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso SIZ",
+    "ctrlmjobname":"inksiz",
+    "Job_Name":"EV Inkasso",
+    "id":"srinksiz010",
+    "BOID_Syrius":-350,
+    "Internalname":"350",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso SIZ",
+    "ctrlmjobname":"inksiz",
+    "Job_Name":"KV namentlich Sammel-Inkasso-Abrechnung exportieren",
+    "id":"srinksiz020",
+    "BOID_Syrius":-500119,
+    "Internalname":"500119",
+    "SST_ID":"SFE"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso SIZ",
+    "ctrlmjobname":"inksiz",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"srinksiz030",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Rückleitung Import",
+    "ctrlmjobname":"rklimp",
+    "Job_Name":"Debit-Direct-Rückleitungen importieren",
+    "id":"srrklimp020",
+    "BOID_Syrius":-500003,
+    "Internalname":"RLImport",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Rückleitung Import",
+    "ctrlmjobname":"rklimp",
+    "Job_Name":"Debit-Direct-Rückleitungen importieren",
+    "id":"srrklimp024",
+    "BOID_Syrius":-500003,
+    "Internalname":"RLImport",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Rückleitung Import",
+    "ctrlmjobname":"rklimp",
+    "Job_Name":"Erfolglose LSV- und DD-Einzüge auflisten ",
+    "id":"srrklimp030",
+    "BOID_Syrius":-500015,
+    "Internalname":"500015",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Rückleitung Import",
+    "ctrlmjobname":"rklimp",
+    "Job_Name":"Rückleitungen auflisten",
+    "id":"srrklimp040",
+    "BOID_Syrius":-500145,
+    "Internalname":"500145",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Prämieninkasso",
+    "jobgroupname":"Inkasso SIZ",
+    "ctrlmjobname":"",
+    "Job_Name":"KV namentlich Sammel-Inkasso-Abrechnung exportieren",
+    "id":"srinksiz020",
+    "BOID_Syrius":-500119,
+    "Internalname":"500119",
+    "SST_ID":"S-2530"
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Bestandesprovision akonto",
+    "ctrlmjobname":"beapro",
+    "Job_Name":"Bestandesprovisionierung",
+    "id":"srbeapro010",
+    "BOID_Syrius":-500071,
+    "Internalname":"Bestandesprovisionierung",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Bestandesprovision akonto",
+    "ctrlmjobname":"beapro",
+    "Job_Name":"provisorische Provisionen",
+    "id":"srbeapro020",
+    "BOID_Syrius":-5925,
+    "Internalname":"provProvision",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Bestandesprovision definitiv",
+    "ctrlmjobname":"bedpro",
+    "Job_Name":"Bestandesprovisionierung",
+    "id":"srbedpro010",
+    "BOID_Syrius":-500071,
+    "Internalname":"Bestandesprovisionierung",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Bestandesprovision definitiv",
+    "ctrlmjobname":"bedpro",
+    "Job_Name":"provisorische Provisionen",
+    "id":"srbedpro020",
+    "BOID_Syrius":-5925,
+    "Internalname":"provProvision",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Export Zahlungen Provisionen",
+    "ctrlmjobname":"expzap",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"srexpzap010",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Export Zahlungen Provisionen",
+    "ctrlmjobname":"expzap",
+    "Job_Name":"Zahlungsdaten erstellen",
+    "id":"srexpzap030",
+    "BOID_Syrius":-43,
+    "Internalname":"43",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung bestellt",
+    "ctrlmjobname":"proabb",
+    "Job_Name":"Provisionsabrechnung",
+    "id":"srproabb010",
+    "BOID_Syrius":-55,
+    "Internalname":"55",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung bestellt",
+    "ctrlmjobname":"proabb",
+    "Job_Name":"Provisionsabrechnung",
+    "id":"srproabb020",
+    "BOID_Syrius":-55,
+    "Internalname":"55",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung bestellt",
+    "ctrlmjobname":"proabb",
+    "Job_Name":"Provisionsabrechnung",
+    "id":"srproabb030",
+    "BOID_Syrius":-55,
+    "Internalname":"55",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung bestellt",
+    "ctrlmjobname":"proabb",
+    "Job_Name":"Provisionsabrechnung",
+    "id":"srproabb040",
+    "BOID_Syrius":-55,
+    "Internalname":"55",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung bestellt",
+    "ctrlmjobname":"proabb",
+    "Job_Name":"Überschussbeteiligungs-Abrechnung",
+    "id":"srproabb050",
+    "BOID_Syrius":-56,
+    "Internalname":"56",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung bestellt",
+    "ctrlmjobname":"proabb",
+    "Job_Name":"Auswertung Abgerechnete Provisionen",
+    "id":"srproabb060",
+    "BOID_Syrius":-10501,
+    "Internalname":"10501",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabr",
+    "Job_Name":"Provisionsabrechnung",
+    "id":"srproabr010",
+    "BOID_Syrius":-55,
+    "Internalname":"55",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabr",
+    "Job_Name":"Provisionsabrechnung",
+    "id":"srproabr020",
+    "BOID_Syrius":-55,
+    "Internalname":"55",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabr",
+    "Job_Name":"Auswertung Abgerechnete Provisionen",
+    "id":"srproabr030",
+    "BOID_Syrius":-10501,
+    "Internalname":"10501",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Prov. Abschlussprovisionen",
+    "ctrlmjobname":"propro",
+    "Job_Name":"Provisorische Provisionen",
+    "id":"srpropro010",
+    "BOID_Syrius":-5925,
+    "Internalname":"provProvision",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Überschussbeteiligung",
+    "ctrlmjobname":"uebbet",
+    "Job_Name":"Überschussbeteiligung berechnen",
+    "id":"sruebbet010",
+    "BOID_Syrius":-74,
+    "Internalname":"74",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Überschussbeteiligung",
+    "ctrlmjobname":"uebbet",
+    "Job_Name":"provisorische Provisionen",
+    "id":"sruebbet020",
+    "BOID_Syrius":-5925,
+    "Internalname":"provProvision",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Vergütungszulassung Import",
+    "ctrlmjobname":"vgzimp",
+    "Job_Name":"Import KVEVProvDef",
+    "id":"srvgzimp010",
+    "BOID_Syrius":-500075,
+    "Internalname":"ImportKVEVProvDef",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Verwaltungskostenentschädigung",
+    "ctrlmjobname":"vkepro",
+    "Job_Name":"Bestandesprovisionierung",
+    "id":"srvkepro010",
+    "BOID_Syrius":-500071,
+    "Internalname":"Bestandesprovisionierung",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Provisionierung",
+    "jobgroupname":"Verwaltungskostenentschädigung",
+    "ctrlmjobname":"vkepro",
+    "Job_Name":"provisorische Provisionen",
+    "id":"srvkepro020",
+    "BOID_Syrius":-5925,
+    "Internalname":"provProvision",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Quellensteuer",
+    "jobgroupname":"Quellensteuer SK Abrechnung",
+    "ctrlmjobname":"qstabr",
+    "Job_Name":"Sammelkonto-Abrechnung erstellen Preprocess",
+    "id":"srqstabr010",
+    "BOID_Syrius":-371,
+    "Internalname":"371",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Quellensteuer",
+    "jobgroupname":"Quellensteuer",
+    "ctrlmjobname":"qusteu",
+    "Job_Name":"Import Quellensteuer",
+    "id":"srqusteu020",
+    "BOID_Syrius":-1000030,
+    "Internalname":"1000030",
+    "SST_ID":"S-3270"
+  },
+  {
+    "Jobnetz":"Quellensteuer",
+    "jobgroupname":"Quellensteuer",
+    "ctrlmjobname":"qusteu",
+    "Job_Name":"Quellensteuer nachfahren",
+    "id":"srqusteu030",
+    "BOID_Syrius":-1001100,
+    "Internalname":"1001100",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"Bankdaten Import",
+    "ctrlmjobname":"banimp",
+    "Job_Name":"Import Banken Preprocess",
+    "id":"srbanimp020",
+    "BOID_Syrius":-1000340,
+    "Internalname":"1000340",
+    "SST_ID":"S-3240"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"Krankenversicherer Import",
+    "ctrlmjobname":"kraimp",
+    "Job_Name":"Krankenversicherer Import",
+    "id":"srkraimp010",
+    "BOID_Syrius":-1005149,
+    "Internalname":"KrankenversichererImport",
+    "SST_ID":"S-3360"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"Ländertabelle Import ",
+    "ctrlmjobname":"lanimp",
+    "Job_Name":"Import Ländertabelle Preprocess",
+    "id":"srlanimp010",
+    "BOID_Syrius":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "SST_ID":"S-3260"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"Ländertabelle Import",
+    "ctrlmjobname":"lanimp",
+    "Job_Name":"Import Ländertabelle",
+    "id":"srlanimp010",
+    "BOID_Syrius":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "SST_ID":"S-3260"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"Ländertabelle Import",
+    "ctrlmjobname":"lanimp",
+    "Job_Name":"Import Ländertabelle  Archive",
+    "id":"srlanimp010",
+    "BOID_Syrius":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "SST_ID":"S-3260"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"Ländertabelle Import",
+    "ctrlmjobname":"lanimp",
+    "Job_Name":"Import Ländertabelle Postprocess",
+    "id":"srlanimp010",
+    "BOID_Syrius":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "SST_ID":"S-3260"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"OE synchronisieren",
+    "ctrlmjobname":"oesync",
+    "Job_Name":"OE Synchronisieren",
+    "id":"sroesync010",
+    "BOID_Syrius":-500037,
+    "Internalname":"OESynchroniBatch",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"OE synchronisieren",
+    "ctrlmjobname":"oesync",
+    "Job_Name":"OE Vertrag synchronisieren",
+    "id":"sroesync020",
+    "BOID_Syrius":-500096,
+    "Internalname":"OEVertragSynchronisierenBatch",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"PLZ Import Update",
+    "ctrlmjobname":"plzimp",
+    "Job_Name":"Import PLZ_P1 Update",
+    "id":"srplzimp020",
+    "BOID_Syrius":-1000370,
+    "Internalname":"1000370",
+    "SST_ID":"S-2290"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"PLZ Import Update",
+    "ctrlmjobname":"plzimp",
+    "Job_Name":"Import PLZ_P1 Update Archive",
+    "id":"arplzimp021",
+    "BOID_Syrius":-1000370,
+    "Internalname":"1000370",
+    "SST_ID":"S-2290"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"PLZ Import Update",
+    "ctrlmjobname":"plzimp",
+    "Job_Name":"Import GemeindeNr (community)",
+    "id":"srplzimp030",
+    "BOID_Syrius":-1000371,
+    "Internalname":"1000371",
+    "SST_ID":"S-2290"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"PLZ Import Update",
+    "ctrlmjobname":"plzimp",
+    "Job_Name":"Adressen prüfen (PLZ)",
+    "id":"srplzimp040",
+    "BOID_Syrius":-1001270,
+    "Internalname":"1001270",
+    "SST_ID":"S-2290"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"PLZ Import Update",
+    "ctrlmjobname":"plzimp",
+    "Job_Name":"Adressen prüfen (Gemeindenummer)",
+    "id":"srplzimp050",
+    "BOID_Syrius":-1001040,
+    "Internalname":"1001040",
+    "SST_ID":"S-2290"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR RechnungsstellerTypGruppe ab 01.01.2005",
+    "id":"srzsrimp020",
+    "BOID_Syrius":-1005013,
+    "Internalname":"1005013",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR RechnungsstellerTyp ab 01.01.2005",
+    "id":"srzsrimp030",
+    "BOID_Syrius":-1000920,
+    "Internalname":"1000920",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Kanton ab 01.01.2005",
+    "id":"srzsrimp035",
+    "BOID_Syrius":-1000990,
+    "Internalname":"1000990",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Leistungserbringer ab 01.01.2005",
+    "id":"srzsrimp040",
+    "BOID_Syrius":-1000900,
+    "Internalname":"1000900",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Leistungserbringer ab 01.01.2005 ARCHIVE",
+    "id":"arzsrimp041",
+    "BOID_Syrius":-1000900,
+    "Internalname":"1000900",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Begünstigte ab 01.01.2005",
+    "id":"srzsrimp050",
+    "BOID_Syrius":-1000940,
+    "Internalname":"1000940",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR ZahlungsAdressen ab 01.01.2005",
+    "id":"srzsrimp060",
+    "BOID_Syrius":-1000950,
+    "Internalname":"1000950",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Eigenschaften ab 01.01.2005",
+    "id":"srzsrimp070",
+    "BOID_Syrius":-1000960,
+    "Internalname":"1000960",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Angestellte ab 01.01.2005",
+    "id":"srzsrimp080",
+    "BOID_Syrius":-1000970,
+    "Internalname":"1000970",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Eigenschaften Angestellte ab 01.01.2005",
+    "id":"srzsrimp090",
+    "BOID_Syrius":-1001250,
+    "Internalname":"1001250",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Beziehungen ab 01.01.2005",
+    "id":"srzsrimp100",
+    "BOID_Syrius":-1001240,
+    "Internalname":"1001240",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Stammdaten",
+    "jobgroupname":"ZSR Import",
+    "ctrlmjobname":"zsrimp",
+    "Job_Name":"Import ZSR Datenprüfung ab 01.01.2005 Preprocess",
+    "id":"przsrimp109",
+    "BOID_Syrius":-1000980,
+    "Internalname":"",
+    "SST_ID":"S-3300"
+  },
+  {
+    "Jobnetz":"Sumex Verarbeitung",
+    "jobgroupname":"Rechnungen Import",
+    "ctrlmjobname":"recimp",
+    "Job_Name":"EClaimXMLImport PROCESS",
+    "id":"srrecimp030",
+    "BOID_Syrius":-1019030,
+    "Internalname":"-1019030",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Sumex Verarbeitung",
+    "jobgroupname":"Rechnungen Import",
+    "ctrlmjobname":"recimp",
+    "Job_Name":"E-Claim Leistungsverarbeitung",
+    "id":"srrecimp040",
+    "BOID_Syrius":-1019020,
+    "Internalname":"-1019020",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Sunet Verarbeitung",
+    "jobgroupname":"Fallmeldung Import",
+    "ctrlmjobname":"falimp",
+    "Job_Name":"Import Fallmeldungen - STEP 4 Preprocess",
+    "id":"srfalimp040",
+    "BOID_Syrius":-10102,
+    "Internalname":"-10102",
+    "SST_ID":"S-2500"
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"Rückmeldung Best. Import",
+    "ctrlmjobname":"rkbimp",
+    "Job_Name":"Versichertenkarte - Rückmeldung importieren",
+    "id":"srrkbimp020",
+    "BOID_Syrius":-1001060,
+    "Internalname":"1001060",
+    "SST_ID":"S-3130"
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"Rückmeldung Best. Import",
+    "ctrlmjobname":"rkbimp",
+    "Job_Name":"Partnerstammabgleich UPI Postprocess",
+    "id":"srrkbimp030",
+    "BOID_Syrius":-1005133,
+    "Internalname":"PartnerstammAbgleichUPI",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"Rückmeldung Deck. Import",
+    "ctrlmjobname":"rkdimp",
+    "Job_Name":"Versichertenkarte - Deckungsdaten Rückmeldungen importieren",
+    "id":"srrkdimp020",
+    "BOID_Syrius":-1005050,
+    "Internalname":"1005050",
+    "SST_ID":"S-2601"
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"VeKa Kartenbestellung",
+    "ctrlmjobname":"vekbes",
+    "Job_Name":"Versichertenkarte - Kartentrigger erstellen Preprocess",
+    "id":"srvekbes010",
+    "BOID_Syrius":-1001010,
+    "Internalname":"1001010",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"VeKa Kartenbestellung",
+    "ctrlmjobname":"vekbes",
+    "Job_Name":"Versichertenkarte - Kartendaten erstellen Preprocess",
+    "id":"srvekbes020",
+    "BOID_Syrius":-1001000,
+    "Internalname":"OfacCovercardFW",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"VeKa Kartenbestellung",
+    "ctrlmjobname":"vekbes",
+    "Job_Name":"Versichertenkarte - Kartendaten exportieren Preprocess",
+    "id":"srvekbes030",
+    "BOID_Syrius":-1001030,
+    "Internalname":"1001030",
+    "SST_ID":"S-3130"
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"VeKa Deckungsmeldung",
+    "ctrlmjobname":"vekdem",
+    "Job_Name":"Versichertenkarte - Deckungsdaten Trigger erstellen Preprocess",
+    "id":"srvekdem010",
+    "BOID_Syrius":-1005020,
+    "Internalname":"1005020",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":"VeKa Deckungsmeldung",
+    "ctrlmjobname":"vekdem",
+    "Job_Name":"Versichertenkarte - Deckungsdaten generieren Preprocess",
+    "id":"srvekdem020",
+    "BOID_Syrius":-1005030,
+    "Internalname":"1005030",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice S",
+    "jobgroupname":"Ablaufende Sistierungen",
+    "ctrlmjobname":"ablsis",
+    "Job_Name":"Ablaufende Sistierungen auflisten",
+    "id":"srablsis010",
+    "BOID_Syrius":-500054,
+    "Internalname":"AblaufendeSistierungen",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice P",
+    "jobgroupname":"Austretende mit Ausständen",
+    "ctrlmjobname":"ausauy",
+    "Job_Name":"Austretende mit Ausständen",
+    "id":"srausauy010",
+    "BOID_Syrius":-500010,
+    "Internalname":"AustretendeMitAusstaenden",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice P",
+    "jobgroupname":"Austretende mit Ausständen",
+    "ctrlmjobname":"ausaus",
+    "Job_Name":"Austretende mit Ausständen",
+    "id":"srausauy010",
+    "BOID_Syrius":-500010,
+    "Internalname":"AustretendeMitAusstaenden",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice P",
+    "jobgroupname":"Mahnlauf Nachvers. Bestätigung",
+    "ctrlmjobname":"mahnvb",
+    "Job_Name":"Mahnlauf Nachversicherer Bestätigung",
+    "id":"srmahnvb010",
+    "BOID_Syrius":-68,
+    "Internalname":"68",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice P",
+    "jobgroupname":"Mahnlauf Nachvers.",
+    "ctrlmjobname":"mahnvs",
+    "Job_Name":"Mahnlauf Nachversicherer",
+    "id":"srmahnvs020",
+    "BOID_Syrius":-5700,
+    "Internalname":"5700",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice S",
+    "jobgroupname":"Prov. Austritt Grundvers.",
+    "ctrlmjobname":"pragru",
+    "Job_Name":"Provisorischer Austritt Grundversicherung",
+    "id":"srpragru010",
+    "BOID_Syrius":-5909,
+    "Internalname":"ProvAustritt",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice S",
+    "jobgroupname":"Steuernachweis",
+    "ctrlmjobname":"stenaw",
+    "Job_Name":"Steuernachweis Export",
+    "id":"srstenaw010",
+    "BOID_Syrius":-1005170,
+    "Internalname":"steuernachweisexport",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Vertragsservice S",
+    "jobgroupname":"Fakt Import",
+    "ctrlmjobname":"fakupo",
+    "Job_Name":"Fakt Import Kundeportal Process",
+    "id":"srfakupo010",
+    "BOID_Syrius":-500076,
+    "Internalname":"Fakt Import",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice S",
+    "jobgroupname":"Erstellen Leistungsabrechnung Regressat",
+    "ctrlmjobname":"laregr",
+    "Job_Name":"Aufbereitung LA Blaco ESR (Regressat)",
+    "id":"srlaregr010",
+    "BOID_Syrius":-10,
+    "Internalname":"Leistungsabrechnung Regressat",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice S",
+    "jobgroupname":"Vertragsprod. mit Kritauspräg.",
+    "ctrlmjobname":"vprkra",
+    "Job_Name":"Vertragsprodukte mit Kriteriumausprägung",
+    "id":"srvprkra010",
+    "BOID_Syrius":-5930,
+    "Internalname":"5930",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Auswertung",
+    "jobgroupname":"Auswertung Wegzug ins Ausland ",
+    "ctrlmjobname":"wegaus",
+    "Job_Name":"Abfrage durchführen",
+    "id":"srwegaus010",
+    "BOID_Syrius":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Vertragsservice U",
+    "jobgroupname":"Einkommensnachweis",
+    "ctrlmjobname":"einnaw",
+    "Job_Name":"Einkommensnachweise exportieren",
+    "id":"sreinnaw010",
+    "BOID_Syrius":-1005183,
+    "Internalname":"einkommensnachweisexport",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Zahlungen Export",
+    "jobgroupname":"Zahlungen Export inbound",
+    "ctrlmjobname":"zaiexp",
+    "Job_Name":"Zahlungsdaten erstellen",
+    "id":"srzaiexp020",
+    "BOID_Syrius":-43,
+    "Internalname":"43",
+    "SST_ID":"S-3400"
+  },
+  {
+    "Jobnetz":"Zahlungen Export",
+    "jobgroupname":"Zahlungen Export outbound",
+    "ctrlmjobname":"zaoexp",
+    "Job_Name":"Zahlungsdaten erstellen",
+    "id":"srzaoexp020",
+    "BOID_Syrius":-43,
+    "Internalname":"43",
+    "SST_ID":"S-3400"
+  },
+  {
+    "Jobnetz":"Zahlungen Import",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"ESR/ASR/LSV+ importieren",
+    "id":"srzahimp020",
+    "BOID_Syrius":-1000361,
+    "Internalname":"1000361",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"ESR/ASR/LSV+ importieren",
+    "id":"srzahimp030",
+    "BOID_Syrius":-1000361,
+    "Internalname":"1000361",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Zahlungen Import",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"ESR/ASR/LSV+ importieren",
+    "id":"srzahimp040",
+    "BOID_Syrius":-1000361,
+    "Internalname":"1000361",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Zahlungen Import",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"ESR/ASR/LSV+ importieren",
+    "id":"srzahimp050",
+    "BOID_Syrius":-1000361,
+    "Internalname":"1000361",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Zahlungen Import",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"ESR/ASR/LSV+ importieren",
+    "id":"srzahimp060",
+    "BOID_Syrius":-1000361,
+    "Internalname":"1000361",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Zahlungen Import",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"ESR/ASR/LSV+ importieren",
+    "id":"srzahimp070",
+    "BOID_Syrius":-1000361,
+    "Internalname":"1000361",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Zahlungen Import",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"Zahlungen für Tagesjournal auflisten ",
+    "id":"srzahimp090",
+    "BOID_Syrius":-403,
+    "Internalname":"403",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Zahlungen Import",
+    "jobgroupname":"Zahlungen Import",
+    "ctrlmjobname":"zahimp",
+    "Job_Name":"Zahlungen für Tagesjournal auflisten ",
+    "id":"srzahimp100",
+    "BOID_Syrius":-403,
+    "Internalname":"403",
+    "SST_ID":"S-3401"
+  },
+  {
+    "Jobnetz":"Leistungsabrechnung",
+    "jobgroupname":"Leistungsabrechnung Lohnausfall",
+    "ctrlmjobname":"lstabu",
+    "Job_Name":"Leistungsabrechnung",
+    "id":"srlstabu010",
+    "BOID_Syrius":-10,
+    "Internalname":"10",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Leistungsabrechnung",
+    "jobgroupname":"Leistungsabrechnung Lohnausfall",
+    "ctrlmjobname":"lstabu",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"srlstabu020",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"KV Anonym Tarifanpassung",
+    "ctrlmjobname":"kolend",
+    "Job_Name":"Kv Anonym Tarifanpassung",
+    "id":"srkolend010",
+    "BOID_Syrius":-10803,
+    "Internalname":"",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Leistungsabrechnung",
+    "jobgroupname":"Leistungsabrechnung Krankenversicherung",
+    "ctrlmjobname":"lstabm",
+    "Job_Name":"Leistungsabrechnung",
+    "id":"srlstabm010",
+    "BOID_Syrius":-10,
+    "Internalname":"10",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Leistungsabrechnung",
+    "jobgroupname":"Leistungsabrechnung Krankenversicherung",
+    "ctrlmjobname":"lstabm",
+    "Job_Name":"OPs und Sammel-OPs drucken",
+    "id":"srlstabm020",
+    "BOID_Syrius":-111,
+    "Internalname":"111",
+    "SST_ID":"S-2680"
+  },
+  {
+    "Jobnetz":"Jahresendverarbeitung (JEV)",
+    "jobgroupname":"KV Anonym validieren",
+    "ctrlmjobname":"kvaval",
+    "Job_Name":"KV Anonym validieren",
+    "id":"srkvaval010",
+    "BOID_Syrius":-125,
+    "Internalname":"-125",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"eBilling",
+    "jobgroupname":"Ebilling An-/Abmeldeprozess Post Yellowbill",
+    "ctrlmjobname":"yelimp",
+    "Job_Name":"Yellowbill-Datei importieren Preprozess",
+    "id":"sryelimp020",
+    "BOID_Syrius":-1005172,
+    "Internalname":"1005172",
+    "SST_ID":"S-3670"
+  },
+  {
+    "Jobnetz":"eBilling",
+    "jobgroupname":"S-3671 Rueckweisung Rechnung von Post Yellowbill",
+    "ctrlmjobname":"yelruk",
+    "Job_Name":"Rueckweisung Rechnung von Yellowbill",
+    "id":"sryelruk020",
+    "BOID_Syrius":-1005204,
+    "Internalname":"SYR_Batch_YellowbillXMLImport",
+    "SST_ID":"S-3671"
+  },
+  {
+    "Jobnetz":"eBilling",
+    "jobgroupname":"S-3670 Ebilling Datenimport An/Ab Meldungen six-Paynet",
+    "ctrlmjobname":"payimp",
+    "Job_Name":"Datenimport fuer An/Ab Meldungen Paynet Preprocess",
+    "id":"srpayimp020",
+    "BOID_Syrius":-1005179,
+    "Internalname":"PaynetXmlImport",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"eBilling",
+    "jobgroupname":"S-3670  Datenexport Ebilling An/Ab Meldungen fuer PayneDatenexport fuer An/Ab Meldungen Paynet Preprocesst",
+    "ctrlmjobname":"payexp",
+    "Job_Name":"Yellowbill-Datei importieren Preprozess",
+    "id":"srpayexp010",
+    "BOID_Syrius":-1005180,
+    "Internalname":"PaynetXmlExport",
+    "SST_ID":""
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":" AHV-Bezugsrecord erstellen",
+    "ctrlmjobname":"ahvn13",
+    "Job_Name":"Partnerstammabgleich UPI fuer Mandaten 00509 Preprocess",
+    "id":"srahvn13030",
+    "BOID_Syrius":-1005133,
+    "Internalname":"",
+    "SST_ID":"S-3650"
+  },
+  {
+    "Jobnetz":"Versichertenkarte",
+    "jobgroupname":" AHV-Bezugsrecord erstellen",
+    "ctrlmjobname":"ahvn13",
+    "Job_Name":"Partnerstammabgleich UPI fuer Mandaten 00057 Preprocess",
+    "id":"srahvn13040",
+    "BOID_Syrius":-1005133,
+    "Internalname":"",
+    "SST_ID":"S-3650"
+  },
+  {
+    "Jobnetz":"Buchhaltung allgemein",
+    "jobgroupname":"OP-Druck der Ratenvereinbarungen",
+    "ctrlmjobname":"soprva",
+    "Job_Name":"OP-Druck der Ratenvereinbarungen Process",
+    "id":"srsoprva020",
+    "BOID_Syrius":-111,
+    "Internalname":"",
+    "SST_ID":""
+  }
+]

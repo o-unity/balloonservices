@@ -1,0 +1,4970 @@
+[
+  {
+    "id":1,
+    "BOID":-10,
+    "Internalname":"10",
+    "jobgroupname":"Leistungsabrechnung",
+    "ctrlmjobname":"lstabu",
+    "jobname":"srlstabu010"
+  },
+  {
+    "id":2,
+    "BOID":-10,
+    "Internalname":"10",
+    "jobgroupname":"Leistungsabrechnung",
+    "ctrlmjobname":"lstabp",
+    "jobname":"srlstabp010"
+  },
+  {
+    "id":3,
+    "BOID":-10,
+    "Internalname":"10",
+    "jobgroupname":"Leistungsabrechnung",
+    "ctrlmjobname":"lstabm",
+    "jobname":"srlstabm010"
+  },
+  {
+    "id":4,
+    "BOID":-10,
+    "Internalname":"10",
+    "jobgroupname":"Leistungsabrechnung",
+    "ctrlmjobname":"laregr",
+    "jobname":"srlaregr010"
+  },
+  {
+    "id":5,
+    "BOID":-10000,
+    "Internalname":"10000",
+    "jobgroupname":"Lohndeklaration erstellen",
+    "ctrlmjobname":"lohdek",
+    "jobname":"srlohdek010"
+  },
+  {
+    "id":6,
+    "BOID":-1000000,
+    "Internalname":"1000000",
+    "jobgroupname":"Import KSK Lebens-Altersgruppe",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp040"
+  },
+  {
+    "id":7,
+    "BOID":-1000001,
+    "Internalname":"1000001",
+    "jobgroupname":"Import KSK Sex Code",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp070"
+  },
+  {
+    "id":8,
+    "BOID":-1000003,
+    "Internalname":"1000003",
+    "jobgroupname":"Import KSK Unfallrisiko",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp080"
+  },
+  {
+    "id":9,
+    "BOID":-1000004,
+    "Internalname":"1000004",
+    "jobgroupname":"Import KSK Franchise",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp020"
+  },
+  {
+    "id":10,
+    "BOID":-1000005,
+    "Internalname":"1000005",
+    "jobgroupname":"Import KSK Schadenart",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp060"
+  },
+  {
+    "id":11,
+    "BOID":-1000006,
+    "Internalname":"1000006",
+    "jobgroupname":"Import KSK VVG Produkt Typen",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp0100"
+  },
+  {
+    "id":12,
+    "BOID":-1000007,
+    "Internalname":"1000007",
+    "jobgroupname":"Import KSK Deckungsart",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp010"
+  },
+  {
+    "id":13,
+    "BOID":-1000008,
+    "Internalname":"1000008",
+    "jobgroupname":"Import KSK Versicherungsmodel",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp090"
+  },
+  {
+    "id":14,
+    "BOID":-1000009,
+    "Internalname":"1000009",
+    "jobgroupname":"Versichertengruppen-Record OKP",
+    "ctrlmjobname":"dpjexp",
+    "jobname":"srdpjexp010"
+  },
+  {
+    "id":15,
+    "BOID":-1000009,
+    "Internalname":"1000009",
+    "jobgroupname":"Versichertengruppen-Record OKP",
+    "ctrlmjobname":"dpjexp",
+    "jobname":"srdpjexp030"
+  },
+  {
+    "id":16,
+    "BOID":-1000009,
+    "Internalname":"1000009",
+    "jobgroupname":"Versichertengruppen-Record OKP",
+    "ctrlmjobname":"dpmexp",
+    "jobname":"srdpmexp010"
+  },
+  {
+    "id":17,
+    "BOID":-1000009,
+    "Internalname":"1000009",
+    "jobgroupname":"Versichertengruppen-Record OKP",
+    "ctrlmjobname":"dpmexp",
+    "jobname":"srdpmexp030"
+  },
+  {
+    "id":18,
+    "BOID":-1000010,
+    "Internalname":"1000010",
+    "jobgroupname":"Leistungs-Record OKP/VVG",
+    "ctrlmjobname":"dpjexp",
+    "jobname":"srdpjexp020"
+  },
+  {
+    "id":19,
+    "BOID":-1000010,
+    "Internalname":"1000010",
+    "jobgroupname":"Leistungs-Record OKP/VVG",
+    "ctrlmjobname":"dpmexp",
+    "jobname":"srdpmexp040"
+  },
+  {
+    "id":20,
+    "BOID":-1000010,
+    "Internalname":"1000010",
+    "jobgroupname":"Leistungs-Record OKP/VVG",
+    "ctrlmjobname":"dpjexp",
+    "jobname":"srdpjexp040"
+  },
+  {
+    "id":21,
+    "BOID":-1000010,
+    "Internalname":"1000010",
+    "jobgroupname":"Leistungs-Record OKP/VVG",
+    "ctrlmjobname":"dpmexp",
+    "jobname":"srdpmexp020"
+  },
+  {
+    "id":22,
+    "BOID":-1000011,
+    "Internalname":"1000011",
+    "jobgroupname":"Import KSK Leistungsart",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp050"
+  },
+  {
+    "id":23,
+    "BOID":-1000013,
+    "Internalname":"1000013",
+    "jobgroupname":"Import KSK ZIL",
+    "ctrlmjobname":"kskimp",
+    "jobname":"srkskimp0110"
+  },
+  {
+    "id":24,
+    "BOID":-1000020,
+    "Internalname":"1000020",
+    "jobgroupname":"UNIMEDES Deckungsexport",
+    "ctrlmjobname":"rvkexp",
+    "jobname":"srrvkexp011"
+  },
+  {
+    "id":25,
+    "BOID":-1000030,
+    "Internalname":"1000030",
+    "jobgroupname":"Import Quellensteuer",
+    "ctrlmjobname":"qusteu",
+    "jobname":"srqusteu020"
+  },
+  {
+    "id":26,
+    "BOID":-1000040,
+    "Internalname":"1000040",
+    "jobgroupname":"UNIMEDES Leistungsexport",
+    "ctrlmjobname":"rvkexp",
+    "jobname":"srrvkexp021"
+  },
+  {
+    "id":27,
+    "BOID":-1000060,
+    "Internalname":"1000060",
+    "jobgroupname":"UNIMEDES Versichertenexport",
+    "ctrlmjobname":"rvkexp",
+    "jobname":"srrvkexp031"
+  },
+  {
+    "id":28,
+    "BOID":-10001,
+    "Internalname":"10001",
+    "jobgroupname":"Lohndeklaration mahnen",
+    "ctrlmjobname":"lohdek",
+    "jobname":"srlohdek020"
+  },
+  {
+    "id":29,
+    "BOID":-1000170,
+    "Internalname":"1000170",
+    "jobgroupname":"OFAC Agentur",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":30,
+    "BOID":-1000180,
+    "Internalname":"1000180",
+    "jobgroupname":"Zahlungsbordereau exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":31,
+    "BOID":-10002,
+    "Internalname":"10002",
+    "jobgroupname":"Lohndeklaration / -mahnung drucken",
+    "ctrlmjobname":"lohdek",
+    "jobname":"srlohdek030"
+  },
+  {
+    "id":32,
+    "BOID":-1000270,
+    "Internalname":"1000270",
+    "jobgroupname":"IPV-Konten importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":33,
+    "BOID":-1000275,
+    "Internalname":"1000275",
+    "jobgroupname":"IPV-Beiträge generieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":34,
+    "BOID":-1000276,
+    "Internalname":"1000276",
+    "jobgroupname":"IPV-Gruppendefinition auf IPV-Konten übernehmen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":35,
+    "BOID":-1000290,
+    "Internalname":"1000290",
+    "jobgroupname":"IPV-Konten exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":36,
+    "BOID":-10003,
+    "Internalname":"10003",
+    "jobgroupname":"Leistungen Validieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":37,
+    "BOID":-1000300,
+    "Internalname":"1000300",
+    "jobgroupname":"Analysenliste (Attribute / T2P)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":38,
+    "BOID":-1000301,
+    "Internalname":"1000301",
+    "jobgroupname":"Analysenliste (Struktur / T1S)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":39,
+    "BOID":-1000321,
+    "Internalname":"1000321",
+    "jobgroupname":"Statistik Asylbewerber-Kollektivverträge",
+    "ctrlmjobname":"ausasb",
+    "jobname":"srausasb011"
+  },
+  {
+    "id":40,
+    "BOID":-1000321,
+    "Internalname":"1000321",
+    "jobgroupname":"Statistik Asylbewerber-Kollektivverträge",
+    "ctrlmjobname":"ausasb",
+    "jobname":"prausasb010"
+  },
+  {
+    "id":41,
+    "BOID":-1000321,
+    "Internalname":"1000321",
+    "jobgroupname":"Statistik Asylbewerber-Kollektivverträge",
+    "ctrlmjobname":"ausasb",
+    "jobname":"poausasb012"
+  },
+  {
+    "id":42,
+    "BOID":-1000330,
+    "Internalname":"1000330",
+    "jobgroupname":"IPV-Konten laufendes Protokoll exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":43,
+    "BOID":-1000340,
+    "Internalname":"1000340",
+    "jobgroupname":"Import Banken",
+    "ctrlmjobname":"banimp",
+    "jobname":"srbanimp020"
+  },
+  {
+    "id":44,
+    "BOID":-1000361,
+    "Internalname":"1000361",
+    "jobgroupname":"Zahlungsdaten importieren",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp030"
+  },
+  {
+    "id":45,
+    "BOID":-1000361,
+    "Internalname":"1000361",
+    "jobgroupname":"Zahlungsdaten importieren",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp060"
+  },
+  {
+    "id":46,
+    "BOID":-1000361,
+    "Internalname":"1000361",
+    "jobgroupname":"Zahlungsdaten importieren",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp070"
+  },
+  {
+    "id":47,
+    "BOID":-1000361,
+    "Internalname":"1000361",
+    "jobgroupname":"Zahlungsdaten importieren",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp040"
+  },
+  {
+    "id":48,
+    "BOID":-1000361,
+    "Internalname":"1000361",
+    "jobgroupname":"Zahlungsdaten importieren",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp050"
+  },
+  {
+    "id":49,
+    "BOID":-1000361,
+    "Internalname":"1000361",
+    "jobgroupname":"Zahlungsdaten importieren",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp020"
+  },
+  {
+    "id":50,
+    "BOID":-10005,
+    "Internalname":"10005",
+    "jobgroupname":"Vertragsprodukte löschen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":51,
+    "BOID":-1000810,
+    "Internalname":"1000810",
+    "jobgroupname":"IPV-Konten Bern TA03 exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":52,
+    "BOID":-1000820,
+    "Internalname":"1000820",
+    "jobgroupname":"IPV-Konten Bern TA04 exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":53,
+    "BOID":-1000830,
+    "Internalname":"1000830",
+    "jobgroupname":"IPV-Konten TA01 exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":54,
+    "BOID":-1000840,
+    "Internalname":"1000840",
+    "jobgroupname":"IPV-Konten TA11 importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":55,
+    "BOID":-1000900,
+    "Internalname":"1000900",
+    "jobgroupname":"Import ZSR Leistungserbringer ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"arzsrimp041"
+  },
+  {
+    "id":56,
+    "BOID":-1000900,
+    "Internalname":"1000900",
+    "jobgroupname":"Import ZSR Leistungserbringer ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp040"
+  },
+  {
+    "id":57,
+    "BOID":-1000920,
+    "Internalname":"1000920",
+    "jobgroupname":"Import ZSR RechnungsstellerTyp ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp030"
+  },
+  {
+    "id":58,
+    "BOID":-1000940,
+    "Internalname":"1000940",
+    "jobgroupname":"Import ZSR Begünstigte ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp050"
+  },
+  {
+    "id":59,
+    "BOID":-1000950,
+    "Internalname":"1000950",
+    "jobgroupname":"Import ZSR ZahlungsAdressen ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp060"
+  },
+  {
+    "id":60,
+    "BOID":-1000960,
+    "Internalname":"1000960",
+    "jobgroupname":"Import ZSR Eigenschaften ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp070"
+  },
+  {
+    "id":61,
+    "BOID":-1000970,
+    "Internalname":"1000970",
+    "jobgroupname":"Import ZSR Angestellte ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp080"
+  },
+  {
+    "id":62,
+    "BOID":-1000980,
+    "Internalname":"1000980",
+    "jobgroupname":"Import ZSR Datenprüfung ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"przsrimp109"
+  },
+  {
+    "id":63,
+    "BOID":-1000990,
+    "Internalname":"1000990",
+    "jobgroupname":"Import ZSR Kanton ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp035"
+  },
+  {
+    "id":64,
+    "BOID":-1001000,
+    "Internalname":"OfacCovercardFW",
+    "jobgroupname":"Versichertenkarte - Kartendaten erstellen",
+    "ctrlmjobname":"vekbes",
+    "jobname":"srvekbes020"
+  },
+  {
+    "id":65,
+    "BOID":-1001010,
+    "Internalname":"1001010",
+    "jobgroupname":"Versichertenkarte - Kartentrigger erstellen",
+    "ctrlmjobname":"vekbes",
+    "jobname":"srvekbes010"
+  },
+  {
+    "id":66,
+    "BOID":-1001030,
+    "Internalname":"1001030",
+    "jobgroupname":"Versichertenkarte - Kartendaten exportieren",
+    "ctrlmjobname":"vekbes",
+    "jobname":"srvekbes030"
+  },
+  {
+    "id":67,
+    "BOID":-1001040,
+    "Internalname":"1001040",
+    "jobgroupname":"Adressen prüfen (Gemeindenummer)",
+    "ctrlmjobname":"plzimp",
+    "jobname":"srplzimp050"
+  },
+  {
+    "id":68,
+    "BOID":-1001060,
+    "Internalname":"1001060",
+    "jobgroupname":"Versichertenkarte - Rückmeldung importieren",
+    "ctrlmjobname":"rkbimp",
+    "jobname":"srrkbimp020"
+  },
+  {
+    "id":69,
+    "BOID":-1001070,
+    "Internalname":"1001070",
+    "jobgroupname":"IPV-Konten für Jahreswechsel kopieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":70,
+    "BOID":-1001100,
+    "Internalname":"1001100",
+    "jobgroupname":"Quellensteuer nachfahren",
+    "ctrlmjobname":"qusteu",
+    "jobname":"srqusteu030"
+  },
+  {
+    "id":71,
+    "BOID":-1001200,
+    "Internalname":"1001200",
+    "jobgroupname":"EV in andere OE umteilen CH",
+    "ctrlmjobname":"parumt",
+    "jobname":"srparumt020"
+  },
+  {
+    "id":72,
+    "BOID":-1001220,
+    "Internalname":"1001220",
+    "jobgroupname":"CIP Betreibungen exportieren",
+    "ctrlmjobname":"syrcip",
+    "jobname":"srsyrcip019"
+  },
+  {
+    "id":73,
+    "BOID":-1001240,
+    "Internalname":"1001240",
+    "jobgroupname":"Import ZSR Beziehungen ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp100"
+  },
+  {
+    "id":74,
+    "BOID":-1001250,
+    "Internalname":"1001250",
+    "jobgroupname":"Import ZSR Eigenschaften Angestellte ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp090"
+  },
+  {
+    "id":75,
+    "BOID":-1001251,
+    "Internalname":"1001251",
+    "jobgroupname":"ESR-Vorauszahlung Mahnsperren setzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":76,
+    "BOID":-1001270,
+    "Internalname":"1001270",
+    "jobgroupname":"Adressen prüfen (PLZ)",
+    "ctrlmjobname":"plzimp",
+    "jobname":"srplzimp040"
+  },
+  {
+    "id":77,
+    "BOID":-1002090,
+    "Internalname":"-1002090",
+    "jobgroupname":"EBPP-Administrationsmeldungen importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":78,
+    "BOID":-1002091,
+    "Internalname":"-1002091",
+    "jobgroupname":"EBPP-Administrationsmeldungen exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":79,
+    "BOID":-1005001,
+    "Internalname":"IPVK. m. m. B.",
+    "jobgroupname":"IPV-Beitragsänderungen auflisten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":80,
+    "BOID":-1005002,
+    "Internalname":"1005002",
+    "jobgroupname":"ASR mit überschrittener Fälligkeit auflisten",
+    "ctrlmjobname":"sopaus",
+    "jobname":"srsopaus040"
+  },
+  {
+    "id":81,
+    "BOID":-1005005,
+    "Internalname":"IPV_KONTO_UEBERSCH.",
+    "jobgroupname":"IPV-Überschneidungen auflisten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":82,
+    "BOID":-1005011,
+    "Internalname":"1005011",
+    "jobgroupname":"NOGAInfo Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":83,
+    "BOID":-1005012,
+    "Internalname":"1005012",
+    "jobgroupname":"NOGAInfo Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":84,
+    "BOID":-1005013,
+    "Internalname":"1005013",
+    "jobgroupname":"Import ZSR RechnungsstellerTypGruppe ab 01.01.2005",
+    "ctrlmjobname":"zsrimp",
+    "jobname":"srzsrimp020"
+  },
+  {
+    "id":85,
+    "BOID":-1005020,
+    "Internalname":"1005020",
+    "jobgroupname":"Versichertenkarte - Deckungsdaten Trigger erstellen",
+    "ctrlmjobname":"vekdem",
+    "jobname":"srvekdem010"
+  },
+  {
+    "id":86,
+    "BOID":-1005030,
+    "Internalname":"1005030",
+    "jobgroupname":"Versichertenkarte - Deckungsdaten generieren",
+    "ctrlmjobname":"vekdem",
+    "jobname":"srvekdem020"
+  },
+  {
+    "id":87,
+    "BOID":-1005050,
+    "Internalname":"1005050",
+    "jobgroupname":"Versichertenkarte - Deckungsdaten Rückmeldungen importieren",
+    "ctrlmjobname":"rkdimp",
+    "jobname":"srrkdimp020"
+  },
+  {
+    "id":88,
+    "BOID":-1005070,
+    "Internalname":"1005070",
+    "jobgroupname":"IPV-Abrechnung Tessin exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":89,
+    "BOID":-1005081,
+    "Internalname":"1005081",
+    "jobgroupname":"Import Medgatedaten",
+    "ctrlmjobname":"medimp",
+    "jobname":"srmedimp020"
+  },
+  {
+    "id":90,
+    "BOID":-1005097,
+    "Internalname":"1005097",
+    "jobgroupname":"SSUV RA3 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":91,
+    "BOID":-1005102,
+    "Internalname":"1005102",
+    "jobgroupname":"SSUV RA3/RA80 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":92,
+    "BOID":-1005105,
+    "Internalname":"1005105",
+    "jobgroupname":"SSUV RA3/RA80 Stichprobe",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":93,
+    "BOID":-1005106,
+    "Internalname":"1005106",
+    "jobgroupname":"SSUV RA3/RA80 Berufskrankheit",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":94,
+    "BOID":-1005107,
+    "Internalname":"1005107",
+    "jobgroupname":"SSUV RA3/RA80 Rentenfall",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":95,
+    "BOID":-1005109,
+    "Internalname":"1005109",
+    "jobgroupname":"Risikonummer auf KV ersetzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":96,
+    "BOID":-1005110,
+    "Internalname":"1005110",
+    "jobgroupname":"Risikonummern importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":97,
+    "BOID":-1005111,
+    "Internalname":"1005111",
+    "jobgroupname":"Risikonummern exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":98,
+    "BOID":-1005117,
+    "Internalname":"-1005117",
+    "jobgroupname":"IPV- und EL-Überschneidungen auflisten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":99,
+    "BOID":-1005119,
+    "Internalname":"-1005119",
+    "jobgroupname":"Sanktionsstufe anpassen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":100,
+    "BOID":-1005121,
+    "Internalname":"EXPORT_SANACARE_LST_DATEN",
+    "jobgroupname":"Export Sanacare Leistungsdaten",
+    "ctrlmjobname":"sacexp",
+    "jobname":"srsacexp020"
+  },
+  {
+    "id":101,
+    "BOID":-1005123,
+    "Internalname":"1005123",
+    "jobgroupname":"Saldonachweis: ausstehende/verfallene ASR ermitteln",
+    "ctrlmjobname":"ausmev",
+    "jobname":"srausmev020"
+  },
+  {
+    "id":102,
+    "BOID":-1005123,
+    "Internalname":"1005123",
+    "jobgroupname":"Saldonachweis: ausstehende/verfallene ASR ermitteln",
+    "ctrlmjobname":"ausjab",
+    "jobname":"srausjab020"
+  },
+  {
+    "id":103,
+    "BOID":-1005126,
+    "Internalname":"-1005126",
+    "jobgroupname":"Tarmed Tarif Importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":104,
+    "BOID":-1005127,
+    "Internalname":"1005127",
+    "jobgroupname":"Versichertenkarte - Vollbestand auslösen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":105,
+    "BOID":-1005129,
+    "Internalname":"SSUV1A",
+    "jobgroupname":"SSUV/UVG RA1 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":106,
+    "BOID":-1005130,
+    "Internalname":"-1005130",
+    "jobgroupname":"GalDataImport",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":107,
+    "BOID":-1005131,
+    "Internalname":"1005131",
+    "jobgroupname":"SSUV RA1 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":108,
+    "BOID":-1005132,
+    "Internalname":"-1005132",
+    "jobgroupname":"FormatSImport",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":109,
+    "BOID":-1005133,
+    "Internalname":"PartnerstammAbgleichUPI",
+    "jobgroupname":"Partnerstammabgleich UPI",
+    "ctrlmjobname":"rkbimp",
+    "jobname":"srrkbimp030"
+  },
+  {
+    "id":110,
+    "BOID":-1005133,
+    "Internalname":"PartnerstammAbgleichUPI",
+    "jobgroupname":"Partnerstammabgleich UPI",
+    "ctrlmjobname":"ahvn13",
+    "jobname":"srahvn13040"
+  },
+  {
+    "id":111,
+    "BOID":-1005133,
+    "Internalname":"PartnerstammAbgleichUPI",
+    "jobgroupname":"Partnerstammabgleich UPI",
+    "ctrlmjobname":"ahvn13",
+    "jobname":"srahvn13030"
+  },
+  {
+    "id":112,
+    "BOID":-1005134,
+    "Internalname":"1005134",
+    "jobgroupname":"SSUV/UVG RA4 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":113,
+    "BOID":-1005135,
+    "Internalname":"1005135",
+    "jobgroupname":"SSUV/UVG RA4 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":114,
+    "BOID":-1005136,
+    "Internalname":"1005136",
+    "jobgroupname":"SSUV/UVG Kontrolle Lohnsumme",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":115,
+    "BOID":-1005137,
+    "Internalname":"IPVKontoMigBatch",
+    "jobgroupname":"Migration IPV-Konto Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":116,
+    "BOID":-1005139,
+    "Internalname":"-1005139",
+    "jobgroupname":"MediFrame2Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":117,
+    "BOID":-1005140,
+    "Internalname":"CIPImport",
+    "jobgroupname":"CIP Betreibungsänderungen importieren",
+    "ctrlmjobname":"cipsyr",
+    "jobname":"prcipsyr029"
+  },
+  {
+    "id":118,
+    "BOID":-1005141,
+    "Internalname":"AVM_COMPLIANCEPRUEFUNG",
+    "jobgroupname":"AVM Complianceprüfung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":119,
+    "BOID":-1005143,
+    "Internalname":"MedgateKundendatenExportBatch",
+    "jobgroupname":"MedgateKundendatenExportBatch",
+    "ctrlmjobname":"medexp",
+    "jobname":"srmedexp010"
+  },
+  {
+    "id":120,
+    "BOID":-1005144,
+    "Internalname":"-1005144",
+    "jobgroupname":"MediFrame2TarifVerarbeitung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":121,
+    "BOID":-1005149,
+    "Internalname":"KrankenversichererImport",
+    "jobgroupname":"Krankenversicherer Import",
+    "ctrlmjobname":"kraimp",
+    "jobname":"srkraimp010"
+  },
+  {
+    "id":122,
+    "BOID":-1005150,
+    "Internalname":"-1005150",
+    "jobgroupname":"Zahlungsadressen Migration nach IBAN",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":123,
+    "BOID":-1005151,
+    "Internalname":"ZSRQualiUpdate",
+    "jobgroupname":"ZSR-Quali-Update",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":124,
+    "BOID":-1005152,
+    "Internalname":"ArbeitslisteAVMSanktionErst",
+    "jobgroupname":"Arbeitsliste für Sanktionen erstellen.",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":125,
+    "BOID":-1005153,
+    "Internalname":"AVMVerstoesseImport",
+    "jobgroupname":"Import von AVM Verstoessen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":126,
+    "BOID":-1005155,
+    "Internalname":"-1005155",
+    "jobgroupname":"SSUV RA10/RA30 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":127,
+    "BOID":-1005156,
+    "Internalname":"1005156",
+    "jobgroupname":"SSUV RA10/RA30 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":128,
+    "BOID":-1005157,
+    "Internalname":"VersichertenkarteDeckungsdatenReExport",
+    "jobgroupname":"Versichertenkarte - Deckungsdaten Re-Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":129,
+    "BOID":-1005158,
+    "Internalname":"SSUV_RA80_Export",
+    "jobgroupname":"SSUV RA80 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":130,
+    "BOID":-1005159,
+    "Internalname":"SSUV_RA40_Datenabzug",
+    "jobgroupname":"SSUV RA40 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":131,
+    "BOID":-1005160,
+    "Internalname":"SSUV_RA40_Export",
+    "jobgroupname":"SSUV RA40 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":132,
+    "BOID":-1005161,
+    "Internalname":"1005161",
+    "jobgroupname":"SSUV RA50 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":133,
+    "BOID":-1005162,
+    "Internalname":"SSUV_RA50_Export",
+    "jobgroupname":"SSUV RA50 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":134,
+    "BOID":-1005163,
+    "Internalname":"MigQualiConBatch",
+    "jobgroupname":"MigQualiConBatch - Beendet QualiConBOs von nicht aktiven Leistungserbringern",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":135,
+    "BOID":-1005164,
+    "Internalname":"SSUV_RA90_Datenabzug",
+    "jobgroupname":"SSUV RA90/95 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":136,
+    "BOID":-1005165,
+    "Internalname":"SSUV_RA90_Export",
+    "jobgroupname":"SSUV RA90 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":137,
+    "BOID":-1005166,
+    "Internalname":"SSUV_RA51_Export",
+    "jobgroupname":"SSUV RA51 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":138,
+    "BOID":-1005167,
+    "Internalname":"SSUV_RA51_Datenabzug",
+    "jobgroupname":"SSUV RA51 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":139,
+    "BOID":-1005168,
+    "Internalname":"SSUV_RA45_Export",
+    "jobgroupname":"SSUV RA45 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":140,
+    "BOID":-1005169,
+    "Internalname":"SSUV_RA45_Datenabzug",
+    "jobgroupname":"SSUV RA45 Datenabzug",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":141,
+    "BOID":-1005170,
+    "Internalname":"steuernachweisexport",
+    "jobgroupname":"Steuernachweis Export",
+    "ctrlmjobname":"stenaw",
+    "jobname":"srstenaw010"
+  },
+  {
+    "id":142,
+    "BOID":-1005171,
+    "Internalname":"EXP_SANACARE_BESTAND",
+    "jobgroupname":"Export SanaCare Bestandesdaten",
+    "ctrlmjobname":"sacexp",
+    "jobname":"srsacexp010"
+  },
+  {
+    "id":143,
+    "BOID":-1005172,
+    "Internalname":"1005172",
+    "jobgroupname":"Yellowbill-Datei importieren",
+    "ctrlmjobname":"yelimp",
+    "jobname":"sryelimp020"
+  },
+  {
+    "id":144,
+    "BOID":-1005173,
+    "Internalname":"IVVerfuegungMigBatch",
+    "jobgroupname":"Migration IV-Verfügung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":145,
+    "BOID":-1005177,
+    "Internalname":"ImportSpitaltage",
+    "jobgroupname":"Import Spitaltage",
+    "ctrlmjobname":"zemimp",
+    "jobname":"srzemimp030"
+  },
+  {
+    "id":146,
+    "BOID":-1005178,
+    "Internalname":"ExportSpitaltage",
+    "jobgroupname":"Export Spitaltage",
+    "ctrlmjobname":"zemexp",
+    "jobname":"srzemexp010"
+  },
+  {
+    "id":147,
+    "BOID":-1005179,
+    "Internalname":"PaynetXmlImport",
+    "jobgroupname":"Paynet XML Import",
+    "ctrlmjobname":"payimp",
+    "jobname":"srpayimp020"
+  },
+  {
+    "id":148,
+    "BOID":-1005180,
+    "Internalname":"PaynetXmlExport",
+    "jobgroupname":"Paynet XML Export",
+    "ctrlmjobname":"payexp",
+    "jobname":"srpayexp010"
+  },
+  {
+    "id":149,
+    "BOID":-1005183,
+    "Internalname":"einkommensnachweisexport",
+    "jobgroupname":"Einkommensnachweise exportieren",
+    "ctrlmjobname":"einnaw",
+    "jobname":"sreinnaw010"
+  },
+  {
+    "id":150,
+    "BOID":-1005184,
+    "Internalname":"TGAbrGrosskundenExport",
+    "jobgroupname":"Taggeld-Abrechnungsdaten für Grosskunden exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":151,
+    "BOID":-1005185,
+    "Internalname":"pvmeldung",
+    "jobgroupname":"PV-Meldungen verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":152,
+    "BOID":-1005186,
+    "Internalname":"pvanfrage",
+    "jobgroupname":"PV-Anfrage Versichertenverhältnis verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":153,
+    "BOID":-1005187,
+    "Internalname":"pvverfuegbestand",
+    "jobgroupname":"PV-Verfügungsbestand verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":154,
+    "BOID":-1005188,
+    "Internalname":"pvversichertenbestand",
+    "jobgroupname":"PV-Versichertenbestand erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":155,
+    "BOID":-1005189,
+    "Internalname":"pvjahresrechnung",
+    "jobgroupname":"PV-Jahresrechnung erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":156,
+    "BOID":-1005190,
+    "Internalname":"pvmig",
+    "jobgroupname":"IPV nach PV migrieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":157,
+    "BOID":-1005191,
+    "Internalname":"sedeximport",
+    "jobgroupname":"Sedex-Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":158,
+    "BOID":-1005192,
+    "Internalname":"sedexexport",
+    "jobgroupname":"Sedex-Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":159,
+    "BOID":-1005193,
+    "Internalname":"SYR_Batch_Partnerstatistik",
+    "jobgroupname":"Partnerstatistik aufbereiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":160,
+    "BOID":-1005194,
+    "Internalname":"SYR_Batch_Risikoauslgleich",
+    "jobgroupname":"Risikoausgleich",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":161,
+    "BOID":-1005195,
+    "Internalname":"SYR_Batch_ErhebungsformulareS",
+    "jobgroupname":"Erhebungsformulare S exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":162,
+    "BOID":-1005197,
+    "Internalname":"SYR_Batch_Erhebungsformulare3",
+    "jobgroupname":"Erhebungsformular EF-1345",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":163,
+    "BOID":-1005198,
+    "Internalname":"SYR_Batch_AHV_Bezugsrecord_erstellen",
+    "jobgroupname":"AHV-Bezugsrecord erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":164,
+    "BOID":-1005199,
+    "Internalname":"SYR_Batch_TarifProduktivSetzenBatch",
+    "jobgroupname":"Tarif produktiv setzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":165,
+    "BOID":-1005200,
+    "Internalname":"SYR_Batch_PVKontoMigBatch",
+    "jobgroupname":"Migration PV-Konto Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":166,
+    "BOID":-1005201,
+    "Internalname":"SYR_Batch_MigrationQuellSteuerTemplateImport",
+    "jobgroupname":"Migration Quellensteuer Template Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":167,
+    "BOID":-1005202,
+    "Internalname":"SYR_Batch_PVBeitragMigBatch",
+    "jobgroupname":"Migration PV-Beitrag Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":168,
+    "BOID":-1005203,
+    "Internalname":"SYR_Batch_AdressstammdatenImport",
+    "jobgroupname":"Adressstammdaten der Post importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":169,
+    "BOID":-1005204,
+    "Internalname":"SYR_Batch_YellowbillXMLImport",
+    "jobgroupname":"Yellowbill-XML importieren",
+    "ctrlmjobname":"yelruk",
+    "jobname":"sryelruk020"
+  },
+  {
+    "id":170,
+    "BOID":-1005207,
+    "Internalname":"SYR_Batch_UID_Export",
+    "jobgroupname":"Sammelanfrage UID-Register BFS",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":171,
+    "BOID":-1005208,
+    "Internalname":"SYR_Batch_UID_Import",
+    "jobgroupname":"Massenabgleich mit UID-Register BFS",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":172,
+    "BOID":-1005209,
+    "Internalname":"SYR_Batch_SUV_RA61_Export",
+    "jobgroupname":"SSUV RA61 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":173,
+    "BOID":-1005211,
+    "Internalname":"SYR_Batch_SSUV_RA95_Export",
+    "jobgroupname":"SSUV RA95 Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":174,
+    "BOID":-1005212,
+    "Internalname":"SYR_Batch_ZSRLeistungserbringerUpdateBatch",
+    "jobgroupname":"ZSR Leistungserbringer aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":175,
+    "BOID":-1005213,
+    "Internalname":"SYR_Batch_Import_EGAV",
+    "jobgroupname":"EGA-V Zahlungsdaten importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":176,
+    "BOID":-1005214,
+    "Internalname":"SYR_Batch_EBPPInkassoToExkassoBatch",
+    "jobgroupname":"EBPP-Informationen kopieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":177,
+    "BOID":-10100,
+    "Internalname":"10100",
+    "jobgroupname":"Import Beruf",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":178,
+    "BOID":-10101,
+    "Internalname":"10101",
+    "jobgroupname":"Import Berufsgruppe",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":179,
+    "BOID":-10102,
+    "Internalname":"-10102",
+    "jobgroupname":"Import Fallmeldungen",
+    "ctrlmjobname":"falimp",
+    "jobname":"srfalimp040"
+  },
+  {
+    "id":180,
+    "BOID":-1019020,
+    "Internalname":"-1019020",
+    "jobgroupname":"E-Claim Leistung verarbeiten",
+    "ctrlmjobname":"recimp",
+    "jobname":"srrecimp040"
+  },
+  {
+    "id":181,
+    "BOID":-1019030,
+    "Internalname":"-1019030",
+    "jobgroupname":"E-Claim-XML importieren",
+    "ctrlmjobname":"recimp",
+    "jobname":"srrecimp030"
+  },
+  {
+    "id":182,
+    "BOID":-1019040,
+    "Internalname":"-1019040",
+    "jobgroupname":"E-Claim-Ablauf exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":183,
+    "BOID":-1019041,
+    "Internalname":"-1019041",
+    "jobgroupname":"E-Claim-Standard-XML importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":184,
+    "BOID":-1019042,
+    "Internalname":"EClaimStandardXMLExport",
+    "jobgroupname":"E-Claim-Standard-XML exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":185,
+    "BOID":-1019043,
+    "Internalname":"EClaimVorbescheidActivityCreate",
+    "jobgroupname":"E-Claim-Vorbescheid Aufgabe erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":186,
+    "BOID":-1019044,
+    "Internalname":"MediFrame2RegelVerarbeitung",
+    "jobgroupname":"MediFrame2RegelVerarbeitung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":187,
+    "BOID":-1019045,
+    "Internalname":"EClaimProcessReprocess",
+    "jobgroupname":"Nochmaliges validieren von E-Claim-Rechnungen (Testbatch, nicht für produktive Systeme geeignet)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":188,
+    "BOID":-1019046,
+    "Internalname":"-1019046",
+    "jobgroupname":"Erneute E-Claim-Rechnungsprüfung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":189,
+    "BOID":-1019047,
+    "Internalname":"EClaimLerbVorbEinfImport",
+    "jobgroupname":"E-Claim-Vorbescheids- und Einforderungs-Flag für Leistungserbringer importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":190,
+    "BOID":-1019048,
+    "Internalname":"EClaimProcessRevalidateForLFall",
+    "jobgroupname":"Erneute E-Claim-Rechnungsprüfung für Rechnungen zu finalem Leistungsfall",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":191,
+    "BOID":-1019049,
+    "Internalname":"EClaimKoGuAbschlussbatch",
+    "jobgroupname":"E-Claim-KoGu abschliessen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":192,
+    "BOID":-1019050,
+    "Internalname":"EClaimImportBereinigung",
+    "jobgroupname":"E-Claim-Import bereinigen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":193,
+    "BOID":-1019051,
+    "Internalname":"EClaimTarifReValidate",
+    "jobgroupname":"E-Claim-Tarifvalidierung erneut durchführen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":194,
+    "BOID":-1019052,
+    "Internalname":"SYR_Batch_ObligoVerarbeitungBatch",
+    "jobgroupname":"Obligo verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":195,
+    "BOID":-1019053,
+    "Internalname":"SYR_Batch_Sammel_Zahlung_Forderung_File_Import",
+    "jobgroupname":"Sammelzahlungsforderung importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":196,
+    "BOID":-1019054,
+    "Internalname":"SYR_Batch_SammelZRechnungVerarbeitenBatch",
+    "jobgroupname":"E-Claim-Rechnungen erzeugen und verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":197,
+    "BOID":-10200,
+    "Internalname":"-10200",
+    "jobgroupname":"Anonymer KV Import einlesen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":198,
+    "BOID":-10201,
+    "Internalname":"-10201",
+    "jobgroupname":"Anonymer KV Import ergänzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":199,
+    "BOID":-10202,
+    "Internalname":"-10202",
+    "jobgroupname":"Anonymer KV Import verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":200,
+    "BOID":-10300,
+    "Internalname":"10300",
+    "jobgroupname":"Liste Zahlungsprofile (sperren)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":201,
+    "BOID":-10500,
+    "Internalname":"10500",
+    "jobgroupname":"Kontrollliste Vertriebspartner-Abrechnung erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":202,
+    "BOID":-10501,
+    "Internalname":"10501",
+    "jobgroupname":"Auswertung Abgerechnete Provisionen",
+    "ctrlmjobname":"proabb",
+    "jobname":"srproabb060"
+  },
+  {
+    "id":203,
+    "BOID":-10501,
+    "Internalname":"10501",
+    "jobgroupname":"Auswertung Abgerechnete Provisionen",
+    "ctrlmjobname":"proabr",
+    "jobname":"srproabr030"
+  },
+  {
+    "id":204,
+    "BOID":-10502,
+    "Internalname":"10502",
+    "jobgroupname":"Vertragsbedingungen auf KV aendern",
+    "ctrlmjobname":"vrtbed",
+    "jobname":"srvrtbed010"
+  },
+  {
+    "id":205,
+    "BOID":-10600,
+    "Internalname":"-10600",
+    "jobgroupname":"Export BIP Partnerdaten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":206,
+    "BOID":-10610,
+    "Internalname":"10610",
+    "jobgroupname":"Preistabellen KVNamentlich ändern",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":207,
+    "BOID":-10700,
+    "Internalname":"tzulrenteakt",
+    "jobgroupname":"Teuerungszulagen Renten aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":208,
+    "BOID":-10710,
+    "Internalname":"tzulhfleakt",
+    "jobgroupname":"Teuerungszulagen HFLE aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":209,
+    "BOID":-10720,
+    "Internalname":"tzxmlerst",
+    "jobgroupname":"Teuerungszulagen XML erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":210,
+    "BOID":-108,
+    "Internalname":"108",
+    "jobgroupname":"Verträge umstellen",
+    "ctrlmjobname":"verums",
+    "jobname":"srverums010"
+  },
+  {
+    "id":211,
+    "BOID":-10800,
+    "Internalname":"10800",
+    "jobgroupname":"Produktkriterien Änderung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":212,
+    "BOID":-10801,
+    "Internalname":"10801",
+    "jobgroupname":"Tarif- und Leistungsreglementdatum Änderung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":213,
+    "BOID":-10802,
+    "Internalname":"10802",
+    "jobgroupname":"Liste KVAnonym-Vertragsprodukte",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":214,
+    "BOID":-10803,
+    "Internalname":"10803",
+    "jobgroupname":"KV Anonym Tarifanpassung",
+    "ctrlmjobname":"kolend",
+    "jobname":"srkolend010"
+  },
+  {
+    "id":215,
+    "BOID":-10900,
+    "Internalname":"10900",
+    "jobgroupname":"Renten DK/RST Abrechnung erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":216,
+    "BOID":-10901,
+    "Internalname":"VertragsProdukteBeenden",
+    "jobgroupname":"Vertragsprodukte beenden",
+    "ctrlmjobname":"vprebe",
+    "jobname":"srvprebe010"
+  },
+  {
+    "id":217,
+    "BOID":-10902,
+    "Internalname":"PartnerMigBatch",
+    "jobgroupname":"Migration Partner Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":218,
+    "BOID":-10903,
+    "Internalname":"LeistungsFallValidatorBatch",
+    "jobgroupname":"Leistungsfälle validieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":219,
+    "BOID":-10904,
+    "Internalname":"LeistungMigBatch",
+    "jobgroupname":"Migration Leistungsabrechnung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":220,
+    "BOID":-10905,
+    "Internalname":"UebKrUeberfuehrBatch",
+    "jobgroupname":"Übersteuerte Vertragskriterien überführen",
+    "ctrlmjobname":"uebvkr",
+    "jobname":"sruebvkr010"
+  },
+  {
+    "id":221,
+    "BOID":-10906,
+    "Internalname":"KoBeMigBatch",
+    "jobgroupname":"Migration Kostenbeteiligung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":222,
+    "BOID":-10907,
+    "Internalname":"FamilieMigBatch",
+    "jobgroupname":"Migration Familie Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":223,
+    "BOID":-10908,
+    "Internalname":"verguetungenvalidieren",
+    "jobgroupname":"Vergütungen validieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":224,
+    "BOID":-10909,
+    "Internalname":"ZusatzAdresseMigBatch",
+    "jobgroupname":"Migration Zusatzadresse Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":225,
+    "BOID":-10910,
+    "Internalname":"ZahlungsverbindungMigBatch",
+    "jobgroupname":"Migration Zahlungsadresse Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":226,
+    "BOID":-10911,
+    "Internalname":"ZahlungsprofilMigBatch",
+    "jobgroupname":"Migration Zahlungsprofil Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":227,
+    "BOID":-10912,
+    "Internalname":"ZahlungsverwendungMigBatch",
+    "jobgroupname":"Migration Zahlungsverwendung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":228,
+    "BOID":-10913,
+    "Internalname":"NVM_Migration",
+    "jobgroupname":"NVM Migration",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":229,
+    "BOID":-10914,
+    "Internalname":"VertragMigBatch",
+    "jobgroupname":"Migration Vertrag Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":230,
+    "BOID":-10916,
+    "Internalname":"VertragProduktMigBatch",
+    "jobgroupname":"Migration Vertragsprodukt Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":231,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"expzap",
+    "jobname":"srexpzap010"
+  },
+  {
+    "id":232,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"lstabm",
+    "jobname":"srlstabm020"
+  },
+  {
+    "id":233,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"inkkvd",
+    "jobname":"srinkein020"
+  },
+  {
+    "id":234,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"lstabp",
+    "jobname":"srlstabp020"
+  },
+  {
+    "id":235,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"inkein",
+    "jobname":"srinkein030"
+  },
+  {
+    "id":236,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"inkkva",
+    "jobname":"poinkkva020"
+  },
+  {
+    "id":237,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"mahlau",
+    "jobname":"srmahlau020"
+  },
+  {
+    "id":238,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"lstabu",
+    "jobname":"srlstabu020"
+  },
+  {
+    "id":239,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"soprva",
+    "jobname":"srsoprva020"
+  },
+  {
+    "id":240,
+    "BOID":-111,
+    "Internalname":"111",
+    "jobgroupname":"OPs und Sammel-OPs drucken",
+    "ctrlmjobname":"inksiz",
+    "jobname":"srinksiz030"
+  },
+  {
+    "id":241,
+    "BOID":-112,
+    "Internalname":"112",
+    "jobgroupname":"Anträge importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":242,
+    "BOID":-114,
+    "Internalname":"114",
+    "jobgroupname":"KVOfferte drucken",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":243,
+    "BOID":-117,
+    "Internalname":"117",
+    "jobgroupname":"PartnerImport",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":244,
+    "BOID":-118,
+    "Internalname":"118",
+    "jobgroupname":"PartnerImport ausführen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":245,
+    "BOID":-119,
+    "Internalname":"119",
+    "jobgroupname":"PartnerImport löschen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":246,
+    "BOID":-120,
+    "Internalname":"120",
+    "jobgroupname":"Auswertung Abschreibung/Ausbuchung",
+    "ctrlmjobname":"absaus",
+    "jobname":"srabsaus040"
+  },
+  {
+    "id":247,
+    "BOID":-122,
+    "Internalname":"122",
+    "jobgroupname":"Abschreibungen und Ausbuchungen erstellen",
+    "ctrlmjobname":"sopaus",
+    "jobname":"srsopaus030"
+  },
+  {
+    "id":248,
+    "BOID":-122,
+    "Internalname":"122",
+    "jobgroupname":"Abschreibungen und Ausbuchungen erstellen",
+    "ctrlmjobname":"sopaus",
+    "jobname":"srsopaus010"
+  },
+  {
+    "id":249,
+    "BOID":-122,
+    "Internalname":"122",
+    "jobgroupname":"Abschreibungen und Ausbuchungen erstellen",
+    "ctrlmjobname":"absaus",
+    "jobname":"srabsaus010"
+  },
+  {
+    "id":250,
+    "BOID":-122,
+    "Internalname":"122",
+    "jobgroupname":"Abschreibungen und Ausbuchungen erstellen",
+    "ctrlmjobname":"absaus",
+    "jobname":"srabsaus020"
+  },
+  {
+    "id":251,
+    "BOID":-122,
+    "Internalname":"122",
+    "jobgroupname":"Abschreibungen und Ausbuchungen erstellen",
+    "ctrlmjobname":"absaus",
+    "jobname":"srabsaus030"
+  },
+  {
+    "id":252,
+    "BOID":-122,
+    "Internalname":"122",
+    "jobgroupname":"Abschreibungen und Ausbuchungen erstellen",
+    "ctrlmjobname":"sopaus",
+    "jobname":"srsopaus020"
+  },
+  {
+    "id":253,
+    "BOID":-123,
+    "Internalname":"123",
+    "jobgroupname":"Vertrag validieren",
+    "ctrlmjobname":"verval",
+    "jobname":"prverval009"
+  },
+  {
+    "id":254,
+    "BOID":-124,
+    "Internalname":"124",
+    "jobgroupname":"Vertragsprodukt Übersteuerung entfernen",
+    "ctrlmjobname":"nepueb",
+    "jobname":"srnepueb010"
+  },
+  {
+    "id":255,
+    "BOID":-125,
+    "Internalname":"125",
+    "jobgroupname":"KVAnonym validieren",
+    "ctrlmjobname":"kvaval",
+    "jobname":"srkvaval010"
+  },
+  {
+    "id":256,
+    "BOID":-126,
+    "Internalname":"126",
+    "jobgroupname":"Checkgruppe ausführen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":257,
+    "BOID":-127,
+    "Internalname":"127",
+    "jobgroupname":"Bonus-Abrechnung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":258,
+    "BOID":-128,
+    "Internalname":"128",
+    "jobgroupname":"Superprovisions-Abrechnung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":259,
+    "BOID":-129,
+    "Internalname":"129",
+    "jobgroupname":"JEV TA Steuerkarte importieren",
+    "ctrlmjobname":"stkimp",
+    "jobname":"srstkimp020"
+  },
+  {
+    "id":260,
+    "BOID":-132,
+    "Internalname":"132",
+    "jobgroupname":"Adresslisten exportieren (TXT)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":261,
+    "BOID":-133,
+    "Internalname":"133",
+    "jobgroupname":"Imp-/Export Patientenstatus ZSR",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":262,
+    "BOID":-203,
+    "Internalname":"203",
+    "jobgroupname":"Zahlungsdaten exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":263,
+    "BOID":-238,
+    "Internalname":"238",
+    "jobgroupname":"Saldonachweis erstellen",
+    "ctrlmjobname":"snwmev",
+    "jobname":"srsnwmev010"
+  },
+  {
+    "id":264,
+    "BOID":-238,
+    "Internalname":"238",
+    "jobgroupname":"Saldonachweis erstellen",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs010"
+  },
+  {
+    "id":265,
+    "BOID":-239,
+    "Internalname":"239",
+    "jobgroupname":"Kollektivvertrag Austritt",
+    "ctrlmjobname":"kolver",
+    "jobname":"srkolver010"
+  },
+  {
+    "id":266,
+    "BOID":-240,
+    "Internalname":"240",
+    "jobgroupname":"Saldonachweis: vorausbezahlte Prämien ermitteln",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs080"
+  },
+  {
+    "id":267,
+    "BOID":-300,
+    "Internalname":"300",
+    "jobgroupname":"Import Preistabellen",
+    "ctrlmjobname":"prtimp",
+    "jobname":"srprtimp010"
+  },
+  {
+    "id":268,
+    "BOID":-301,
+    "Internalname":"301",
+    "jobgroupname":"Export Preistabellen",
+    "ctrlmjobname":"prtexp",
+    "jobname":"srprtexp010"
+  },
+  {
+    "id":269,
+    "BOID":-30200001,
+    "Internalname":"SYR_Batch_BestanddatenExportAsBlueCare",
+    "jobgroupname":"Bestandsdaten im BlueCare-Format exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":270,
+    "BOID":-350,
+    "Internalname":"350",
+    "jobgroupname":"EV Inkasso",
+    "ctrlmjobname":"inkein",
+    "jobname":"srinkein020"
+  },
+  {
+    "id":271,
+    "BOID":-350,
+    "Internalname":"350",
+    "jobgroupname":"EV Inkasso",
+    "ctrlmjobname":"inksiz",
+    "jobname":"srinksiz010"
+  },
+  {
+    "id":272,
+    "BOID":-370,
+    "Internalname":"370",
+    "jobgroupname":"Generic Batch",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":273,
+    "BOID":-371,
+    "Internalname":"371",
+    "jobgroupname":"Sammelkonto-Abrechnung erstellen",
+    "ctrlmjobname":"qstabr",
+    "jobname":"srqstabr010"
+  },
+  {
+    "id":274,
+    "BOID":-38,
+    "Internalname":"38",
+    "jobgroupname":"Kollektiv Abrechnung",
+    "ctrlmjobname":"inkkvd",
+    "jobname":"srinkkvd010"
+  },
+  {
+    "id":275,
+    "BOID":-38,
+    "Internalname":"38",
+    "jobgroupname":"Kollektiv Abrechnung",
+    "ctrlmjobname":"inkkva",
+    "jobname":"srinkkva010"
+  },
+  {
+    "id":276,
+    "BOID":-381,
+    "Internalname":"EV_FORECAST_CREATE",
+    "jobgroupname":"EV ForeCast erstellen",
+    "ctrlmjobname":"forcev",
+    "jobname":"srforcev010"
+  },
+  {
+    "id":277,
+    "BOID":-382,
+    "Internalname":"KVANONYM_FORECAST_CREATE",
+    "jobgroupname":"KV Anonym ForeCast erstellen",
+    "ctrlmjobname":"forkva",
+    "jobname":"srforkva010"
+  },
+  {
+    "id":278,
+    "BOID":-400,
+    "Internalname":"400",
+    "jobgroupname":"OPs und Sammel-OPs auflisten",
+    "ctrlmjobname":"veraup",
+    "jobname":"srausmev040"
+  },
+  {
+    "id":279,
+    "BOID":-400,
+    "Internalname":"400",
+    "jobgroupname":"OPs und Sammel-OPs auflisten",
+    "ctrlmjobname":"veraup",
+    "jobname":"srausmev030"
+  },
+  {
+    "id":280,
+    "BOID":-401,
+    "Internalname":"401",
+    "jobgroupname":"Zahlungen auflisten",
+    "ctrlmjobname":"auszah",
+    "jobname":"srauszah020"
+  },
+  {
+    "id":281,
+    "BOID":-401,
+    "Internalname":"401",
+    "jobgroupname":"Zahlungen auflisten",
+    "ctrlmjobname":"auszah",
+    "jobname":"srauszah010"
+  },
+  {
+    "id":282,
+    "BOID":-402,
+    "Internalname":"402",
+    "jobgroupname":"Zahlungsmittel auflisten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":283,
+    "BOID":-403,
+    "Internalname":"403",
+    "jobgroupname":"Zahlungen für Tagesjournal auflisten",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp100"
+  },
+  {
+    "id":284,
+    "BOID":-403,
+    "Internalname":"403",
+    "jobgroupname":"Zahlungen für Tagesjournal auflisten",
+    "ctrlmjobname":"zahimp",
+    "jobname":"srzahimp090"
+  },
+  {
+    "id":285,
+    "BOID":-404,
+    "Internalname":"-404",
+    "jobgroupname":"Regress fakturieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":286,
+    "BOID":-405,
+    "Internalname":"-405",
+    "jobgroupname":"Regress berechnen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":287,
+    "BOID":-406,
+    "Internalname":"-406",
+    "jobgroupname":"Regress Status Activity Control",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":288,
+    "BOID":-407,
+    "Internalname":"-407",
+    "jobgroupname":"Regress Verjaehrungsverzicht Control",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":289,
+    "BOID":-408,
+    "Internalname":"-408",
+    "jobgroupname":"Leistungsliste Update in Bezug auf Regressfälle",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":290,
+    "BOID":-409,
+    "Internalname":"-409",
+    "jobgroupname":"Ausscheideordnung export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":291,
+    "BOID":-410,
+    "Internalname":"-410",
+    "jobgroupname":"Ausscheideordnung import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":292,
+    "BOID":-43,
+    "Internalname":"43",
+    "jobgroupname":"Zahlungsdaten erstellen",
+    "ctrlmjobname":"zaiexp",
+    "jobname":"srzaiexp020"
+  },
+  {
+    "id":293,
+    "BOID":-43,
+    "Internalname":"43",
+    "jobgroupname":"Zahlungsdaten erstellen",
+    "ctrlmjobname":"expzap",
+    "jobname":"srexpzap030"
+  },
+  {
+    "id":294,
+    "BOID":-43,
+    "Internalname":"43",
+    "jobgroupname":"Zahlungsdaten erstellen",
+    "ctrlmjobname":"zaoexp",
+    "jobname":"srzaoexp020"
+  },
+  {
+    "id":295,
+    "BOID":-430,
+    "Internalname":"-430",
+    "jobgroupname":"Deckungskapital / Rückstellungen aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":296,
+    "BOID":-500000,
+    "Internalname":"BCBestanddatenExport",
+    "jobgroupname":"Export BlueCare Bestandesdaten",
+    "ctrlmjobname":"blcexp",
+    "jobname":"srblcexp010"
+  },
+  {
+    "id":297,
+    "BOID":-500001,
+    "Internalname":"EXPORT_BLUECARE_LST_DATEN",
+    "jobgroupname":"Export BlueCare Leistungsdaten",
+    "ctrlmjobname":"blcexp",
+    "jobname":"srblcexp020"
+  },
+  {
+    "id":298,
+    "BOID":-500001,
+    "Internalname":"EXPORT_BLUECARE_LST_DATEN",
+    "jobgroupname":"Export BlueCare Leistungsdaten",
+    "ctrlmjobname":"blcexp",
+    "jobname":"srblcexp030"
+  },
+  {
+    "id":299,
+    "BOID":-500002,
+    "Internalname":"500002",
+    "jobgroupname":"IPV-Änderungsmitteilung für Empfänger erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":300,
+    "BOID":-500003,
+    "Internalname":"RLImport",
+    "jobgroupname":"Rückleitungen importieren",
+    "ctrlmjobname":"rklimp",
+    "jobname":"srrklimp020"
+  },
+  {
+    "id":301,
+    "BOID":-500003,
+    "Internalname":"RLImport",
+    "jobgroupname":"Rückleitungen importieren",
+    "ctrlmjobname":"rklimp",
+    "jobname":"srrklimp024"
+  },
+  {
+    "id":302,
+    "BOID":-500005,
+    "Internalname":"FalldossierMigBatch",
+    "jobgroupname":"Migration Falldossier Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":303,
+    "BOID":-500007,
+    "Internalname":"500007",
+    "jobgroupname":"Saldonachweisdaten löschen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":304,
+    "BOID":-500009,
+    "Internalname":"EVPersonalNrImportBatch",
+    "jobgroupname":"ImportBatch Einzelvertrag PersonalNr.",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":305,
+    "BOID":-500010,
+    "Internalname":"AustretendeMitAusstaenden",
+    "jobgroupname":"Austretende mit Ausständen",
+    "ctrlmjobname":"ausauy",
+    "jobname":"srausauy010"
+  },
+  {
+    "id":306,
+    "BOID":-500010,
+    "Internalname":"AustretendeMitAusstaenden",
+    "jobgroupname":"Austretende mit Ausständen",
+    "ctrlmjobname":"ausaus",
+    "jobname":"srausauy010"
+  },
+  {
+    "id":307,
+    "BOID":-500011,
+    "Internalname":"VertriebsPartnerMigBatch",
+    "jobgroupname":"Migration Vertriebspartner Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":308,
+    "BOID":-500012,
+    "Internalname":"DocRoutingMigBatch",
+    "jobgroupname":"Migration DocRouting Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":309,
+    "BOID":-500013,
+    "Internalname":"NotesMigBatch",
+    "jobgroupname":"Migration Notes Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":310,
+    "BOID":-500014,
+    "Internalname":"-500014",
+    "jobgroupname":"LerbImportEinlesen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":311,
+    "BOID":-500015,
+    "Internalname":"500015",
+    "jobgroupname":"Erfolglose LSV- und DD-Einzüge auflisten",
+    "ctrlmjobname":"rklimp",
+    "jobname":"srrklimp030"
+  },
+  {
+    "id":312,
+    "BOID":-500016,
+    "Internalname":"-500016",
+    "jobgroupname":"LerbImportErgaenzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":313,
+    "BOID":-500017,
+    "Internalname":"-500017",
+    "jobgroupname":"LerbImportVerarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":314,
+    "BOID":-500018,
+    "Internalname":"VP_Ersetzen",
+    "jobgroupname":"Vertriebspartner ersetzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":315,
+    "BOID":-500020,
+    "Internalname":"KVAnonymMigBatch",
+    "jobgroupname":"Migration KVA Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":316,
+    "BOID":-500021,
+    "Internalname":"KVAnonymPersGrpMigBatch",
+    "jobgroupname":"Migration KVA Personengruppe Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":317,
+    "BOID":-500022,
+    "Internalname":"KVAnonymProduktMigBatch",
+    "jobgroupname":"Migration KVA Produkt Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":318,
+    "BOID":-500023,
+    "Internalname":"KVNamentlichMigBatch",
+    "jobgroupname":"Migration KVN Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":319,
+    "BOID":-500024,
+    "Internalname":"KVNamentlichPersGrpMigBatch",
+    "jobgroupname":"Migration KVN Personengruppe Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":320,
+    "BOID":-500025,
+    "Internalname":"KVNamentlichProduktMigBatch",
+    "jobgroupname":"Migration KVN Produkt Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":321,
+    "BOID":-500026,
+    "Internalname":"PreisKomponenteMigBatch",
+    "jobgroupname":"Migration Preiskomponente Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":322,
+    "BOID":-500027,
+    "Internalname":"VorbehaltMigBatch",
+    "jobgroupname":"Migration Vorbehalt Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":323,
+    "BOID":-500028,
+    "Internalname":"ReduktionMigBatch",
+    "jobgroupname":"Migration EV Prämienreduktion Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":324,
+    "BOID":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "jobgroupname":"Import Ländertabelle",
+    "ctrlmjobname":"lanimp",
+    "jobname":"srlanimp010"
+  },
+  {
+    "id":325,
+    "BOID":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "jobgroupname":"Import Ländertabelle",
+    "ctrlmjobname":"lanimp",
+    "jobname":"srlanimp010"
+  },
+  {
+    "id":326,
+    "BOID":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "jobgroupname":"Import Ländertabelle",
+    "ctrlmjobname":"lanimp",
+    "jobname":"srlanimp010"
+  },
+  {
+    "id":327,
+    "BOID":-500029,
+    "Internalname":"ImportLaendertabelle",
+    "jobgroupname":"Import Ländertabelle",
+    "ctrlmjobname":"lanimp",
+    "jobname":"srlanimp010"
+  },
+  {
+    "id":328,
+    "BOID":-500030,
+    "Internalname":"LERBZahlungsfristSynchronisieren",
+    "jobgroupname":"Lerb Zahlungsfrist synchronisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":329,
+    "BOID":-500031,
+    "Internalname":"AVMNetzLerbZuteilung",
+    "jobgroupname":"AVM-Netz Leistungserbringer-Zuteilung aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":330,
+    "BOID":-500032,
+    "Internalname":"ExportLeistungserbringer",
+    "jobgroupname":"Export Leistungserbringer",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":331,
+    "BOID":-500033,
+    "Internalname":"KVReduktionMigBatch",
+    "jobgroupname":"Migration KVN Reduktion Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":332,
+    "BOID":-500034,
+    "Internalname":"EurotaxImportBatch",
+    "jobgroupname":"Eurotax Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":333,
+    "BOID":-500036,
+    "Internalname":"500036",
+    "jobgroupname":"OP-Partitionierung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":334,
+    "BOID":-500037,
+    "Internalname":"OESynchroniBatch",
+    "jobgroupname":"OE Synchronisieren",
+    "ctrlmjobname":"oesync",
+    "jobname":"sroesync010"
+  },
+  {
+    "id":335,
+    "BOID":-500038,
+    "Internalname":"KostengutspracheMigBatch",
+    "jobgroupname":"Migration Kostengutsprache Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":336,
+    "BOID":-500039,
+    "Internalname":"ReservationMigBatch",
+    "jobgroupname":"Migration Reservation Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":337,
+    "BOID":-500040,
+    "Internalname":"KVPreisSequenzMigBatch",
+    "jobgroupname":"Migration KVN Preissequenz Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":338,
+    "BOID":-500041,
+    "Internalname":"VertragsBedingungMigBatch",
+    "jobgroupname":"Migration Vertragsbedingung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":339,
+    "BOID":-500042,
+    "Internalname":"AbonnementMigBatch",
+    "jobgroupname":"Migration Abonnement Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":340,
+    "BOID":-500043,
+    "Internalname":"KVRevisionMigBatch",
+    "jobgroupname":"Migration KVA Revision Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":341,
+    "BOID":-500044,
+    "Internalname":"LeistungssperreMigBatch",
+    "jobgroupname":"Migration Leistungssperre Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":342,
+    "BOID":-500045,
+    "Internalname":"KVLeistungssperreMigBatch",
+    "jobgroupname":"Migration KVA Leistungssperre Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":343,
+    "BOID":-500046,
+    "Internalname":"ZahlersperreMigBatch",
+    "jobgroupname":"Migration Zahlersperre Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":344,
+    "BOID":-500047,
+    "Internalname":"BestandprovisionDefMigBatch",
+    "jobgroupname":"Migration Bestandesprovision Definition Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":345,
+    "BOID":-500048,
+    "Internalname":"BonusDefKopfMigBatch",
+    "jobgroupname":"Migration Bonus Definition Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":346,
+    "BOID":-500049,
+    "Internalname":"UeberschussbeteiligungDefMigBatch",
+    "jobgroupname":"Migration Vertrag Überschussbeteiligung Definition Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":347,
+    "BOID":-500050,
+    "Internalname":"VerguetungDefMigBatch",
+    "jobgroupname":"Migration Vergütung Definition Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":348,
+    "BOID":-500053,
+    "Internalname":"NVM_Forecast_From_OPDet_Migration",
+    "jobgroupname":"NVM ForeCast Generierung ab OPDetail",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":349,
+    "BOID":-500054,
+    "Internalname":"AblaufendeSistierungen",
+    "jobgroupname":"Ablaufende Sistierungen auflisten",
+    "ctrlmjobname":"ablsis",
+    "jobname":"srablsis010"
+  },
+  {
+    "id":350,
+    "BOID":-500055,
+    "Internalname":"ArbeitsanweisungMigBatch",
+    "jobgroupname":"Migration Arbeitsanweisung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":351,
+    "BOID":-500056,
+    "Internalname":"NVM_Trigger_Forecast_Migration",
+    "jobgroupname":"Migration NVM Trigger Forecast verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":352,
+    "BOID":-500057,
+    "Internalname":"AufgabeMigBatch",
+    "jobgroupname":"Migration Aufgabe Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":353,
+    "BOID":-500058,
+    "Internalname":"FahrzeugMigBatch",
+    "jobgroupname":"Migration Fahrzeug Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":354,
+    "BOID":-500059,
+    "Internalname":"LiegenschaftMigBatch",
+    "jobgroupname":"Migration Liegenschaft Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":355,
+    "BOID":-500060,
+    "Internalname":"PartnerKollektivMigBatch",
+    "jobgroupname":"Migration Partnerkollektiv Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":356,
+    "BOID":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "jobgroupname":"Abfrage durchführen",
+    "ctrlmjobname":"vmdexp",
+    "jobname":"srvmdexp040"
+  },
+  {
+    "id":357,
+    "BOID":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "jobgroupname":"Abfrage durchführen",
+    "ctrlmjobname":"vmdexp",
+    "jobname":"srvmdexp030"
+  },
+  {
+    "id":358,
+    "BOID":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "jobgroupname":"Abfrage durchführen",
+    "ctrlmjobname":"vmdexp",
+    "jobname":"srvmdexp020"
+  },
+  {
+    "id":359,
+    "BOID":-500061,
+    "Internalname":"AbfrageExportBatch",
+    "jobgroupname":"Abfrage durchführen",
+    "ctrlmjobname":"wegaus",
+    "jobname":"srwegaus010"
+  },
+  {
+    "id":360,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwmev",
+    "jobname":"srsnwmev030"
+  },
+  {
+    "id":361,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs060"
+  },
+  {
+    "id":362,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwmev",
+    "jobname":"srsnwmev060"
+  },
+  {
+    "id":363,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwmev",
+    "jobname":"srsnwmev050"
+  },
+  {
+    "id":364,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs050"
+  },
+  {
+    "id":365,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwmev",
+    "jobname":"srsnwmev070"
+  },
+  {
+    "id":366,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwmev",
+    "jobname":"srsnwmev020"
+  },
+  {
+    "id":367,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs040"
+  },
+  {
+    "id":368,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs020"
+  },
+  {
+    "id":369,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwmev",
+    "jobname":"srsnwmev040"
+  },
+  {
+    "id":370,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs070"
+  },
+  {
+    "id":371,
+    "BOID":-500062,
+    "Internalname":"500062",
+    "jobgroupname":"Saldonachweisdaten exportieren",
+    "ctrlmjobname":"snwabs",
+    "jobname":"srsnwabs030"
+  },
+  {
+    "id":372,
+    "BOID":-500063,
+    "Internalname":"BatchedWorkItemTestBatch",
+    "jobgroupname":"BatchedWorkItemTestBatch",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":373,
+    "BOID":-500064,
+    "Internalname":"tarifziffer_zifferkoa",
+    "jobgroupname":"Staging Tarifziffer-KOA",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":374,
+    "BOID":-500065,
+    "Internalname":"LeistungssperrenBeenden",
+    "jobgroupname":"Leistungssperren beenden",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":375,
+    "BOID":-500066,
+    "Internalname":"BUCHUNGSTOFF_MIGRATION",
+    "jobgroupname":"NVM Buchungsstoff Migration",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":376,
+    "BOID":-500068,
+    "Internalname":"BIG_OP_SOP_HANDLING",
+    "jobgroupname":"Grosse OPs verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":377,
+    "BOID":-500069,
+    "Internalname":"-500069",
+    "jobgroupname":"JEV Folgejahre auf abgerechneten Forecast prüfen",
+    "ctrlmjobname":"abgrfc",
+    "jobname":"srabgrfc010"
+  },
+  {
+    "id":378,
+    "BOID":-500070,
+    "Internalname":"EinErhaltungsbemuehungen",
+    "jobgroupname":"Eingeleitete Erhaltungsbemühungen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":379,
+    "BOID":-500071,
+    "Internalname":"Bestandesprovisionierung",
+    "jobgroupname":"Bestandesprovisionierung",
+    "ctrlmjobname":"vkepro",
+    "jobname":"srvkepro010"
+  },
+  {
+    "id":380,
+    "BOID":-500071,
+    "Internalname":"Bestandesprovisionierung",
+    "jobgroupname":"Bestandesprovisionierung",
+    "ctrlmjobname":"bedpro",
+    "jobname":"srbedpro010"
+  },
+  {
+    "id":381,
+    "BOID":-500071,
+    "Internalname":"Bestandesprovisionierung",
+    "jobgroupname":"Bestandesprovisionierung",
+    "ctrlmjobname":"beapro",
+    "jobname":"srbeapro010"
+  },
+  {
+    "id":382,
+    "BOID":-500072,
+    "Internalname":"FAKONTO_ERSTELLEN",
+    "jobgroupname":"Fremdanteilkonto erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":383,
+    "BOID":-500073,
+    "Internalname":"SEClassicBStoffMigration",
+    "jobgroupname":"SE Classic BStoffMigration",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":384,
+    "BOID":-500075,
+    "Internalname":"ImportKVEVProvDef",
+    "jobgroupname":"Import KVEVProvDef",
+    "ctrlmjobname":"vgzimp",
+    "jobname":"srvgzimp010"
+  },
+  {
+    "id":385,
+    "BOID":-500076,
+    "Internalname":"500076",
+    "jobgroupname":"Fakt Import",
+    "ctrlmjobname":"fakupo",
+    "jobname":"srfakupo010"
+  },
+  {
+    "id":386,
+    "BOID":-500077,
+    "Internalname":"PartnerRolleMigBatch",
+    "jobgroupname":"Migration Partnerrolle Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":387,
+    "BOID":-500078,
+    "Internalname":"ABR_MITVERS",
+    "jobgroupname":"Mitversicherer-Abrechnung erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":388,
+    "BOID":-500079,
+    "Internalname":"FamilienrabattBerechnen",
+    "jobgroupname":"Familienrabatt berechnen",
+    "ctrlmjobname":"3kindr",
+    "jobname":"sr3kindr010"
+  },
+  {
+    "id":389,
+    "BOID":-500079,
+    "Internalname":"FamilienrabattBerechnen",
+    "jobgroupname":"Familienrabatt berechnen",
+    "ctrlmjobname":"3kindr",
+    "jobname":"sr3kindr030"
+  },
+  {
+    "id":390,
+    "BOID":-500079,
+    "Internalname":"FamilienrabattBerechnen",
+    "jobgroupname":"Familienrabatt berechnen",
+    "ctrlmjobname":"3kindr",
+    "jobname":"sr3kindr020"
+  },
+  {
+    "id":391,
+    "BOID":-500080,
+    "Internalname":"LeistungserbringerBeenden",
+    "jobgroupname":"Leistungserbringer beenden",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":392,
+    "BOID":-500081,
+    "Internalname":"VertragOhneProdBeenden",
+    "jobgroupname":"Verträge ohne VP beenden",
+    "ctrlmjobname":"verbee",
+    "jobname":"srverbee010"
+  },
+  {
+    "id":393,
+    "BOID":-500082,
+    "Internalname":"DiagOpImport",
+    "jobgroupname":"Diagnose / Operationscode Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":394,
+    "BOID":-500083,
+    "Internalname":"LerbQualiIntAnerkSync",
+    "jobgroupname":"Lerb-Quali Int. Anerkennung Sync",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":395,
+    "BOID":-500084,
+    "Internalname":"LerbQualiIntAnerkOVRSync",
+    "jobgroupname":"Lerb-Quali Int. Anerkennung OVR Sync",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":396,
+    "BOID":-500085,
+    "Internalname":"ProvisionSumBatch",
+    "jobgroupname":"Provisionssummen berechnen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":397,
+    "BOID":-500086,
+    "Internalname":"RVProdukteErstellen",
+    "jobgroupname":"RV-Produkte erstellen",
+    "ctrlmjobname":"rvprer",
+    "jobname":"srrvrper010"
+  },
+  {
+    "id":398,
+    "BOID":-500087,
+    "Internalname":"KVNamentlichProdukteErstellen",
+    "jobgroupname":"KVNamentlich-Produkte erstellen",
+    "ctrlmjobname":"kvprer",
+    "jobname":"srkvrper010"
+  },
+  {
+    "id":399,
+    "BOID":-500088,
+    "Internalname":"MitversichererExport",
+    "jobgroupname":"Mitversicherer Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":400,
+    "BOID":-500089,
+    "Internalname":"VertragsProduktWechseln",
+    "jobgroupname":"Vertragsprodukt wechseln",
+    "ctrlmjobname":"vprwec",
+    "jobname":"srvprwec010"
+  },
+  {
+    "id":401,
+    "BOID":-500090,
+    "Internalname":"LohnAngabeMigBatch",
+    "jobgroupname":"Migration Lohnangabe Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":402,
+    "BOID":-500091,
+    "Internalname":"MitversicherungMigBatch",
+    "jobgroupname":"Migration Mitversicherung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":403,
+    "BOID":-500092,
+    "Internalname":"-500092",
+    "jobgroupname":"Parametrierung der Buchungssteuerung prüfen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":404,
+    "BOID":-500093,
+    "Internalname":"OPMigBatch",
+    "jobgroupname":"Migration OP Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":405,
+    "BOID":-500094,
+    "Internalname":"PreisKomponentExport",
+    "jobgroupname":"PreisKomponenten Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":406,
+    "BOID":-500095,
+    "Internalname":"PreisKomponentChangeBatch",
+    "jobgroupname":"PreisKomponenten ändern (Import)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":407,
+    "BOID":-500096,
+    "Internalname":"OEVertragSynchronisierenBatch",
+    "jobgroupname":"OE Vertrag synchronisieren",
+    "ctrlmjobname":"oesync",
+    "jobname":"sroesync020"
+  },
+  {
+    "id":408,
+    "BOID":-500097,
+    "Internalname":"Liste_der_ZAUFT_Anteile",
+    "jobgroupname":"Zahlungsaufteilung exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":409,
+    "BOID":-500098,
+    "Internalname":"MigBeendeteLERBsInaktivOeffnenBatch",
+    "jobgroupname":"Migration: Beendete Leistungserbringer inaktiv öffnen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":410,
+    "BOID":-500099,
+    "Internalname":"NotizAblaufListe",
+    "jobgroupname":"Notiz Ablauf Liste",
+    "ctrlmjobname":"ausnot",
+    "jobname":"srausnot010"
+  },
+  {
+    "id":411,
+    "BOID":-500100,
+    "Internalname":"VertragsProduktIstPreisExport",
+    "jobgroupname":"VertragsProdukt NettoPreis Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":412,
+    "BOID":-500101,
+    "Internalname":"VertragsProduktIstPreisChangeBatch",
+    "jobgroupname":"VertragsProdukt NettoPreis ändern (Import)",
+    "ctrlmjobname":"nepimp",
+    "jobname":"srnepimp010"
+  },
+  {
+    "id":413,
+    "BOID":-500102,
+    "Internalname":"NVM_AZV_BETR_MIGRATION",
+    "jobgroupname":"NVM Abzahlvereinbarung/Betreibung Migration",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":414,
+    "BOID":-500103,
+    "Internalname":"InvaliditaetPosMigBatch",
+    "jobgroupname":"Migration Körperliche Beeinträchtigung Integrität Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":415,
+    "BOID":-500104,
+    "Internalname":"500104",
+    "jobgroupname":"Altersbaum exportieren",
+    "ctrlmjobname":"ausjab",
+    "jobname":"srausjab010"
+  },
+  {
+    "id":416,
+    "BOID":-500104,
+    "Internalname":"500104",
+    "jobgroupname":"Altersbaum exportieren",
+    "ctrlmjobname":"ausmev",
+    "jobname":"srausmev010"
+  },
+  {
+    "id":417,
+    "BOID":-500105,
+    "Internalname":"VrtrpImpEinlesen",
+    "jobgroupname":"Vertriebspartner Import einlesen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":418,
+    "BOID":-500106,
+    "Internalname":"ForeignExchangeImport",
+    "jobgroupname":"Wechselkurse importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":419,
+    "BOID":-500107,
+    "Internalname":"VrtrpImpVerarbeiten",
+    "jobgroupname":"Vertriebspartner Import verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":420,
+    "BOID":-500108,
+    "Internalname":"tzhflexmlerst",
+    "jobgroupname":"HFLE Teuerungszulagen XML erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":421,
+    "BOID":-500109,
+    "Internalname":"LerbMeldungMigBatch",
+    "jobgroupname":"Migration Leistungserbringer Meldung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":422,
+    "BOID":-500110,
+    "Internalname":"JournalMigBatch",
+    "jobgroupname":"Migration Journal Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":423,
+    "BOID":-500111,
+    "Internalname":"MigLerbQuali",
+    "jobgroupname":"Migration LerbQuali bereinigen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":424,
+    "BOID":-500112,
+    "Internalname":"FdossDeckblattMigBatch",
+    "jobgroupname":"Migration Case Management Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":425,
+    "BOID":-500113,
+    "Internalname":"RentenVorberechnungMigBatch",
+    "jobgroupname":"Migration Rentenvorberechnung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":426,
+    "BOID":-500114,
+    "Internalname":"BehandlungMigBatch",
+    "jobgroupname":"Migration Behandlung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":427,
+    "BOID":-500115,
+    "Internalname":"RVKonsolidierung",
+    "jobgroupname":"RV Konsolidierung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":428,
+    "BOID":-500116,
+    "Internalname":"AkteMigBatch",
+    "jobgroupname":"Migration Akte Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":429,
+    "BOID":-500117,
+    "Internalname":"ZahlungMigBatch",
+    "jobgroupname":"Migration Zahlung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":430,
+    "BOID":-500119,
+    "Internalname":"500119",
+    "jobgroupname":"KV namentlich Sammel-Inkasso-Abrechnung exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"srinksiz020"
+  },
+  {
+    "id":431,
+    "BOID":-500119,
+    "Internalname":"500119",
+    "jobgroupname":"KV namentlich Sammel-Inkasso-Abrechnung exportieren",
+    "ctrlmjobname":"inksiz",
+    "jobname":"srinksiz020"
+  },
+  {
+    "id":432,
+    "BOID":-500120,
+    "Internalname":"ParamAttrMigrationsBatch",
+    "jobgroupname":"Migration Param. Attribut Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":433,
+    "BOID":-500121,
+    "Internalname":"NVM_EV_FORECAST_CREATE",
+    "jobgroupname":"Migration NVM Forecast erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":434,
+    "BOID":-500122,
+    "Internalname":"DokumentErinnerung",
+    "jobgroupname":"Dokument-Erinnerung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":435,
+    "BOID":-500123,
+    "Internalname":"BuchungsstoffStichprobenValidatorBatch",
+    "jobgroupname":"Buchungsstoff stichprobenartig validieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":436,
+    "BOID":-500124,
+    "Internalname":"BetreibungAktivSetzen",
+    "jobgroupname":"Betreibung aktiv setzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":437,
+    "BOID":-500125,
+    "Internalname":"AntrFragenContMigBatch",
+    "jobgroupname":"Migration Antragsfragen Container Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":438,
+    "BOID":-500127,
+    "Internalname":"KlassifizZuordMigBatch",
+    "jobgroupname":"Migration Klassifizierung Zuordnung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":439,
+    "BOID":-500128,
+    "Internalname":"BonusstufeBatch",
+    "jobgroupname":"Bonusstufe ermitteln",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":440,
+    "BOID":-500130,
+    "Internalname":"KVAForeCastBerechnen",
+    "jobgroupname":"Forecast nach Minimalprämienübernahme von RV in die Zukunft neu berechnen",
+    "ctrlmjobname":"minprm",
+    "jobname":"srminprm010"
+  },
+  {
+    "id":441,
+    "BOID":-500131,
+    "Internalname":"FalldossierPruefung",
+    "jobgroupname":"Falldossierprüfung",
+    "ctrlmjobname":"fdopru",
+    "jobname":"srfdopru010"
+  },
+  {
+    "id":442,
+    "BOID":-500132,
+    "Internalname":"AVMZuteilungImport",
+    "jobgroupname":"AVM-Zuteilung ImportBatch",
+    "ctrlmjobname":"rvkimp",
+    "jobname":"srrvkimp010"
+  },
+  {
+    "id":443,
+    "BOID":-500132,
+    "Internalname":"AVMZuteilungImport",
+    "jobgroupname":"AVM-Zuteilung ImportBatch",
+    "ctrlmjobname":"rvkimp",
+    "jobname":"srrvkimp020"
+  },
+  {
+    "id":444,
+    "BOID":-500132,
+    "Internalname":"AVMZuteilungImport",
+    "jobgroupname":"AVM-Zuteilung ImportBatch",
+    "ctrlmjobname":"rvkimp",
+    "jobname":"srrvkimp030"
+  },
+  {
+    "id":445,
+    "BOID":-500133,
+    "Internalname":"VekaRec2006MigBatch",
+    "jobgroupname":"Migration Versichertenkarte Record Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":446,
+    "BOID":-500134,
+    "Internalname":"VekaDeckRecMigBatch",
+    "jobgroupname":"Migration Versichertenkarte Deckungsrecord Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":447,
+    "BOID":-500135,
+    "Internalname":"OfacVersRecMigBatch",
+    "jobgroupname":"Migration Ofac Versichertenrecord Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":448,
+    "BOID":-500136,
+    "Internalname":"OfacDeckRecMigBatch",
+    "jobgroupname":"Migration Ofac Deckungsrecord Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":449,
+    "BOID":-500137,
+    "Internalname":"ForeCastAbgerechnetMigBatch",
+    "jobgroupname":"Migration Abrechnungsstatus Forecast Update",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":450,
+    "BOID":-500138,
+    "Internalname":"ModelReferencesCheckBatch",
+    "jobgroupname":"Modell-Referenzen überprüfen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":451,
+    "BOID":-500139,
+    "Internalname":"RightsCleanUpBatch",
+    "jobgroupname":"Berechtigungen aufräumen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":452,
+    "BOID":-500140,
+    "Internalname":"NotAuthorizedObjectsAndFunctionsBatch",
+    "jobgroupname":"Nicht berechtigte Objekte und Funktionen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":453,
+    "BOID":-500141,
+    "Internalname":"LstAufImp",
+    "jobgroupname":"Leistungsaufträge importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":454,
+    "BOID":-500142,
+    "Internalname":"LstGrpImp",
+    "jobgroupname":"Leistungsgruppen importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":455,
+    "BOID":-500143,
+    "Internalname":"RatingErmitteln",
+    "jobgroupname":"Rating ermitteln",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":456,
+    "BOID":-500144,
+    "Internalname":"FallmeldungMigBatch",
+    "jobgroupname":"Migration Fallmeldung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":457,
+    "BOID":-500145,
+    "Internalname":"500145",
+    "jobgroupname":"Rückleitungen auflisten",
+    "ctrlmjobname":"rklimp",
+    "jobname":"srrklimp040"
+  },
+  {
+    "id":458,
+    "BOID":-500146,
+    "Internalname":"MinimalPraemieMigBatch",
+    "jobgroupname":"Migration Minimalprämie Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":459,
+    "BOID":-500147,
+    "Internalname":"FMgmtFalldossConMigBatch",
+    "jobgroupname":"Migration Falldossier Fallmanagement Konnektor Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":460,
+    "BOID":-500148,
+    "Internalname":"VerlaufDokuMigBatch",
+    "jobgroupname":"Migration Verlaufsdokumentation Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":461,
+    "BOID":-500149,
+    "Internalname":"ProvImport",
+    "jobgroupname":"Provisionen Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":462,
+    "BOID":-500150,
+    "Internalname":"KoBeBerechnenBatch",
+    "jobgroupname":"KoBe-Berechnung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":463,
+    "BOID":-500151,
+    "Internalname":"ManKobeMigBatch",
+    "jobgroupname":"Migration Manuelle KoBe Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":464,
+    "BOID":-500152,
+    "Internalname":"BetreuerErsetzen",
+    "jobgroupname":"Betreuer ersetzen",
+    "ctrlmjobname":"betwec",
+    "jobname":"srbetwec010"
+  },
+  {
+    "id":465,
+    "BOID":-500153,
+    "Internalname":"IGB2BProvisionierungBatch",
+    "jobgroupname":"IG B2B Provisionen exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":466,
+    "BOID":-500154,
+    "Internalname":"RVPreisSequenzChangeBatch",
+    "jobgroupname":"Rahmenvertrags-Preiskomponenten ändern",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":467,
+    "BOID":-500155,
+    "Internalname":"AVMArztUeberfuehrung",
+    "jobgroupname":"AVM-Arzt überführen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":468,
+    "BOID":-500156,
+    "Internalname":"PreisSeqHierarchieValidieren",
+    "jobgroupname":"Preissequenzen über Hierarchie validieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":469,
+    "BOID":-500157,
+    "Internalname":"RightsReloadBatch",
+    "jobgroupname":"Benutzerberechtigungen neu laden",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":470,
+    "BOID":-500158,
+    "Internalname":"LeistungsfreiheitsrabattBatch",
+    "jobgroupname":"Leistungsfreiheitsrabatt prüfen",
+    "ctrlmjobname":"lfrrab",
+    "jobname":"srlfrrab010"
+  },
+  {
+    "id":471,
+    "BOID":-500158,
+    "Internalname":"LeistungsfreiheitsrabattBatch",
+    "jobgroupname":"Leistungsfreiheitsrabatt prüfen",
+    "ctrlmjobname":"stukmu",
+    "jobname":"srstukmu010"
+  },
+  {
+    "id":472,
+    "BOID":-500159,
+    "Internalname":"Sachbearbeiter umstellen",
+    "jobgroupname":"Sachbearbeiter umstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":473,
+    "BOID":-500160,
+    "Internalname":"500160",
+    "jobgroupname":"Jährliche Prämienbemessung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":474,
+    "BOID":-500161,
+    "Internalname":"FaktDefPartnerConMigBatch",
+    "jobgroupname":"Migration Partnerfakten Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":475,
+    "BOID":-500162,
+    "Internalname":"LstFallKuerzungMigBatch",
+    "jobgroupname":"Migration Leistungsfallkürzung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":476,
+    "BOID":-500163,
+    "Internalname":"HRNeueBerechnung",
+    "jobgroupname":"Neue Berechnungslogik bei HR-Vorberechnungen ausführen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":477,
+    "BOID":-500164,
+    "Internalname":"LohnDeklationsMigBatch",
+    "jobgroupname":"Migration Lohndeklaration Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":478,
+    "BOID":-500165,
+    "Internalname":"NachversichererExportBatch",
+    "jobgroupname":"ZMV-Datenrecord für Vorversicherer erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":479,
+    "BOID":-500166,
+    "Internalname":"VertragslaufzeitenNachfahren",
+    "jobgroupname":"Laufzeitdefinitionen auf Vertragsprodukten setzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":480,
+    "BOID":-500167,
+    "Internalname":"VorversichererImportBatch",
+    "jobgroupname":"ZMV-Datenrecord des Nachversicherers verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":481,
+    "BOID":-500168,
+    "Internalname":"KVAnonymRecalculateBatch",
+    "jobgroupname":"KVA neu berechnen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":482,
+    "BOID":-500169,
+    "Internalname":"WorkflowMetaRuleExecutorBatch",
+    "jobgroupname":"Objektliste mit Workflow-Entscheidungstabelle verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":483,
+    "BOID":-500170,
+    "Internalname":"ZMVRUECKMELDUNG",
+    "jobgroupname":"ZMV-Rückmeldung verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":484,
+    "BOID":-500171,
+    "Internalname":"IGB2BRechnungsstellungBatch",
+    "jobgroupname":"IG B2B Rechnungsstellung exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":485,
+    "BOID":-500172,
+    "Internalname":"SyrDocRefMigBatch",
+    "jobgroupname":"Migration Dokumentreferenzen Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":486,
+    "BOID":-500173,
+    "Internalname":"FDossDeckblattZieleMassnahmenMigBatch",
+    "jobgroupname":"Migration Case Management Massnahmen Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":487,
+    "BOID":-500174,
+    "Internalname":"SYR_Batch_KriterienCheckExport",
+    "jobgroupname":"KV-Kriterien exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":488,
+    "BOID":-500176,
+    "Internalname":"LeistungForLeistungsFallGenerierenBatch",
+    "jobgroupname":"Leistung für Leistungsfall erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":489,
+    "BOID":-500177,
+    "Internalname":"SYR_Batch_ManKoBeTSVImport",
+    "jobgroupname":"Manuelle Kostenbeteiligungen importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":490,
+    "BOID":-500178,
+    "Internalname":"SYR_Batch_ZAdr_Beenden",
+    "jobgroupname":"Zahlungsadressen beenden",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":491,
+    "BOID":-500179,
+    "Internalname":"SYR_Batch_TGAnspruchsmeldungImport",
+    "jobgroupname":"Taggeldanspruchsmeldungen importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":492,
+    "BOID":-500180,
+    "Internalname":"SYR_Batch_TGAnspruchsmeldungVerarbeiten",
+    "jobgroupname":"Taggeldanspruchsmeldungen verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":493,
+    "BOID":-500182,
+    "Internalname":"SYR_Batch_ProvLohnsummeMig",
+    "jobgroupname":"Lohnsummen migrieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":494,
+    "BOID":-500183,
+    "Internalname":"SYR_Batch_RVPriceExport",
+    "jobgroupname":"Preiskomponenten von RV und KVN exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":495,
+    "BOID":-500184,
+    "Internalname":"SYR_Batch_RVPriceImport",
+    "jobgroupname":"Preiskomponenten von RV und KVN importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":496,
+    "BOID":-500185,
+    "Internalname":"SYR_Batch_KVPrGe",
+    "jobgroupname":"Preiskomponenten von KVN generieren oder aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":497,
+    "BOID":-500186,
+    "Internalname":"SYR_Batch_ForeCastGVorfallAndOpDetHerkMigBatch",
+    "jobgroupname":"Geschäftsvorfall und Buchungsdetail-Forecast migrieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":498,
+    "BOID":-500187,
+    "Internalname":"SYR_Batch_MigrationRegressLstFallImport",
+    "jobgroupname":"Migration Regress Leistungsfall Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":499,
+    "BOID":-500188,
+    "Internalname":"SYR_Batch_MigrationRegHaftpflichtigerImport",
+    "jobgroupname":"Migration Regress Haftpflichtiger Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":500,
+    "BOID":-500189,
+    "Internalname":"SYR_Batch_MigrationLstKategorieImport",
+    "jobgroupname":"Migration Leistungskategorie Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":501,
+    "BOID":-500190,
+    "Internalname":"SYR_Batch_PersLohnMigBatch",
+    "jobgroupname":"Migration Personenbezogene Lohnsummen Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":502,
+    "BOID":-500191,
+    "Internalname":"SYR_Batch_Abschlussprovisionierung",
+    "jobgroupname":"Abschluss provisionieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":503,
+    "BOID":-500192,
+    "Internalname":"SYR_Batch_MigrationRegressLstFallUpdate",
+    "jobgroupname":"Migration Regress Leistungsfall Update",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":504,
+    "BOID":-500195,
+    "Internalname":"SYR_Batch_LohnsummeKVOMig",
+    "jobgroupname":"Lohnsummen KV-Offerte migrieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":505,
+    "BOID":-500196,
+    "Internalname":"SYR_Batch_GenerationentafelExportBatch",
+    "jobgroupname":"Generationentafel exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":506,
+    "BOID":-500197,
+    "Internalname":"SYR_Batch_GenerationentafelImportBatch",
+    "jobgroupname":"Generationentafel importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":507,
+    "BOID":-500198,
+    "Internalname":"SYR_Batch_BatchlogExport",
+    "jobgroupname":"Batch-Protokoll exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":508,
+    "BOID":-500199,
+    "Internalname":"SYR_Batch_EventCategory_CPChange",
+    "jobgroupname":"Kategorie Erzeugung oder Verarbeitung ändern",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":509,
+    "BOID":-500200,
+    "Internalname":"SYR_Batch_SammelOPMigBatch",
+    "jobgroupname":"Migration Sammel-OP Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":510,
+    "BOID":-500201,
+    "Internalname":"SYR_Batch_AdresseRolleMigBatch",
+    "jobgroupname":"Migration Adressrolle Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":511,
+    "BOID":-500203,
+    "Internalname":"SYR_Batch_KVAnonymZahlersperre",
+    "jobgroupname":"Zahlersperre für KVA erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":512,
+    "BOID":-500204,
+    "Internalname":"SYR_Batch_FachlicheArchivierung",
+    "jobgroupname":"Datengruppen fachlich archivieren (Test)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":513,
+    "BOID":-500205,
+    "Internalname":"SYR_Batch_EventMessageRerun",
+    "jobgroupname":"Events neu starten oder löschen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":514,
+    "BOID":-500207,
+    "Internalname":"SYR_Batch_ZahlungZuordnungMigBatch",
+    "jobgroupname":"Migration Zahlungszuordnung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":515,
+    "BOID":-500208,
+    "Internalname":"SYR_Batch_RevDeklDetKompMigBatch",
+    "jobgroupname":"Migration Differenzlohnsumme Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":516,
+    "BOID":-500209,
+    "Internalname":"SYR_Batch_PraemRedu_Beenden",
+    "jobgroupname":"Prämienreduktionen beenden",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":517,
+    "BOID":-500211,
+    "Internalname":"SYR_Batch_MitversichererAbrExportSim",
+    "jobgroupname":"Mitversicherer abrechnen und exportieren (Simulation)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":518,
+    "BOID":-500212,
+    "Internalname":"SYR_Batch_UeberschussBeteilMigBatch",
+    "jobgroupname":"Migration Überschussbeteiligung Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":519,
+    "BOID":-500213,
+    "Internalname":"SYR_Batch_ProvInfoMigBatch",
+    "jobgroupname":"Migration Provisionsinformation Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":520,
+    "BOID":-500214,
+    "Internalname":"SYR_Batch_ProvisionMigBatch",
+    "jobgroupname":"Migration Provision Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":521,
+    "BOID":-500215,
+    "Internalname":"SYR_Batch_FaktenDelete",
+    "jobgroupname":"Fakten löschen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":522,
+    "BOID":-500216,
+    "Internalname":"SYR_Batch_ZMVDataRecordImportBatch",
+    "jobgroupname":"ZMV-Datenrecord in Staging-Area importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":523,
+    "BOID":-500217,
+    "Internalname":"SYR_Batch_ZMVVerarbeitung",
+    "jobgroupname":"ZMV-Datenrecords aus Staging-Area verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":524,
+    "BOID":-500218,
+    "Internalname":"SYR_Batch_BonusMalusstufenSetzen",
+    "jobgroupname":"Bonus- und Malusstufen auf Vertragsprodukten setzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":525,
+    "BOID":-500219,
+    "Internalname":"SYR_Batch_JahresabschlussFiBuProv",
+    "jobgroupname":"Jahresabschluss Fibu provisorisch erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":526,
+    "BOID":-500220,
+    "Internalname":"SYR_Batch_JahresabschlussFiBuDef",
+    "jobgroupname":"Jahresabschluss Fibu definitiv erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":527,
+    "BOID":-500221,
+    "Internalname":"SYR_Batch_PartnerDublettensucheInitialisieren",
+    "jobgroupname":"Partner-Dublettensuche initialisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":528,
+    "BOID":-500222,
+    "Internalname":"SYR_Batch_PartnerDublettenBearbeiten",
+    "jobgroupname":"Partner-Dubletten suchen und zusammenführen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":529,
+    "BOID":-500226,
+    "Internalname":"SYR_Batch_LeistungsfallMigBatch",
+    "jobgroupname":"Migration Leistungsfall Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":530,
+    "BOID":-500227,
+    "Internalname":"SYR_Batch_LstFallSplitMigBatch",
+    "jobgroupname":"Migration Leistungsfall Begünstigte Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":531,
+    "BOID":-500228,
+    "Internalname":"SYR_Batch_PartnerHarmonisierung",
+    "jobgroupname":"Partnerdaten Harmonisierung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":532,
+    "BOID":-500229,
+    "Internalname":"SYR_Batch_PartnerIndividuumInitialize",
+    "jobgroupname":"Partner-Individuum initialisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":533,
+    "BOID":-500230,
+    "Internalname":"SYR_Batch_UpdatePartnerstatus",
+    "jobgroupname":"Partnerstatus aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":534,
+    "BOID":-500231,
+    "Internalname":"SYR_Batch_PoliceDruckenBatch",
+    "jobgroupname":"Police EV drucken",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":535,
+    "BOID":-500232,
+    "Internalname":"SYR_Batch_ExportLeistungserbringerAVMZuteilung",
+    "jobgroupname":"AVM-Zuteilungen exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":536,
+    "BOID":-500233,
+    "Internalname":"SYR_Batch_PartnerIdentifierMigBatch",
+    "jobgroupname":"Migration Partneridentifikator Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":537,
+    "BOID":-500234,
+    "Internalname":"SYR_Batch_CommonArchiver",
+    "jobgroupname":"Datengruppen fachlich archivieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":538,
+    "BOID":-500236,
+    "Internalname":"SYR_Batch_AdressestammdatenInitialisieren",
+    "jobgroupname":"Adressstammdaten initialisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":539,
+    "BOID":-500238,
+    "Internalname":"SYR_Batch_VersObjMigBatch",
+    "jobgroupname":"Migration versichertes Objekt Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":540,
+    "BOID":-500240,
+    "Internalname":"SYR_Batch_RIK_ReExport",
+    "jobgroupname":"Vorgemerkte RIK-Meldungen erneut exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":541,
+    "BOID":-500242,
+    "Internalname":"SYR_Batch_BetreuerFallbearbeitungErsetzen",
+    "jobgroupname":"Betreuer Fallbearbeitung ersetzen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":542,
+    "BOID":-500243,
+    "Internalname":"SYR_Batch_ZahlungenFuerFremdsystemAusbuchenBatch",
+    "jobgroupname":"Zahlungen für Fremdsystem ausbuchen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":543,
+    "BOID":-500246,
+    "Internalname":"SYR_Batch_KV_RV_Rabattsatz_Exportieren",
+    "jobgroupname":"KVN- und RV-Rabattsatz exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":544,
+    "BOID":-500247,
+    "Internalname":"SYR_Batch_KV_RV_Rabattsatz_Importieren",
+    "jobgroupname":"KVN- und RV-Rabattsatz importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":545,
+    "BOID":-500248,
+    "Internalname":"SYR_Batch_VertragsProduktCreate",
+    "jobgroupname":"Vertragsprodukt erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":546,
+    "BOID":-500249,
+    "Internalname":"SYR_Batch_SchattenPartnerUeberfuehrungsBatch",
+    "jobgroupname":"Schattenpartner überführen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":547,
+    "BOID":-500250,
+    "Internalname":"SYR_Batch_ImportPartner",
+    "jobgroupname":"Partner importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":548,
+    "BOID":-500251,
+    "Internalname":"SYR_Batch_AdresseUpdateBatch",
+    "jobgroupname":"Adressen mit Adressstammdaten abgleichen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":549,
+    "BOID":-500252,
+    "Internalname":"SYR_Batch_EVRabattNachfahrenBatch",
+    "jobgroupname":"EV-Rabatt aktualisieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":550,
+    "BOID":-5100,
+    "Internalname":"5100",
+    "jobgroupname":"BO Import",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":551,
+    "BOID":-52,
+    "Internalname":"52",
+    "jobgroupname":"Police Kollektivvertrag Anonym",
+    "ctrlmjobname":"poldru",
+    "jobname":"srpoldru010"
+  },
+  {
+    "id":552,
+    "BOID":-53,
+    "Internalname":"53",
+    "jobgroupname":"Buchungsstoff erstellen",
+    "ctrlmjobname":"jahbse",
+    "jobname":"srjahbse010"
+  },
+  {
+    "id":553,
+    "BOID":-53,
+    "Internalname":"53",
+    "jobgroupname":"Buchungsstoff erstellen",
+    "ctrlmjobname":"bsters",
+    "jobname":"srbsters010"
+  },
+  {
+    "id":554,
+    "BOID":-5301,
+    "Internalname":"5301",
+    "jobgroupname":"Ratenvereinbarungen mit überschrittenem Verfallsdatum auflisten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":555,
+    "BOID":-5302,
+    "Internalname":"5302",
+    "jobgroupname":"Zahlungsmittel für verfallene ASR erstellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":556,
+    "BOID":-55,
+    "Internalname":"55",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabb",
+    "jobname":"srproabb030"
+  },
+  {
+    "id":557,
+    "BOID":-55,
+    "Internalname":"55",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabb",
+    "jobname":"srproabb040"
+  },
+  {
+    "id":558,
+    "BOID":-55,
+    "Internalname":"55",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabb",
+    "jobname":"srproabb010"
+  },
+  {
+    "id":559,
+    "BOID":-55,
+    "Internalname":"55",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabb",
+    "jobname":"srproabb020"
+  },
+  {
+    "id":560,
+    "BOID":-55,
+    "Internalname":"55",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabr",
+    "jobname":"srproabr010"
+  },
+  {
+    "id":561,
+    "BOID":-55,
+    "Internalname":"55",
+    "jobgroupname":"Provisionsabrechnung",
+    "ctrlmjobname":"proabr",
+    "jobname":"srproabr020"
+  },
+  {
+    "id":562,
+    "BOID":-56,
+    "Internalname":"56",
+    "jobgroupname":"Überschussbeteiligungs-Abrechnung",
+    "ctrlmjobname":"proabb",
+    "jobname":"srproabb050"
+  },
+  {
+    "id":563,
+    "BOID":-57,
+    "Internalname":"57",
+    "jobgroupname":"Buchungsstoff verdichten",
+    "ctrlmjobname":"bstexp",
+    "jobname":"srbstexp010"
+  },
+  {
+    "id":564,
+    "BOID":-5700,
+    "Internalname":"5700",
+    "jobgroupname":"Mahnlauf Nachversicherer",
+    "ctrlmjobname":"mahnvs",
+    "jobname":"srmahnvs020"
+  },
+  {
+    "id":565,
+    "BOID":-58,
+    "Internalname":"58",
+    "jobgroupname":"Police (Neu)",
+    "ctrlmjobname":"poljev",
+    "jobname":"srpoljev010"
+  },
+  {
+    "id":566,
+    "BOID":-58,
+    "Internalname":"58",
+    "jobgroupname":"Police (Neu)",
+    "ctrlmjobname":"poldrp",
+    "jobname":"srpoldrp010"
+  },
+  {
+    "id":567,
+    "BOID":-5902,
+    "Internalname":"Test viele Partner",
+    "jobgroupname":"Test viele Partner",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":568,
+    "BOID":-5906,
+    "Internalname":"FamAngehoerig",
+    "jobgroupname":"Familienangehörige ohne abhängige Adresse",
+    "ctrlmjobname":"berpar",
+    "jobname":"srberpar010"
+  },
+  {
+    "id":569,
+    "BOID":-5907,
+    "Internalname":"Revisionen KV",
+    "jobgroupname":"Revision Kollektiv-Vertrag",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":570,
+    "BOID":-5909,
+    "Internalname":"ProvAustritt",
+    "jobgroupname":"Provisorischer Austritt Grundversicherung",
+    "ctrlmjobname":"pragru",
+    "jobname":"srpragru010"
+  },
+  {
+    "id":571,
+    "BOID":-5920,
+    "Internalname":"PLZ Pruefung",
+    "jobgroupname":"Prüfung auf Partner (PLZ, PLZ_Zusatz)",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":572,
+    "BOID":-5924,
+    "Internalname":"Vertr o. VP",
+    "jobgroupname":"Verträge ohne Vertragsprodukt",
+    "ctrlmjobname":"verber",
+    "jobname":"srverber010"
+  },
+  {
+    "id":573,
+    "BOID":-5925,
+    "Internalname":"provProvision",
+    "jobgroupname":"provisorische Provisionen",
+    "ctrlmjobname":"beapro",
+    "jobname":"srbeapro020"
+  },
+  {
+    "id":574,
+    "BOID":-5925,
+    "Internalname":"provProvision",
+    "jobgroupname":"provisorische Provisionen",
+    "ctrlmjobname":"bedpro",
+    "jobname":"srbedpro020"
+  },
+  {
+    "id":575,
+    "BOID":-5925,
+    "Internalname":"provProvision",
+    "jobgroupname":"provisorische Provisionen",
+    "ctrlmjobname":"uebbet",
+    "jobname":"sruebbet020"
+  },
+  {
+    "id":576,
+    "BOID":-5925,
+    "Internalname":"provProvision",
+    "jobgroupname":"provisorische Provisionen",
+    "ctrlmjobname":"vkepro",
+    "jobname":"srvkepro020"
+  },
+  {
+    "id":577,
+    "BOID":-5925,
+    "Internalname":"provProvision",
+    "jobgroupname":"provisorische Provisionen",
+    "ctrlmjobname":"propro",
+    "jobname":"srpropro010"
+  },
+  {
+    "id":578,
+    "BOID":-5928,
+    "Internalname":"avmVPungueltigLstErb",
+    "jobgroupname":"AVM-Vertragsprodukte mit ungültigem Hausarzt",
+    "ctrlmjobname":"rvkimp",
+    "jobname":"srrvkimp040"
+  },
+  {
+    "id":579,
+    "BOID":-5929,
+    "Internalname":"avmVPohneLstErb",
+    "jobgroupname":"AVM-Vertragsprodukte ohne Hausarzt",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":580,
+    "BOID":-5930,
+    "Internalname":"5930",
+    "jobgroupname":"Vertragsprodukte mit Kriteriumausprägung",
+    "ctrlmjobname":"vprkra",
+    "jobname":"srvprkra010"
+  },
+  {
+    "id":581,
+    "BOID":-5931,
+    "Internalname":"5931",
+    "jobgroupname":"AVM Hausarzt - Ermittlung Versicherte",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":582,
+    "BOID":-60,
+    "Internalname":"60",
+    "jobgroupname":"Export Offerte",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":583,
+    "BOID":-61,
+    "Internalname":"61",
+    "jobgroupname":"Abo generieren",
+    "ctrlmjobname":"abobes",
+    "jobname":"srabobes010"
+  },
+  {
+    "id":584,
+    "BOID":-62,
+    "Internalname":"62",
+    "jobgroupname":"Abo-Dokumente bestellen",
+    "ctrlmjobname":"abobes",
+    "jobname":"srabobes020"
+  },
+  {
+    "id":585,
+    "BOID":-6200,
+    "Internalname":"6200",
+    "jobgroupname":"KV-Kriterien importieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":586,
+    "BOID":-63,
+    "Internalname":"63",
+    "jobgroupname":"Dokument Bestellung verarbeiten",
+    "ctrlmjobname":"abobes",
+    "jobname":"srabobes030"
+  },
+  {
+    "id":587,
+    "BOID":-63,
+    "Internalname":"63",
+    "jobgroupname":"Dokument Bestellung verarbeiten",
+    "ctrlmjobname":"dokdru",
+    "jobname":"srdokdru010"
+  },
+  {
+    "id":588,
+    "BOID":-6300,
+    "Internalname":"6300",
+    "jobgroupname":"BO Export",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":589,
+    "BOID":-64,
+    "Internalname":"64",
+    "jobgroupname":"Reduktionsträger Abrechnung",
+    "ctrlmjobname":"agbeit",
+    "jobname":"pragbeit010"
+  },
+  {
+    "id":590,
+    "BOID":-66,
+    "Internalname":"66",
+    "jobgroupname":"Anpassung VertriebsPartnerDef",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":591,
+    "BOID":-6600,
+    "Internalname":"AufschubVerarb",
+    "jobgroupname":"Storno/Neuabrechnung nach Beendigung Leistungsaufschub",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":592,
+    "BOID":-6601,
+    "Internalname":"Mahnlauf Neu",
+    "jobgroupname":"Mahnlauf auslösen",
+    "ctrlmjobname":"mahlau",
+    "jobname":"srmahlau010"
+  },
+  {
+    "id":593,
+    "BOID":-6700,
+    "Internalname":"KoguVerarb",
+    "jobgroupname":"Kostengutsprachen drucken",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":594,
+    "BOID":-68,
+    "Internalname":"68",
+    "jobgroupname":"Mahnlauf Nachversicherer Bestätigung",
+    "ctrlmjobname":"mahnvb",
+    "jobname":"srmahnvb010"
+  },
+  {
+    "id":595,
+    "BOID":-6800,
+    "Internalname":"6800",
+    "jobgroupname":"Buchungsstoff exportieren",
+    "ctrlmjobname":"bstexp",
+    "jobname":"srbstexp020"
+  },
+  {
+    "id":596,
+    "BOID":-6800,
+    "Internalname":"6800",
+    "jobgroupname":"Buchungsstoff exportieren",
+    "ctrlmjobname":"jahbsx",
+    "jobname":"srjahabs020"
+  },
+  {
+    "id":597,
+    "BOID":-6900,
+    "Internalname":"6900",
+    "jobgroupname":"Jahresabschluss",
+    "ctrlmjobname":"jahabp",
+    "jobname":"srjahabp010"
+  },
+  {
+    "id":598,
+    "BOID":-6900,
+    "Internalname":"6900",
+    "jobgroupname":"Jahresabschluss",
+    "ctrlmjobname":"jahabd",
+    "jobname":"srjahabp010"
+  },
+  {
+    "id":599,
+    "BOID":-7000,
+    "Internalname":"7000",
+    "jobgroupname":"Definitiver Jahresabschluss",
+    "ctrlmjobname":"jahabd",
+    "jobname":"srjahabd010"
+  },
+  {
+    "id":600,
+    "BOID":-71,
+    "Internalname":"70",
+    "jobgroupname":"Temp. KV Vertragskopien abarbeiten",
+    "ctrlmjobname":"kolkop",
+    "jobname":"srkolkop010"
+  },
+  {
+    "id":601,
+    "BOID":-7100,
+    "Internalname":"7100",
+    "jobgroupname":"Falldossier beenden",
+    "ctrlmjobname":"fdoend",
+    "jobname":"srfdoend010"
+  },
+  {
+    "id":602,
+    "BOID":-7200,
+    "Internalname":"7200",
+    "jobgroupname":"DWH SView Generator Batch",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":603,
+    "BOID":-7300,
+    "Internalname":"7300",
+    "jobgroupname":"Leistungen generieren Batch",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":604,
+    "BOID":-7350,
+    "Internalname":"-7350",
+    "jobgroupname":"Fallmeldungen verarbeiten",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":605,
+    "BOID":-74,
+    "Internalname":"74",
+    "jobgroupname":"Überschussbeteiligung berechnen",
+    "ctrlmjobname":"uebbet",
+    "jobname":"sruebbet010"
+  },
+  {
+    "id":606,
+    "BOID":-81,
+    "Internalname":"81",
+    "jobgroupname":"EV in andere OE umteilen",
+    "ctrlmjobname":"parumt",
+    "jobname":"srparumt010"
+  },
+  {
+    "id":607,
+    "BOID":-85,
+    "Internalname":"85",
+    "jobgroupname":"OP Import",
+    "ctrlmjobname":"opsimp",
+    "jobname":"srbonimp010"
+  },
+  {
+    "id":608,
+    "BOID":-86,
+    "Internalname":"86",
+    "jobgroupname":"OP Import verarbeiten",
+    "ctrlmjobname":"opsimp",
+    "jobname":"srbonimp020"
+  },
+  {
+    "id":609,
+    "BOID":-87,
+    "Internalname":"87",
+    "jobgroupname":"Kinder Rabatt bereinigen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":610,
+    "BOID":-88,
+    "Internalname":"88",
+    "jobgroupname":"Kandidaten Kinder Rabatt",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":611,
+    "BOID":-9,
+    "Internalname":"9",
+    "jobgroupname":"Jahresendverarbeitung EV",
+    "ctrlmjobname":"jahend",
+    "jobname":"srjahend010"
+  },
+  {
+    "id":612,
+    "BOID":-93,
+    "Internalname":"93",
+    "jobgroupname":"Adresslisten exportieren",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":613,
+    "BOID":-94,
+    "Internalname":"94",
+    "jobgroupname":"Policen bestellen",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":614,
+    "BOID":-96,
+    "Internalname":"HINTERL_DOKBEST_PART",
+    "jobgroupname":"Hinterlegung Dokumentbestellungen auf Partner",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":615,
+    "BOID":-97,
+    "Internalname":"PartnerOEUebersteuerungBatch",
+    "jobgroupname":"Rücknahme der Partner OE Übersteuerung",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":616,
+    "BOID":-9991,
+    "Internalname":"9991",
+    "jobgroupname":"ASE Test-Batch - ErrorTest",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":617,
+    "BOID":-9992,
+    "Internalname":"9992",
+    "jobgroupname":"ASE Test-Batch - Dynamic",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":618,
+    "BOID":-9994,
+    "Internalname":"9994",
+    "jobgroupname":"ASE Test-Batch Only Exporter",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":619,
+    "BOID":-9995,
+    "Internalname":"9995",
+    "jobgroupname":"ASE Test-Batch Only PreProcessor",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":620,
+    "BOID":-9996,
+    "Internalname":"9996",
+    "jobgroupname":"ASE Test-Batch",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  },
+  {
+    "id":621,
+    "BOID":-9997,
+    "Internalname":"9997",
+    "jobgroupname":"ASE Test-Batch Streaming",
+    "ctrlmjobname":"-",
+    "jobname":"-"
+  }
+]

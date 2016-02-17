@@ -1,0 +1,145 @@
+[
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 1,
+        "PARAMETERBEZEICHNUNG_B": "Periode von",
+        "PARAMETERBEZEICHNUNG_T": "Periode Von",
+        "PARAMETERTYP_T": "date",
+        "PARAMZUSATZ": null,
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "EinzelInkasso Partner",
+        "PARAMETERBEZEICHNUNG_T": "EinzelInkasso Partner",
+        "PARAMETERTYP_T": "ref",
+        "PARAMZUSATZ": "-3",
+        "TABLENAME": "Partner"
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "Zahlertyp",
+        "PARAMETERBEZEICHNUNG_T": "Zahlertyp",
+        "PARAMETERTYP_T": "ref",
+        "PARAMZUSATZ": "-491",
+        "TABLENAME": "SysCollection"
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "Partnername von",
+        "PARAMETERBEZEICHNUNG_T": "Partnername von",
+        "PARAMETERTYP_T": "string",
+        "PARAMZUSATZ": null,
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "Falligkeit",
+        "PARAMETERBEZEICHNUNG_T": "Faelligkeit",
+        "PARAMETERTYP_T": "code",
+        "PARAMZUSATZ": "-1540",
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "GBereich",
+        "PARAMETERBEZEICHNUNG_T": "GBereich",
+        "PARAMETERTYP_T": "ref",
+        "PARAMZUSATZ": "-494",
+        "TABLENAME": "GBereich"
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 1,
+        "PARAMETERBEZEICHNUNG_B": "Rechnungsdatum",
+        "PARAMETERBEZEICHNUNG_T": "Rechnungsdatum",
+        "PARAMETERTYP_T": "date",
+        "PARAMZUSATZ": null,
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "Gruppen Inkasso",
+        "PARAMETERBEZEICHNUNG_T": "Gruppen Inkasso",
+        "PARAMETERTYP_T": "ref",
+        "PARAMZUSATZ": "-158",
+        "TABLENAME": "PartnerGrp"
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "Zahlungsart",
+        "PARAMETERBEZEICHNUNG_T": "Zahlungsart",
+        "PARAMETERTYP_T": "code",
+        "PARAMZUSATZ": "-290",
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "PartnerNr von",
+        "PARAMETERBEZEICHNUNG_T": "PartnerNr von",
+        "PARAMETERTYP_T": "string",
+        "PARAMZUSATZ": null,
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "OP-Betrag",
+        "PARAMETERBEZEICHNUNG_T": "OP-Betrag",
+        "PARAMETERTYP_T": "code",
+        "PARAMZUSATZ": "-4020",
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "PartnerNr bis",
+        "PARAMETERBEZEICHNUNG_T": "PartnerNr bis",
+        "PARAMETERTYP_T": "string",
+        "PARAMZUSATZ": null,
+        "TABLENAME": null
+    },
+    {
+        "BATCHBEZEICHNUNG_B": "EV Inkasso",
+        "BOID_T": "-350",
+        "INTERNALNAME_T": "350",
+        "MANDATORY_B": 0,
+        "PARAMETERBEZEICHNUNG_B": "Partnername bis",
+        "PARAMETERBEZEICHNUNG_T": "Partnername bis",
+        "PARAMETERTYP_T": "string",
+        "PARAMZUSATZ": null,
+        "TABLENAME": null
+    }
+]

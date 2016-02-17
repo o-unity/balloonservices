@@ -1,0 +1,39 @@
+[{
+		id: "1304",
+		jobgroupname: "Vermittlerdaten Export",
+		ctrlmjobname: "vmdexp",
+	}, {
+		id: "1204",
+		jobgroupname: "Datenpool Export (monatlich)",
+		ctrlmjobname: "dpmexp,dpmexp2,xxfrd",
+	}, {
+		id: "1001100",
+		jobgroupname: "Quellensteuer nachfahren",
+		ctrlmjobname: "dqpmdd",
+	}, {
+		id: "1001200",
+		jobgroupname: "EV in andere OE umteilen CH",
+		ctrlmjobname: "wweeee",
+	}, {
+		id: "1001220",
+		jobgroupname: "CIP Betreibungen exportieren",
+		ctrlmjobname: "cipsyr",
+	}, {
+		id: "1001240",
+		jobgroupname: "Import ZSR",
+		ctrlmjobname: "impsyrggg",
+	}, {
+		id: "1001250",
+		jobgroupname: "Import ZSR Eigenschaften Angestellte ab 01.01.2005",
+		ctrlmjobname: "impsyrggg",
+	}, {
+		id: "58",
+		jobgroupname: "Police",
+		ctrlmjobname: "POLDRP",
+	}, {
+		id: "350",
+		jobgroupname: "EV Inkasso",
+		ctrlmjobname: "INKEIN",
+	}
+
+]
