@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <script type="text/javascript" src="static/js/jquery-1.4.2.min.js"></script>
+	<script src="static/js/webix/codebase/webix.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="static/js/webix/codebase/webix.css" type="text/css">
+    <script type="text/javascript" src="static/js/socket.io.min.js"></script>
+	<!--<link rel="stylesheet" href="static/js/webix/codebase/skins/material.css" type="text/css">-->
+	<!--<link rel="stylesheet" href="static/js/webix/codebase/skins/siberia.css">-->
+
+	<style>
+        .value {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30pt;
+            text-align: right;
+            position: relative;
+            top: -95px;
+            right: 3px;
+            width: 100%
+        }
+
+        .text {
+            color: #fff;
+            font-weight: normal;
+            font-size: 16pt;
+            text-align: right;
+            position: relative;
+            top: -105px;
+            right: 3px;
+            width: 100%
+        }
+
+        .footer {
+            color: #fff;
+            font-weight: normal;
+            font-size: 10pt;
+            text-align: center;
+            position: relative;
+            top: -100px;
+            right: 0px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.0470588);
+            padding: 5px;
+        }
+
+        .footer .webix_icon {
+            font-size: 9pt;
+        }
+
+        .icon {
+            color: #fff;
+            font-weight: bold;
+            font-size: 77px;
+            color: rgba(255, 255, 255, 0.168627);
+            padding: 20px;
+            padding-left: 10px;
+        }
+        .titletext{
+            color: #b6c1c4;
+            font-weight: normal;
+            font-size: 24pt;
+            padding-left:10px;
+        }
+        .webix_layout_toolbar.webix_toolbar{
+            background-color:rgb(95, 95, 95)
+        }
+ 	</style>
+</head>
+
+<body>
+
+
+	<div id="panel_dataitems" style='display:none;'>
+        <div class="webix_icon icon fa-cloud-download"></div>
+        <div class="details">
+            <div class="value" id="value_dataitems">-</div>
+            <div class="text">data messages</div>
+        </div>
+        <div class="footer">View more <span class="webix_icon fa-angle-double-right"></span></div>
+	</div>
+
+	<div id="panel_lastmessage" style='display:none;'>
+        <div class="webix_icon icon fa-clock-o"></div>
+        <div class="details">
+            <div class="value" id="value_lastmsg">-</div>
+            <div class="text">last message</div>
+        </div>
+        <div class="footer">View more <span class="webix_icon fa-angle-double-right"></span></div>
+	</div>
+
+	<div id="panel_altitude" style='display:none;'>
+        <div class="webix_icon icon fa-line-chart"></div>
+        <div class="details">
+            <div class="value">12'458 m</div>
+            <div class="text">altitude</div>
+        </div>
+        <div class="footer">View more <span class="webix_icon fa-angle-double-right"></span></div>
+	</div>
+
+	<div id="panel_increasing" style='display:none;'>
+        <div class="webix_icon icon fa-fighter-jet"></div>
+        <div class="details">
+            <div class="value">5 m/s</div>
+            <div class="text">increasing</div>
+        </div>
+        <div class="footer">View more <span class="webix_icon fa-angle-double-right"></span></div>
+	</div>
+
+    <div id="titlecontainer" style='display:none;'>
+       <div class="titletext">balloo - realtime web service</div>
+    </div>
+
+	<script type="text/javascript" charset="utf-8">
+
+        var menu_data = [
+            {
+                id:"1",
+                value:"Info",
+                css:{'background-color':'rgb(95, 95, 95)'},
+            }
+        ];
+        var menu = {
+            view:"menu",
+            data: menu_data,
+            css:{'background-color':'rgb(95, 95, 95)'}
+        };
+
+		webix.ui({
+			type: "clean",
+            id: "balloodoc",
+			rows: [
+            {
+                type:"clean",
+                /*cols:[ menu ],*/
+                /*css:{'background-color':'rgb(95, 95, 95)'},*/
+                height: 50,
+                cols: [{
+                    type: "space",
+                    template: "html->titlecontainer",
+                    /*template: "ssss"*/
+                    css:{'background-color':'rgb(95, 95, 95)'},
+                },{
+                    view:"toolbar",
+                    cols:[
+                        {
+                            gravity: 4,
+                        },
+                        { view:"icon", icon:"envelope", value:"Mail"},
+                        { view:"icon", icon:"users"},
+                        { view:"icon", icon:"cog"}
+                    ]
+                }]
+            }, {
+                type: "space",
+			    rows: [
+                {
+                    type: "wide",
+                    height: 130,
+                    id: "panels",
+                    cols: [{
+                        css:{'background-color':'rgb(166, 147, 235)'},
+                        template: "html->panel_dataitems",
+                        id: "col_dataitems"
+                    }, {
+                        css:{'background-color':'rgb(99, 180, 234)'},
+                        template: "html->panel_lastmessage",
+                        id: "col_lastmessage"
+                    }, {
+                        css:{'background-color':'rgb(241, 155, 96)'},
+                        template: "html->panel_altitude"
+                    }, {
+                        css:{'background-color':'rgb(73, 205, 129)'},
+                        template: "html->panel_increasing"
+                    }]
+
+                },{
+
+                        id: "contenttest",
+                        template: "test"
+                }]
+            }]
+		});
+
+
+
+        $(document).ready(function(){
+            namespace = '/api'; // change to an empty string to use the global namespace
+            var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+            socket.emit('join', {room: 'webroom'});
+
+            socket.on('dataitems', function(msg) {
+                $('#value_dataitems').html(msg.msgcount);
+                $$('col_dataitems').define("template","html->panel_dataitems");
+                $$('col_dataitems').refresh();
+                lastmsgrec = 0
+            });
+
+            socket.on('startup', function(msg) {
+                $('#value_dataitems').html(msg.msgcount);
+                $$('col_dataitems').define("template","html->panel_dataitems");
+                $$('col_dataitems').refresh();
+                lastmsgrec = msg.lastmsg
+                addsec2lastmsg()
+            });
+
+            /*
+            $('#value_dataitems').html("Hello World");
+            $$('col_dataitems').define("template","html->panel_dataitems");
+            $$('col_dataitems').refresh();
+            */
+		});
+
+
+        function calc2min(sec){
+            var minutes = Math.floor(sec / 60);
+            var seconds = sec - minutes * 60;
+            if(seconds < 10){
+                return minutes + ":0" + seconds;
+            }
+            return minutes + ":" + seconds;
+
+        }
+
+        var lastmsgrec = 0;
+        function addsec2lastmsg(){
+            lastmsgrec += 1;
+            $('#value_lastmsg').html(calc2min(lastmsgrec));
+            $$('col_lastmessage').define("template","html->panel_lastmessage");
+            $$('col_lastmessage').refresh();
+        }
+
+        setInterval(addsec2lastmsg, 1000);
+
+
+
+
+
+
+	</script>
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

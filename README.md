@@ -13,7 +13,11 @@
     pip install eventlet
     pip install -U socketIO-client
     pip install decorator
+    pip install pillow
 
+## modify module socketIO_client
+    line 224 change to
+    self._transport.set_timeout(seconds=seconds)
 
 ## Testcoverage
     coverage erase
@@ -21,3 +25,4 @@
     coverage xml -i
     coverage report -m
     coverage html
+

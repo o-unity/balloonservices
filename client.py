@@ -3,14 +3,52 @@ from threading import Thread
 import json
 import time
 from collections import OrderedDict
+import logging
+import sys
+import os
+from PIL import Image as Pil
+import base64
+import io
 
 __author__ = 'over.unity'
 
 
+root = logging.getLogger()
+root.setLevel(logging.DEBUG)
+
+ch = logging.StreamHandler(sys.stdout)
+ch.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+root.addHandler(ch)
+
+
 class Image(object):
+    img = None
+    width = 300
+    height = 300
+
     def __init__(self, **kwargs):
         self.attr = kwargs
+        print(kwargs)
         self.prop = {}
+        self.read().resize().convertbase64()
+
+    def read(self):
+        self.img = Pil.open(self.attr['path'])
+        return self
+
+    def resize(self):
+        if "resize" in self.attr:
+            size = self.width, self.height
+            self.img.thumbnail(size, Pil.ANTIALIAS)
+
+        return self
+
+    def convertbase64(self):
+        buffer = io.BytesIO()
+        self.img.save(buffer, "JPEG")
+        self.prop['payload'] = base64.b64encode(buffer.getvalue()).decode()
 
     def gettype(self):
         return "image"
@@ -38,6 +76,12 @@ class Instance(object):
 
     def gethash(self):
         return self._hash
+
+    def settimestamp(self):
+        self.obj.prop['timestamp'] = time.time()
+
+    def gettimestamp(self):
+        return self.obj.prop['timestamp']
 
     def dict(self):
         d = dict()
@@ -81,10 +125,10 @@ class SocketNamespace(BaseNamespace):
     _lock = False
 
     def on_connect(self):
-        print('connected')
+        root.info('connected')
 
     def on_error(self, data):
-        print('error')
+        root.info('error')
 
     def on_response(*args):
         sock.unlockbyhash(args[1])
@@ -103,15 +147,52 @@ class Socket(SocketNamespace):
         self.queue = []
         self.oc = ObjectCount()
         self._sock = False
+        self.maxunlocktime = 30
+        self.emittime = 0.1
+        self.emittimemin = 0.02
+        self.emitavg = 2
+        ult = Thread(target=self.unlockbytime)
+        ult.start()
 
-    def unlockbyhash(self, hash):
+    def unlockbytime(self):
+        while True:
+            time.sleep(1)
+            if self.getlock():
+                root.info("waiting for response")
+                ct = 0
+                while ct < self.maxunlocktime:
+                    ct += 1
+                    time.sleep(1)
+                    if ct >= self.maxunlocktime:
+                        root.info("response timeout, unlock!!!")
+                        self.calcemittime(self.maxunlocktime / 2)
+                        root.info("new emit wait time:%s" % self.emittime)
+                        self.unlock()
+
+                    if not self.getlock():
+                        break
+
+    def unlockbyhash(self, hashstr):
         for key, obj in enumerate(self.queue):
-            if hash == obj.gethash():
+            if hashstr == obj.gethash():
+                root.info("response for No:%s" % obj.getcount())
                 del self.queue[key]
                 self.unlock()
+                ntime = time.time() - obj.gettimestamp()
+                self.calcemittime(float(ntime))
+
+    def calcemittime(self, ntime):
+        self.emittime = (ntime * 2 + (self.emittime * (self.emitavg - 1))) / self.emitavg
+        if self.emittime < ntime:
+            self.emittime = ntime * 2
+
+        if self.emittimemin > self.emittime:
+            self.emittime = self.emittimemin
+
+        self.emittime = round(self.emittime, 2)
+#        root.info("new calc time:%s" % self.emittime)
 
     def unlock(self):
-        print("unlock")
         self._lock = False
 
     def lock(self):
@@ -138,15 +219,19 @@ class Socket(SocketNamespace):
     def addqueue(self, obj):
         self.queue.append(obj)
         self.sortbycount()
-        print("add to queue, current objects: %s" % len(self.queue))
+        root.info("add new object to queue, count: %s" % len(self.queue))
 
-        if not self.getlock():
-            self.lock()
-            self.emit(self.queue[0])
+    def emitdata(self):
+        while True:
+            if not self.getlock() and len(self.queue):
 
-    def emit(self, qobj):
-        self.nsp.emit(qobj.gettype(), qobj.dict())
-        self.socketio.wait(seconds=1)
+                self.lock()
+                self.queue[0].settimestamp()
+                root.info("start emitting No:%s" % self.queue[0].getcount())
+                self.nsp.emit(self.queue[0].gettype(), self.queue[0].dict())
+                self.socketio.wait(seconds=self.emittime)
+            else:
+                time.sleep(0.2)
 
     def sortbycount(self):
         self.queue = sorted(self.queue, key=lambda x: x.obj.prop['count'], reverse=True)
@@ -189,6 +274,7 @@ class WebSocket(object):
 
 class ImageCollector(object):
     def __init__(self, resize=False):
+        root.info("starting ImageCollector")
         self.resize = resize
         self.collect()
 
@@ -196,8 +282,8 @@ class ImageCollector(object):
         ct = 0
         while ct < 3600:
             ct += 1
-            self.register("path/to/image.png")
-            time.sleep(5)
+            self.register("/Users/andi/PycharmProjects/balloonservices/data/images/test.jpg")
+            time.sleep(30)
 
     def register(self, path):
         sock.add().image(path=path, resize=self.resize)
@@ -205,6 +291,10 @@ class ImageCollector(object):
 
 # --------------------------------------- //
 
+# root = logging()
+root.info("starting client")
+
+# --------------------------------------- //
 
 ws = WebSocket()
 ws.host = 'localhost'
@@ -213,11 +303,13 @@ ws.namespace = "/api"
 
 sock = ws.connect()
 
+procs = []
+p1 = Thread(target=ImageCollector, args=(True, ))
+p1.start()
 
-t = Thread(target=ImageCollector, args=(True, ))
-t.start()
+sock.emitdata()
 
 
-print("done")
+root.info("done")
 
 
