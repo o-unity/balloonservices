@@ -73,6 +73,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/map')
+def googlemap():
+    return render_template('gtest.html')
+
+
 @socketio.on('image', namespace='/api')
 def test_message(message):
     wrdata.incmsg()
