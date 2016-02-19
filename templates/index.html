@@ -110,7 +110,8 @@
 	</div>
 
     <div id="titlecontainer" style='display:none;'>
-       <div class="titletext">balloo - realtime web service</div>
+       <!--<div class="titletext">balloo - realtime web service</div>-->
+        <img src="static/img/logo_invert_weiss.png" height="35px" style="padding-left:20px"/>
     </div>
 
 	<script type="text/javascript" charset="utf-8">
@@ -177,9 +178,30 @@
                     }]
 
                 },{
-
-                        id: "contenttest",
-                        template: "test"
+                    type: "clean",
+                    rows: [{
+                        type: "clean",
+                        height: "50%",
+                        id: "panels",
+                        cols: [{
+                            template: "images",
+                            id: "content_1"
+                        }, {
+                            template: "google path",
+                            id: "content_2"
+                        }]
+                    },{
+                        type: "clean",
+                        height: "50%",
+                        id: "panels",
+                        cols: [{
+                            template: "altitude / speed",
+                            id: "content_3"
+                        }, {
+                            template: "log messages",
+                            id: "content_4"
+                        }]
+                    }]
                 }]
             }]
 		});
