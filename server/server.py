@@ -16,7 +16,7 @@ msgcount = 0
 
 
 class Bimg(object):
-    pathimage = "received/images/"
+    pathimage = "static/received/images/"
     img = None
 
     def add(self, uxtimestamp):

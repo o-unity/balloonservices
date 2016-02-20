@@ -282,7 +282,7 @@ class ImageCollector(object):
         ct = 0
         while ct < 3600:
             ct += 1
-            self.register("/Users/andi/PycharmProjects/balloonservices/data/images/test.jpg")
+            self.register("/Users/andi/PycharmProjects/balloonservices/client/data/images/test.jpg")
             time.sleep(30)
 
     def register(self, path):
