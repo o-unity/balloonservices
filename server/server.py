@@ -6,6 +6,9 @@ from flask_socketio import SocketIO, emit, join_room, leave_room, \
     close_room, rooms, disconnect
 import base64
 import datetime
+from functools import wraps
+import sqlite3 as lite
+import sys
 
 async_mode = 'eventlet'
 app = Flask(__name__)
@@ -62,6 +65,53 @@ class WebroomData(object):
         return d
 
 
+class MessageLogging(object):
+
+    def __init__(self, view_func):
+        self.view_func = view_func
+        wraps(view_func)(self)
+
+    def __call__(self, request, *args, **kwargs):
+        print(request['loggingtype'])
+        response = self.view_func(request, *args, **kwargs)
+        return response
+
+
+class DB(object):
+    def __init__(self):
+        self.con = None
+        self.connect()
+
+    def connect(self):
+        self.con = lite.connect('db/data.db')
+
+    def test(self):
+        cur = self.con.cursor()
+        cur.execute('SELECT SQLITE_VERSION()')
+        data = cur.fetchone()
+        print("SQLite version: %s" % data)
+
+    def inserttest(self):
+        cur = self.con.cursor()
+        log = dict()
+        log['type'] = "image"
+        log['checksum'] = "sgegsdgsgsg"
+        log['data'] = "yes!"
+        columns = ', '.join(log.keys())
+        placeholders = ':'+', :'.join(log.keys())
+        query = 'INSERT INTO log (%s) VALUES (%s)' % (columns, placeholders)
+        print(query)
+
+        cur.execute(query, log)
+        self.con.commit()
+
+db = DB()
+db.inserttest()
+#db.select("select * from xyz")
+
+sys.exit(0)
+
+
 wrdata = WebroomData()
 bimg = Bimg()
 wrdata.incmsg()
@@ -79,6 +129,7 @@ def googlemap():
 
 
 @socketio.on('image', namespace='/api')
+@MessageLogging
 def test_message(message):
     wrdata.incmsg()
     bimg.add(message['timestamp'])

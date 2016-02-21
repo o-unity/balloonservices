@@ -69,6 +69,7 @@ class Instance(object):
         return self.obj.prop['count']
 
     def gettype(self):
+        self.obj.prop['loggingtype'] = self.obj.gettype()
         return self.obj.gettype()
 
     def sethash(self, d):
