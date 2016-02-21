@@ -86,7 +86,8 @@ class Mapping(object):
         datamapped['loggingtype'] = data['loggingtype']
         datamapped['count'] = data['count']
         datamapped['checksum'] = data['checksum']
-        datamapped['timestamp'] = data['timestamp']
+        datamapped['pushtimestamp'] = data['timestamp']
+        datamapped['savetimestamp'] = time.time()
         return datamapped
 
 
