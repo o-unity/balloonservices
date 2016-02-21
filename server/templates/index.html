@@ -59,6 +59,12 @@
         body text
     </div>
 
+    <div id="boxctlog" class="boxctlog" style='display:none;'>
+       <pre>
+           1    17:15:24    image
+       </pre>
+    </div>
+
 
 
 	<script type="text/javascript" charset="utf-8">
@@ -185,7 +191,8 @@
                                     "height": 40
                                 },
                                 {
-                                    template: "log"
+                                    template: "html->boxctlog",
+                                    id: "boxctlog"
                                 }
                             ]
                         }]
@@ -214,6 +221,10 @@
                 $$('col_dataitems').refresh();
                 lastmsgrec = msg.lastmsg
                 addsec2lastmsg()
+            });
+
+            socket.on('log', function(msg) {
+                alert("log!")
             });
 
             /*

@@ -48,7 +48,7 @@ class Image(object):
     def convertbase64(self):
         buffer = io.BytesIO()
         self.img.save(buffer, "JPEG")
-        self.prop['payload'] = base64.b64encode(buffer.getvalue()).decode()
+        self.attr['payload'] = base64.b64encode(buffer.getvalue()).decode()
 
     def gettype(self):
         return "image"

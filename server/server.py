@@ -72,50 +72,57 @@ class MessageLogging(object):
         wraps(view_func)(self)
 
     def __call__(self, request, *args, **kwargs):
-        print(request['loggingtype'])
+        db.settable("log").map(request['loggingtype'], request).commit()
         response = self.view_func(request, *args, **kwargs)
         return response
 
 
-class DB(object):
+class Mapping(object):
+    def __init__(self):
+        pass
+
+    def image(self, data):
+        datamapped = dict()
+        datamapped['loggingtype'] = data['loggingtype']
+        datamapped['count'] = data['count']
+        datamapped['checksum'] = data['checksum']
+        datamapped['timestamp'] = data['timestamp']
+        return datamapped
+
+
+class DB(Mapping):
     def __init__(self):
         self.con = None
+        self.datamapped = None
+        self.table = None
         self.connect()
+
+    def settable(self, table):
+        self.table = table
+        return self
 
     def connect(self):
         self.con = lite.connect('db/data.db')
 
-    def test(self):
-        cur = self.con.cursor()
-        cur.execute('SELECT SQLITE_VERSION()')
-        data = cur.fetchone()
-        print("SQLite version: %s" % data)
+    def map(self, mappingfunction, data):
+        self.datamapped = getattr(self, mappingfunction)(data)
+        return self
 
-    def inserttest(self):
+    def commit(self):
         cur = self.con.cursor()
-        log = dict()
-        log['type'] = "image"
-        log['checksum'] = "sgegsdgsgsg"
-        log['data'] = "yes!"
-        columns = ', '.join(log.keys())
-        placeholders = ':'+', :'.join(log.keys())
-        query = 'INSERT INTO log (%s) VALUES (%s)' % (columns, placeholders)
-        print(query)
-
-        cur.execute(query, log)
+        columns = ', '.join(self.datamapped.keys())
+        placeholders = ':'+', :'.join(self.datamapped.keys())
+        query = 'INSERT INTO %s (%s) VALUES (%s)' % \
+                (self.table, columns, placeholders)
+        cur.execute(query, self.datamapped)
         self.con.commit()
+        emit('log', self.datamapped, room='webroom')
+
 
 db = DB()
-db.inserttest()
-#db.select("select * from xyz")
-
-sys.exit(0)
-
-
-wrdata = WebroomData()
 bimg = Bimg()
+wrdata = WebroomData()
 wrdata.incmsg()
-#print(wrdata.dict())
 
 
 @app.route('/')
@@ -130,10 +137,10 @@ def googlemap():
 
 @socketio.on('image', namespace='/api')
 @MessageLogging
-def test_message(message):
+def sockimage(message):
     wrdata.incmsg()
     bimg.add(message['timestamp'])
-    bimg.setcontent(message['payload']).save()
+    bimg.setcontent(message['obj']['payload']).save()
 
     emit('response', message['checksum'])
     emit('dataitems', wrdata.dict(), room='webroom')
@@ -158,7 +165,6 @@ def disconnect_request():
 
 @socketio.on('connect', namespace='/api')
 def test_connect():
-#    emit('my response', {'data': 'Connected', 'count': 0})
     wrdata.lastmsg()
     emit('startup', wrdata.dict())
 
@@ -169,4 +175,4 @@ def test_disconnect():
 
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    socketio.run(app, debug=False)
