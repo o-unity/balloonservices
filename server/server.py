@@ -90,6 +90,9 @@ class Mapping(object):
         datamapped['savetimestamp'] = time.time()
         return datamapped
 
+    def image_log(self):
+        pass
+
 
 class DB(Mapping):
     def __init__(self):
@@ -117,14 +120,24 @@ class DB(Mapping):
                 (self.table, columns, placeholders)
         cur.execute(query, self.datamapped)
         self.con.commit()
+        print(cur.lastrowid)
         emit('log', self.datamapped, room='webroom')
 
+
+class Logger(Mapping):
+    def __init__(self):
+        pass
+
+    def getentrybyrowid(self):
+        print("pass")
 
 db = DB()
 bimg = Bimg()
 wrdata = WebroomData()
 wrdata.incmsg()
 
+#Logger().getentrybyrowid()
+#sys.exit(0)
 
 @app.route('/')
 def index():
@@ -145,6 +158,11 @@ def sockimage(message):
 
     emit('response', message['checksum'])
     emit('dataitems', wrdata.dict(), room='webroom')
+
+
+@socketio.on('cleanup', namespace='/api')
+def join(message):
+    print(message)
 
 
 @socketio.on('join', namespace='/api')

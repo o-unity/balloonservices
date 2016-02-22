@@ -102,9 +102,7 @@
                         {
                             gravity: 4,
                         },
-                        { view:"icon", icon:"envelope", value:"Mail"},
-                        { view:"icon", icon:"users"},
-                        { view:"icon", icon:"cog"}
+                        { view:"icon", icon:"recycle", id:"action_cleanup"}
                     ]
                 }]
             }, {
@@ -201,11 +199,14 @@
             }]
 		});
 
+        $$('action_cleanup').attachEvent("onItemClick", function(id,value){
+            socket.emit('cleanup', {cleanup: true});
+        });
 
-
+        var socket
         $(document).ready(function(){
             namespace = '/api'; // change to an empty string to use the global namespace
-            var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
+            socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
             socket.emit('join', {room: 'webroom'});
 
             socket.on('dataitems', function(msg) {
