@@ -200,11 +200,19 @@
 		});
 
         $$('action_cleanup').attachEvent("onItemClick", function(id,value){
+            if(!auth){
+                $$('log_form_window').show();
+                return false;
+            }
+
             socket.emit('cleanup', {cleanup: true});
         });
 
         var socket
         $(document).ready(function(){
+            alert(webix.storage.cookie.get('test'))
+            webix.storage.cookie.put('test', "ssss");
+
             namespace = '/api'; // change to an empty string to use the global namespace
             socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
             socket.emit('join', {room: 'webroom'});
@@ -217,6 +225,7 @@
             });
 
             socket.on('startup', function(msg) {
+                console.log(msg)
                 $('#value_dataitems').html(msg.msgcount);
                 $$('col_dataitems').define("template","html->panel_dataitems");
                 $$('col_dataitems').refresh();
@@ -227,6 +236,16 @@
             socket.on('log', function(msg) {
                 //alert("log!")
             });
+
+            socket.on('auth', function(msg) {
+                if(msg['auth'] == true){
+                    webix.message("login successful");
+                    auth = true;
+                    return
+                }
+                webix.message({type:"error", text:"password is invalid"});
+            });
+
 
             /*
             $('#value_dataitems').html("Hello World");
@@ -256,7 +275,56 @@
 
         setInterval(addsec2lastmsg, 1000);
 
+        // ----------------------------------------------------------------
+        // LOGIN
 
+        webix.ui({
+            view:"window",
+            id:"log_form_window",
+            height:250,
+            width:300,
+            position:"center",
+            head:false,
+            body:{
+                view:"form",
+                id:"log_form",
+                width:300,
+                elements:[
+                    { view:"text", type:"password", label:"Password", id:"log_form_password"},
+                    { margin:5, cols:[
+                        { view:"button", value:"Login" , type:"form", id:"log_form_login" },
+                        { view:"button", value:"Cancel", id:"log_form_cancel" }
+                    ]}
+                    ]
+            }
+        }).hide();
+
+        auth = false
+		$$('log_form_cancel').attachEvent("onItemClick", function(id,value){
+           $$('log_form_window').hide();
+		});
+
+		$$('log_form_login').attachEvent("onItemClick", function(id,value){
+            emitauth();
+		});
+
+        $$("log_form_password").attachEvent("onKeyPress", function(code, e) {
+            if (code === 13) {
+                emitauth();
+            }
+        });
+
+        function emitauth(){
+            $$('log_form_window').hide();
+            socket.emit('auth', {
+                password: $$('log_form_password').getValue(),
+                'loggingtype': 'auth'
+            });
+
+        }
+
+        // ----------------------------------------------------------------
+        // ---
 
 	</script>
 </body>

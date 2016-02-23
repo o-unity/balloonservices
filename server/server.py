@@ -9,6 +9,7 @@ import datetime
 from functools import wraps
 import sqlite3 as lite
 import sys
+import uuid
 
 async_mode = 'eventlet'
 app = Flask(__name__)
@@ -62,6 +63,8 @@ class WebroomData(object):
         d = dict()
         for prop, value in self.obj.items():
             d[prop] = value
+
+        d['auth'] = session['auth']
         return d
 
 
@@ -92,6 +95,13 @@ class Mapping(object):
 
     def image_log(self):
         pass
+
+    def auth(self, data):
+        datamapped = dict()
+        datamapped['loggingtype'] = data['loggingtype']
+        datamapped['savetimestamp'] = time.time()
+        datamapped['data'] = "{'remote_address:' '%s', 'uid': '%s'}" % (request.remote_addr, session['id'])
+        return datamapped
 
 
 class DB(Mapping):
@@ -136,8 +146,6 @@ bimg = Bimg()
 wrdata = WebroomData()
 wrdata.incmsg()
 
-#Logger().getentrybyrowid()
-#sys.exit(0)
 
 @app.route('/')
 def index():
@@ -165,6 +173,19 @@ def join(message):
     print(message)
 
 
+@socketio.on('auth', namespace='/api')
+@MessageLogging
+def join(message):
+    try:
+        if message['password'] == "service":
+            emit('auth', {'auth': True})
+            session['auth'] = True
+        else:
+            emit('auth', {'auth': False})
+    except:
+        emit('auth', {'auth': False})
+
+
 @socketio.on('join', namespace='/api')
 def join(message):
     join_room(message['room'])
@@ -185,6 +206,14 @@ def disconnect_request():
 @socketio.on('connect', namespace='/api')
 def test_connect():
     wrdata.lastmsg()
+    if not "auth" in session:
+        session['auth'] = False
+        print("auth to false")
+
+    if not "id" in session:
+        session['id'] = str(uuid.uuid4())
+        print("gen new session id")
+
     emit('startup', wrdata.dict())
 
 
