@@ -59,17 +59,17 @@ class WebroomData(object):
     def resetlstmsg(self):
         self.obj['_lastmsg'] = time.time()
 
-    def dict(self):
+    def dict(self, uuid=""):
         d = dict()
         for prop, value in self.obj.items():
             d[prop] = value
 
-        d['auth'] = session['auth']
+        if uuid:
+            d['auth'] = usr.uuid(uuid).getauth()
         return d
 
 
 class MessageLogging(object):
-
     def __init__(self, view_func):
         self.view_func = view_func
         wraps(view_func)(self)
@@ -100,7 +100,7 @@ class Mapping(object):
         datamapped = dict()
         datamapped['loggingtype'] = data['loggingtype']
         datamapped['savetimestamp'] = time.time()
-        datamapped['data'] = "{'remote_address:' '%s', 'uid': '%s'}" % (request.remote_addr, session['id'])
+        datamapped['data'] = "{'remote_address:' '%s'}" % (request.remote_addr,)
         return datamapped
 
 
@@ -125,7 +125,7 @@ class DB(Mapping):
     def commit(self):
         cur = self.con.cursor()
         columns = ', '.join(self.datamapped.keys())
-        placeholders = ':'+', :'.join(self.datamapped.keys())
+        placeholders = ':' + ', :'.join(self.datamapped.keys())
         query = 'INSERT INTO %s (%s) VALUES (%s)' % \
                 (self.table, columns, placeholders)
         cur.execute(query, self.datamapped)
@@ -141,8 +141,44 @@ class Logger(Mapping):
     def getentrybyrowid(self):
         print("pass")
 
+
+class UserLoggin(object):
+    def __init__(self):
+        self.user = dict()
+        self.id = None
+        pass
+
+    def uuid(self, id=False):
+        if id:
+            self.id = id
+        else:
+            self.id = str(uuid.uuid4())
+
+        if self.id not in self.user:
+            self.user[self.id] = dict()
+
+        if "auth" not in self.user[self.id]:
+            self.user[self.id]['auth'] = False
+
+        return self
+
+    def getuuid(self):
+        return self.id
+
+    def auth(self, password=""):
+        if password == "balloo":
+            self.user[self.id]['auth'] = True
+        else:
+            self.user[self.id]['auth'] = False
+
+    def getauth(self):
+        return self.user[self.id]['auth']
+
+
 db = DB()
 bimg = Bimg()
+usr = UserLoggin()
+
 wrdata = WebroomData()
 wrdata.incmsg()
 
@@ -175,24 +211,18 @@ def join(message):
 
 @socketio.on('auth', namespace='/api')
 @MessageLogging
-def join(message):
-    try:
-        if message['password'] == "service":
-            emit('auth', {'auth': True})
-            session['auth'] = True
-        else:
-            emit('auth', {'auth': False})
-    except:
-        emit('auth', {'auth': False})
+def auth(message):
+    print(message)
+    usr.uuid(message['uuid']).auth(message['password'])
+    emit('auth', {'auth': usr.getauth(), 'uuid': usr.getuuid()})
 
 
 @socketio.on('join', namespace='/api')
 def join(message):
     join_room(message['room'])
     session['receive_count'] = session.get('receive_count', 0) + 1
-    emit('my response',
-         {'data': 'In rooms: ' + ', '.join(rooms()),
-          'count': session['receive_count']})
+    wrdata.lastmsg()
+    emit('startup', wrdata.dict(message['uuid']))
 
 
 @socketio.on('disconnect request', namespace='/api')
@@ -205,16 +235,7 @@ def disconnect_request():
 
 @socketio.on('connect', namespace='/api')
 def test_connect():
-    wrdata.lastmsg()
-    if not "auth" in session:
-        session['auth'] = False
-        print("auth to false")
-
-    if not "id" in session:
-        session['id'] = str(uuid.uuid4())
-        print("gen new session id")
-
-    emit('startup', wrdata.dict())
+    return True
 
 
 @socketio.on('disconnect', namespace='/api')

@@ -210,12 +210,11 @@
 
         var socket
         $(document).ready(function(){
-            alert(webix.storage.cookie.get('test'))
-            webix.storage.cookie.put('test', "ssss");
+            //webix.storage.cookie.put('test', "ssss");
 
             namespace = '/api'; // change to an empty string to use the global namespace
             socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
-            socket.emit('join', {room: 'webroom'});
+            socket.emit('join', {room: 'webroom', 'uuid': webix.storage.cookie.get('uuid')});
 
             socket.on('dataitems', function(msg) {
                 $('#value_dataitems').html(msg.msgcount);
@@ -231,6 +230,11 @@
                 $$('col_dataitems').refresh();
                 lastmsgrec = msg.lastmsg
                 addsec2lastmsg()
+
+                if(msg['auth'] == true){
+                    auth = true
+                }
+
             });
 
             socket.on('log', function(msg) {
@@ -238,6 +242,8 @@
             });
 
             socket.on('auth', function(msg) {
+                webix.storage.cookie.put('uuid', msg['uuid']);
+                console.log(msg)
                 if(msg['auth'] == true){
                     webix.message("login successful");
                     auth = true;
@@ -317,8 +323,9 @@
         function emitauth(){
             $$('log_form_window').hide();
             socket.emit('auth', {
-                password: $$('log_form_password').getValue(),
-                'loggingtype': 'auth'
+                password:       $$('log_form_password').getValue(),
+                'loggingtype':  'auth',
+                'uuid':         webix.storage.cookie.get('uuid')
             });
 
         }
