@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="static/js/webix/codebase/webix.css" type="text/css">
     <link rel="stylesheet" href="static/css/balloo.css" type="text/css">
     <script type="text/javascript" src="static/js/socket.io.min.js"></script>
+    <link rel="shortcut icon" href="static/img/wings.ico">
 </head>
 
 <body>
@@ -101,8 +102,19 @@
                     cols:[
                         {
                             gravity: 4,
-                        },
-                        { view:"icon", icon:"recycle", id:"action_cleanup"}
+                        }, {
+                            view:"icon",
+                            icon:"database",
+                            id:"action_cleanup"
+                        }, {
+                            view:"icon",
+                            icon:"key",
+                            id:"action_setnewpasswd"
+                        }, {
+                            view:"icon",
+                            icon:"user-secret",
+                            id:"action_login"
+                        }
                     ]
                 }]
             }, {
@@ -200,17 +212,34 @@
 		});
 
         $$('action_cleanup').attachEvent("onItemClick", function(id,value){
-            if(!auth){
-                $$('log_form_window').show();
-                return false;
-            }
+            webix.confirm({
+                title:"cleanup database",
+                ok:"Yes",
+                cancel:"No",
+                text:"are you sure to cleanup <br>the <b>database</b>?<br><br>You will lose all received data!",
+                callback: function(result){
+                    if(result){
+                        socket.emit('cleanup', {
+                            'loggingtype':  'cleanup',
+                            'uuid':         webix.storage.cookie.get('uuid')
+                        });
+                        webix.message("database is now empty");
+                    }
+                }
+            });
 
-            socket.emit('cleanup', {cleanup: true});
+
         });
+
+        $$('action_login').attachEvent("onItemClick", function(id,value){
+            $$('log_form_window').show();
+        });
+
 
         var socket
         $(document).ready(function(){
-            //webix.storage.cookie.put('test', "ssss");
+            $$('action_cleanup').hide();
+            $$('action_setnewpasswd').hide();
 
             namespace = '/api'; // change to an empty string to use the global namespace
             socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
@@ -232,6 +261,9 @@
                 addsec2lastmsg()
 
                 if(msg['auth'] == true){
+                    $$('action_cleanup').show();
+                    $$('action_setnewpasswd').show();
+                    $$('action_login').hide();
                     auth = true
                 }
 
@@ -247,17 +279,15 @@
                 if(msg['auth'] == true){
                     webix.message("login successful");
                     auth = true;
+                    $$('log_form_window').hide();
+                    $$('action_cleanup').show();
+                    $$('action_setnewpasswd').show();
+                    $$('action_login').hide();
                     return
                 }
                 webix.message({type:"error", text:"password is invalid"});
             });
 
-
-            /*
-            $('#value_dataitems').html("Hello World");
-            $$('col_dataitems').define("template","html->panel_dataitems");
-            $$('col_dataitems').refresh();
-            */
 		});
 
 
@@ -321,7 +351,6 @@
         });
 
         function emitauth(){
-            $$('log_form_window').hide();
             socket.emit('auth', {
                 password:       $$('log_form_password').getValue(),
                 'loggingtype':  'auth',

@@ -70,3 +70,7 @@
     box-shadow: 0 0 8px rgba(0,0,0,.2);
     border-radius: 2px;
 }
+
+.webix_menu-x .webix_list_item {
+    background-color:rgb(95, 95, 95)
+}

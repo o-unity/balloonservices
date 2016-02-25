@@ -10,6 +10,7 @@ from functools import wraps
 import sqlite3 as lite
 import sys
 import uuid
+import collections
 
 async_mode = 'eventlet'
 app = Flask(__name__)
@@ -17,6 +18,34 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, async_mode=async_mode)
 thread = None
 msgcount = 0
+
+# ------------------------
+# DECORATOR
+
+
+def MessageLogging(func):
+    def wrapper(*args, **kwargs):
+        db.settable("objects").map(args[0]['loggingtype'], args[0]).commit()
+        res = func(*args, **kwargs)
+        return res
+    return wrapper
+
+
+def IsAuth(func):
+    def wrapper(*args, **kwargs):
+        res = None
+        if usr.uuid(args[0]['uuid']).isauth():
+            res = func(*args, **kwargs)
+        return res
+    return wrapper
+
+
+# ------------------------
+# CLASSES
+
+class Struct:
+    def __init__(self, **entries):
+        self.__dict__.update(entries)
 
 
 class Bimg(object):
@@ -65,26 +94,15 @@ class WebroomData(object):
             d[prop] = value
 
         if uuid:
-            d['auth'] = usr.uuid(uuid).getauth()
+            d['auth'] = usr.uuid(uuid).isauth()
         return d
-
-
-class MessageLogging(object):
-    def __init__(self, view_func):
-        self.view_func = view_func
-        wraps(view_func)(self)
-
-    def __call__(self, request, *args, **kwargs):
-        db.settable("log").map(request['loggingtype'], request).commit()
-        response = self.view_func(request, *args, **kwargs)
-        return response
 
 
 class Mapping(object):
     def __init__(self):
         pass
 
-    def image(self, data):
+    def setimage(self, data):
         datamapped = dict()
         datamapped['loggingtype'] = data['loggingtype']
         datamapped['count'] = data['count']
@@ -93,10 +111,17 @@ class Mapping(object):
         datamapped['savetimestamp'] = time.time()
         return datamapped
 
-    def image_log(self):
+    def setimage_log(self):
         pass
 
-    def auth(self, data):
+    def setauth(self, data):
+        datamapped = dict()
+        datamapped['loggingtype'] = data['loggingtype']
+        datamapped['savetimestamp'] = time.time()
+        datamapped['data'] = "{'remote_address:' '%s'}" % (request.remote_addr,)
+        return datamapped
+
+    def setcleanup(self, data):
         datamapped = dict()
         datamapped['loggingtype'] = data['loggingtype']
         datamapped['savetimestamp'] = time.time()
@@ -115,12 +140,40 @@ class DB(Mapping):
         self.table = table
         return self
 
+    def fetchconfig(self, attr):
+        cur = self.con.execute("SELECT value FROM config WHERE attribute = '%s'" % attr)
+        return cur.fetchone()[0]
+
+    def getpasswd(self):
+        return self.fetchconfig('password')
+
+    def cleanup(self):
+        self.con.execute("DELETE FROM objects")
+        self.con.commit()
+        self.con.execute("VACUUM")
+        self.con.commit()
+
     def connect(self):
         self.con = lite.connect('db/data.db')
 
     def map(self, mappingfunction, data):
-        self.datamapped = getattr(self, mappingfunction)(data)
+        print(data)
+        self.datamapped = getattr(self, "set" + mappingfunction)(data)
         return self
+
+    def selectbyid(self, oid):
+        self.select("SELECT * FROM objects WHERE id = %s" % oid)
+        return self
+
+    def select(self, query):
+        cur = self.con.cursor()
+        cur.execute(query)
+        res = []
+        for c in self.iter(cur):
+            res.append(c)
+        if len(res) == 1:
+            return c
+        return res
 
     def commit(self):
         cur = self.con.cursor()
@@ -130,16 +183,21 @@ class DB(Mapping):
                 (self.table, columns, placeholders)
         cur.execute(query, self.datamapped)
         self.con.commit()
-        print(cur.lastrowid)
+#        print(cur.lastrowid)
+#        Logger().getentrybyrowid(cur.lastrowid)
+
+        self.selectbyid(cur.lastrowid).view()
         emit('log', self.datamapped, room='webroom')
 
-
-class Logger(Mapping):
-    def __init__(self):
-        pass
-
-    def getentrybyrowid(self):
-        print("pass")
+    def iter(self, cur):
+        result = {}
+        for (pt, row) in enumerate(cur):
+            result[pt] = {}
+            result[pt]['fields'] = ""
+            for (pt2, key) in enumerate(row):
+                result[pt][cur.description[pt2][0]] = key
+                result[pt]['fields'] += str(cur.description[pt2][0]) + ","
+            yield Struct(**result[pt])
 
 
 class UserLoggin(object):
@@ -166,16 +224,19 @@ class UserLoggin(object):
         return self.id
 
     def auth(self, password=""):
-        if password == "balloo":
+        if password == db.getpasswd():
             self.user[self.id]['auth'] = True
         else:
             self.user[self.id]['auth'] = False
 
-    def getauth(self):
+    def isauth(self):
         return self.user[self.id]['auth']
 
 
 db = DB()
+db.selectbyid(84)
+sys.exit(0)
+
 bimg = Bimg()
 usr = UserLoggin()
 
@@ -205,16 +266,17 @@ def sockimage(message):
 
 
 @socketio.on('cleanup', namespace='/api')
-def join(message):
-    print(message)
+@IsAuth
+@MessageLogging
+def cleanup(message):
+    db.cleanup()
 
 
 @socketio.on('auth', namespace='/api')
 @MessageLogging
 def auth(message):
-    print(message)
     usr.uuid(message['uuid']).auth(message['password'])
-    emit('auth', {'auth': usr.getauth(), 'uuid': usr.getuuid()})
+    emit('auth', {'auth': usr.isauth(), 'uuid': usr.getuuid()})
 
 
 @socketio.on('join', namespace='/api')
