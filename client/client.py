@@ -9,6 +9,7 @@ import os
 from PIL import Image as Pil
 import base64
 import io
+import dill
 
 __author__ = 'over.unity'
 
@@ -229,6 +230,7 @@ class Socket(SocketNamespace):
                 self.lock()
                 self.queue[0].settimestamp()
                 root.info("start emitting No:%s" % self.queue[0].getcount())
+
                 self.nsp.emit(self.queue[0].gettype(), self.queue[0].dict())
                 self.socketio.wait(seconds=self.emittime)
             else:

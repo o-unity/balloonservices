@@ -11,6 +11,7 @@ import sqlite3 as lite
 import sys
 import uuid
 import collections
+import json
 
 async_mode = 'eventlet'
 app = Flask(__name__)
@@ -88,13 +89,13 @@ class WebroomData(object):
     def resetlstmsg(self):
         self.obj['_lastmsg'] = time.time()
 
-    def dict(self, uuid=""):
+    def dict(self, _uuid=""):
         d = dict()
         for prop, value in self.obj.items():
             d[prop] = value
 
         if uuid:
-            d['auth'] = usr.uuid(uuid).isauth()
+            d['auth'] = usr.uuid(_uuid).isauth()
         return d
 
 
@@ -118,8 +119,18 @@ class Mapping(object):
         datamapped = dict()
         datamapped['loggingtype'] = data['loggingtype']
         datamapped['savetimestamp'] = time.time()
-        datamapped['data'] = "{'remote_address:' '%s'}" % (request.remote_addr,)
+        datamapped['data'] = "{\"remote_address\": \"%s\"}" % (request.remote_addr,)
         return datamapped
+
+    def getauth(self, data):
+        jdata = json.loads(data.data)
+        text = "%s" % str(data.id).ljust(10)
+        text += "%s" % str(data.loggingtype).ljust(10)
+        text += "%s" % datetime.datetime.fromtimestamp(
+                            int(data.savetimestamp)
+                        ).strftime('%H:%M:%S').ljust(15)
+        text += "remote address: %s" % str(jdata['remote_address']).ljust(10)
+        return text
 
     def setcleanup(self, data):
         datamapped = dict()
@@ -134,6 +145,7 @@ class DB(Mapping):
         self.con = None
         self.datamapped = None
         self.table = None
+        self.seldata = None
         self.connect()
 
     def settable(self, table):
@@ -157,12 +169,14 @@ class DB(Mapping):
         self.con = lite.connect('db/data.db')
 
     def map(self, mappingfunction, data):
-        print(data)
         self.datamapped = getattr(self, "set" + mappingfunction)(data)
         return self
 
+    def view(self):
+        return getattr(self, "get" + self.seldata.loggingtype)(self.seldata)
+
     def selectbyid(self, oid):
-        self.select("SELECT * FROM objects WHERE id = %s" % oid)
+        self.seldata = self.select("SELECT * FROM objects WHERE id = %s" % oid)
         return self
 
     def select(self, query):
@@ -186,7 +200,7 @@ class DB(Mapping):
 #        print(cur.lastrowid)
 #        Logger().getentrybyrowid(cur.lastrowid)
 
-        self.selectbyid(cur.lastrowid).view()
+#        self.selectbyid(cur.lastrowid).view()
         emit('log', self.datamapped, room='webroom')
 
     def iter(self, cur):
@@ -234,7 +248,7 @@ class UserLoggin(object):
 
 
 db = DB()
-db.selectbyid(84)
+print(db.selectbyid(84).view())
 sys.exit(0)
 
 bimg = Bimg()
