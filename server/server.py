@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import time
 from threading import Thread
-from flask import Flask, render_template, session, request
+from flask import Flask, render_template, session, request, send_file
 from flask_socketio import SocketIO, emit, join_room, leave_room, \
     close_room, rooms, disconnect
 import base64
@@ -12,6 +12,7 @@ import sys
 import uuid
 import collections
 import json
+import io
 
 async_mode = 'eventlet'
 app = Flask(__name__)
@@ -73,6 +74,10 @@ class Bimg(object):
 
     def setcontent(self, base64data):
         self.img['content'] = base64.b64decode(base64data.encode())
+        return self
+
+    def setcontent2(self, data):
+        self.img['content'] = data
         return self
 
     def save(self):
@@ -235,6 +240,12 @@ class DB(Mapping):
                                         "FROM objects WHERE id = %s" % oid)
         return self
 
+    def getpayload(self, oid):
+        return self.select("SELECT "
+           "id, "
+           "payload "
+                "FROM objects WHERE id = %s" % oid)
+
     def selecto(self, query):
         self.res = self.select(query)
         return self
@@ -317,14 +328,22 @@ wrdata = WebroomData()
 wrdata.incmsg()
 
 
+#img = db.getpayload(208)
+#bimg.add(1456673720.10788)
+#bimg.setcontent2(img.payload).save()
+#sys.exit(0)
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
 @app.route('/getimage')
-def getimage():
-    pass
+def _getimage():
+    img = db.getpayload(208)
+    return send_file(io.BytesIO(img.payload))
+
 
 @app.route('/map')
 def googlemap():
