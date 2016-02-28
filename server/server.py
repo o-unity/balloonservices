@@ -324,8 +324,7 @@ def index():
 
 @app.route('/getimage')
 def getimage():
-
-
+    pass
 
 @app.route('/map')
 def googlemap():
