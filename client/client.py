@@ -286,7 +286,7 @@ class ImageCollector(object):
         while ct < 3600:
             ct += 1
             self.register("/Users/andi/PycharmProjects/balloonservices/client/data/images/test.jpg")
-            time.sleep(30)
+            time.sleep(10)
 
     def register(self, path):
         sock.add().image(path=path, resize=self.resize)

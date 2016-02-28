@@ -61,8 +61,7 @@
     </div>
 
     <div id="boxctlog" class="boxctlog" style='display:none;'>
-       <pre style="font-size: 11px; padding:0px; margin: 0px;">
-1           17:15:24 (1.225ms)       image       content size: 12kb
+       <pre style="font-size: 11px; padding:0px; margin: 0px;" id="boxctlogtext">
        </pre>
     </div>
 
@@ -202,7 +201,8 @@
                                 },
                                 {
                                     template: "html->boxctlog",
-                                    id: "boxctlog"
+                                    id: "boxctlog",
+                                    scroll: true,
                                 }
                             ]
                         }]
@@ -237,6 +237,7 @@
 
 
         var socket
+        var logarr = []
         $(document).ready(function(){
             $$('action_cleanup').hide();
             $$('action_setnewpasswd').hide();
@@ -267,10 +268,15 @@
                     auth = true
                 }
 
+                for (var i = msg['log'].length-1; i > -1; i--) {
+                    addmsg2log(msg['log'][i])
+                }
+
             });
 
             socket.on('log', function(msg) {
-                //alert("log!")
+                //countlogmsg++;
+                addmsg2log(msg)
             });
 
             socket.on('auth', function(msg) {
@@ -289,6 +295,22 @@
             });
 
 		});
+
+        function addmsg2log(msg){
+           logarr.push(msg);
+
+            var htmltext = ""
+            if(logarr.length > 100){
+               logarr.splice(0, 1);
+            }
+
+            for (var i = logarr.length-1; i > -1; i--) {
+                htmltext += logarr[i] + "<br>"
+            }
+            $('#boxctlogtext').html(htmltext)
+            $$('boxctlog').define("template","html->boxctlog");
+            $$('boxctlog').refresh();
+        }
 
 
         function calc2min(sec){

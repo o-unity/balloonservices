@@ -44,6 +44,15 @@ def IsAuth(func):
 # ------------------------
 # CLASSES
 
+def sizeof_fmt(num, suffix='B'):
+    for unit in ['', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi']:
+        if abs(num) < 1024.0:
+            return "%3.1f%s%s" % (num, unit, suffix)
+        num /= 1024.0
+    return "%.1f%s%s" % (num, 'Yi', suffix)
+
+
+
 class Struct:
     def __init__(self, **entries):
         self.__dict__.update(entries)
@@ -96,6 +105,19 @@ class WebroomData(object):
 
         if uuid:
             d['auth'] = usr.uuid(_uuid).isauth()
+
+        d['log'] = []
+        for c in db.selecto("SELECT "
+                                   "id, "
+                                   "loggingtype, "
+                                   "count, "
+                                   "checksum, "
+                                   "pushtimestamp, "
+                                   "savetimestamp, "
+                                   "data, length(payload) as payloadsize "
+                                        "FROM objects ORDER BY id DESC LIMIT 100").each():
+            d['log'].append(db.viewo(c))
+
         return d
 
 
@@ -110,7 +132,29 @@ class Mapping(object):
         datamapped['checksum'] = data['checksum']
         datamapped['pushtimestamp'] = data['timestamp']
         datamapped['savetimestamp'] = time.time()
+        datamapped['payload'] = base64.b64decode(data['obj']['payload'].encode())
         return datamapped
+
+    def getimage(self, data):
+        text = "%s/%s" % (str(data.id), str(data.count))
+        text = text.ljust(15)
+        text += "%s" % str(data.loggingtype).ljust(10)
+        t1 = "%s" % datetime.datetime.fromtimestamp(
+                            int(data.pushtimestamp)
+                        ).strftime('%H:%M:%S')
+        t1 += " / %s" % datetime.datetime.fromtimestamp(
+                            int(data.savetimestamp)
+                        ).strftime('%H:%M:%S')
+
+        t1 += " (%s s)" % str(data.savetimestamp - data.pushtimestamp)[:5]
+        text += t1.ljust(33)
+
+        if not data.payloadsize:
+            data.payloadsize = 0
+
+        text += "size: %s" % sizeof_fmt(data.payloadsize)
+
+        return text
 
     def setimage_log(self):
         pass
@@ -124,11 +168,11 @@ class Mapping(object):
 
     def getauth(self, data):
         jdata = json.loads(data.data)
-        text = "%s" % str(data.id).ljust(10)
+        text = "%s" % str(data.id).ljust(15)
         text += "%s" % str(data.loggingtype).ljust(10)
         text += "%s" % datetime.datetime.fromtimestamp(
                             int(data.savetimestamp)
-                        ).strftime('%H:%M:%S').ljust(15)
+                        ).strftime('%H:%M:%S').ljust(33)
         text += "remote address: %s" % str(jdata['remote_address']).ljust(10)
         return text
 
@@ -146,6 +190,7 @@ class DB(Mapping):
         self.datamapped = None
         self.table = None
         self.seldata = None
+        self.res = None
         self.connect()
 
     def settable(self, table):
@@ -175,9 +220,28 @@ class DB(Mapping):
     def view(self):
         return getattr(self, "get" + self.seldata.loggingtype)(self.seldata)
 
+    def viewo(self, obj):
+        return getattr(self, "get" + obj.loggingtype)(obj)
+
     def selectbyid(self, oid):
-        self.seldata = self.select("SELECT * FROM objects WHERE id = %s" % oid)
+        self.seldata = self.select("SELECT "
+                                   "id, "
+                                   "loggingtype, "
+                                   "count, "
+                                   "checksum, "
+                                   "pushtimestamp, "
+                                   "savetimestamp, "
+                                   "data, length(payload) as payloadsize "
+                                        "FROM objects WHERE id = %s" % oid)
         return self
+
+    def selecto(self, query):
+        self.res = self.select(query)
+        return self
+
+    def each(self):
+        for co in self.res:
+            yield co
 
     def select(self, query):
         cur = self.con.cursor()
@@ -197,11 +261,8 @@ class DB(Mapping):
                 (self.table, columns, placeholders)
         cur.execute(query, self.datamapped)
         self.con.commit()
-#        print(cur.lastrowid)
-#        Logger().getentrybyrowid(cur.lastrowid)
 
-#        self.selectbyid(cur.lastrowid).view()
-        emit('log', self.datamapped, room='webroom')
+        emit('log', self.selectbyid(cur.lastrowid).view(), room='webroom')
 
     def iter(self, cur):
         result = {}
@@ -248,8 +309,6 @@ class UserLoggin(object):
 
 
 db = DB()
-print(db.selectbyid(84).view())
-sys.exit(0)
 
 bimg = Bimg()
 usr = UserLoggin()
@@ -263,6 +322,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/getimage')
+def getimage():
+
+
+
 @app.route('/map')
 def googlemap():
     return render_template('gtest.html')
@@ -272,8 +336,8 @@ def googlemap():
 @MessageLogging
 def sockimage(message):
     wrdata.incmsg()
-    bimg.add(message['timestamp'])
-    bimg.setcontent(message['obj']['payload']).save()
+#    bimg.add(message['timestamp'])
+#    bimg.setcontent(message['obj']['payload']).save()
 
     emit('response', message['checksum'])
     emit('dataitems', wrdata.dict(), room='webroom')
