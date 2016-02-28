@@ -14,6 +14,7 @@
     pip install -U socketIO-client
     pip install decorator
     pip install pillow
+    pip install dill
 
 ## modify module socketIO_client
     line 224 change to
