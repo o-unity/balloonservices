@@ -53,7 +53,6 @@ def sizeof_fmt(num, suffix='B'):
     return "%.1f%s%s" % (num, 'Yi', suffix)
 
 
-
 class Struct:
     def __init__(self, **entries):
         self.__dict__.update(entries)
@@ -339,9 +338,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/getimage')
+@app.route('/getimage', methods=['POST', 'GET'])
 def _getimage():
-    img = db.getpayload(208)
+    img = db.getpayload(request.args.get('id', ''))
     return send_file(io.BytesIO(img.payload))
 
 

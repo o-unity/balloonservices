@@ -65,12 +65,41 @@
 .sub_title .webix_template {
     padding-left: 12px;
     padding-top: 14px;
+    background-color: white;
+    opacity: 0.8;
 }
 .webix_view_box {
     box-shadow: 0 0 8px rgba(0,0,0,.2);
     border-radius: 2px;
 }
 
+.image_box .webix_view{
+    background-color: transparent;
+}
+
+/*
+background-image: url(http://localhost:5000/getimage?id=0);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+*/
+
+
+.image_box{
+    background-image: url(http://localhost:5000/getimage?id=213);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+/*background-image':' url(/getimage?id=0) no-repeat center center fixed;', 'background-size':'cover'*/
 .webix_menu-x .webix_list_item {
     background-color:rgb(95, 95, 95)
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%
 }

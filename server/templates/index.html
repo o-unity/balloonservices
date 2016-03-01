@@ -61,7 +61,7 @@
     </div>
 
     <div id="boxctlog" class="boxctlog" style='display:none;'>
-       <pre style="font-size: 11px; padding:0px; margin: 0px;" id="boxctlogtext">
+       <pre style="font-size: 11px; padding:0px; margin: 0px; margin-left: 10px;" id="boxctlogtext">
        </pre>
     </div>
 
@@ -147,7 +147,7 @@
                         id: "panels",
                         cols: [{
                             type:"clean",
-                            "css": "webix_view_box",
+                            "css": "webix_view_box image_box",
                             rows:[
                                 {
                                     "template": "<span class='webix_icon fa-file-image-o' style='padding-right: 20px'></span>last image",
@@ -155,7 +155,7 @@
                                     "height": 40
                                 },
                                 {
-                                    template: "<img src='/getimage' />"
+                                    template: " ",
                                 }
                             ]
                         }, {
@@ -239,6 +239,11 @@
         var socket
         var logarr = []
         $(document).ready(function(){
+
+            //alert($('#image_box').css())
+            //$('.image_box').css('backgroundImage','url(http://localhost:5000/getimage?id=206)')
+            //console.log($('.image_box').css('background-image'));
+
             $$('action_cleanup').hide();
             $$('action_setnewpasswd').hide();
 
