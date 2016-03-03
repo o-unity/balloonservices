@@ -55,6 +55,10 @@
         <img src="static/img/logo_invert_weiss.png" height="35px" style="padding-left:20px"/>
     </div>
 
+    <div id="titleconnection" class="titleconnection" style='display:none;'>
+        connected!
+    </div>
+
     <div id="boximages" class="boximages" style='display:none;'>
        <div class="boxheader">images</div>
         body text
@@ -113,6 +117,10 @@
                             view:"icon",
                             icon:"user-secret",
                             id:"action_login"
+                        }, {
+                            view:"icon",
+                            icon:"refresh fa-spin",
+                            id:"action_connected"
                         }
                     ]
                 }]
@@ -140,74 +148,86 @@
                     }]
 
                 },{
-                    type: "wide",
-                    rows: [{
                         type: "wide",
-                        height: "48%",
-                        id: "panels",
-                        cols: [{
-                            type:"clean",
-                            "css": "webix_view_box image_box",
-                            rows:[
-                                {
-                                    "template": "<span class='webix_icon fa-file-image-o' style='padding-right: 20px'></span>last image",
-                                    "css": "sub_title",
-                                    "height": 40
-                                },
-                                {
-                                    template: " ",
-                                }
-                            ]
-                        }, {
-                            type:"clean",
-                            "css": "webix_view_box",
-                            rows:[
-                                {
-                                    "template": "<span class='webix_icon fa-map-marker' style='padding-right: 20px'></span>google map path",
-                                    "css": "sub_title",
-                                    "height": 40
-                                },
-                                {
-                                    template: "html->gmapcontainer",
-                                    id: "gmapview"
-                                }
-                            ]
-                        }]
-                    },{
-                        type: "wide",
-                        height: "52%",
-                        id: "panels",
-                        cols: [{
-                            type:"clean",
-                            "css": "webix_view_box",
-                            rows:[
-                                {
-                                    "template": "<span class='webix_icon fa-line-chart' style='padding-right: 20px'></span>altitude / speed",
-                                    "css": "sub_title",
-                                    "height": 40
-                                },
-                                {
-                                    template: "altitude / speed"
-                                }
-                            ]
-                        }, {
-                            type:"clean",
-                            "css": "webix_view_box",
-                            rows:[
-                                {
-                                    "template": "<span class='webix_icon fa-file-text-o' style='padding-right: 20px'></span>log",
-                                    "css": "sub_title",
-                                    "height": 40
-                                },
-                                {
-                                    template: "html->boxctlog",
-                                    id: "boxctlog",
-                                    scroll: true,
-                                }
-                            ]
+                        id: "mainView",
+                        rows: [{
+                            type: "wide",
+                            height: "48%",
+                            id: "panels",
+                            cols: [{
+                                type:"clean",
+                                "css": "webix_view_box image_box",
+                                id: "imgwindow",
+                                rows:[
+                                    {
+                                        "template": "<div class='click100'><span class='webix_icon fa-file-image-o' style='padding-right: 20px'></span>last image</div>",
+                                        "css": "sub_title",
+                                        "height": 40,
+                                        id: "imglistwindow",
+                                        onClick: {
+                                            "click100": function (e, id, trg) {
+                                                webix.message("Delete row: " + id);
+                                                $$('imageView').show();
+                                                //return false; //here it blocks default behavior
+                                            }
+                                        }
+                                    },
+                                    {
+                                        template: "<div class='imgnospace'><div class='imgtimestamp'>15:35:10</div></div>", css: "imgnospace",
+                                        id: "imgpopuplink"
+                                    }
+                                ]
+
+                            }, {
+                                type:"clean",
+                                "css": "webix_view_box",
+                                rows:[
+                                    {
+                                        "template": "<span class='webix_icon fa-map-marker' style='padding-right: 20px'></span>google map path",
+                                        "css": "sub_title",
+                                        "height": 40
+                                    },
+                                    {
+                                        template: "html->gmapcontainer",
+                                        id: "gmapview"
+                                    }
+                                ]
+                            }]
+                        },{
+                            type: "wide",
+                            height: "52%",
+                            id: "panels",
+                            cols: [{
+                                type:"clean",
+                                "css": "webix_view_box",
+                                rows:[
+                                    {
+                                        "template": "<span class='webix_icon fa-line-chart' style='padding-right: 20px'></span>altitude / speed",
+                                        "css": "sub_title",
+                                        "height": 40
+                                    },
+                                    {
+                                        template: "altitude / speed"
+                                    }
+                                ]
+                            }, {
+                                type:"clean",
+                                "css": "webix_view_box",
+                                rows:[
+                                    {
+                                        "template": "<span class='webix_icon fa-file-text-o' style='padding-right: 20px'></span>log",
+                                        "css": "sub_title",
+                                        "height": 40
+                                    },
+                                    {
+                                        template: "html->boxctlog",
+                                        id: "boxctlog",
+                                        scroll: true,
+                                    }
+                                ]
+                            }]
                         }]
                     }]
-                }]
             }]
 		});
 
@@ -235,9 +255,16 @@
             $$('log_form_window').show();
         });
 
+        function imgheaderclickevent(id){
+            alert(id)
+        }
+
 
         var socket
         var logarr = []
+        var connected = false;
+        const RETRY_INTERVAL = 10000;
+        var timeout;
         $(document).ready(function(){
 
             //alert($('#image_box').css())
@@ -249,7 +276,6 @@
 
             namespace = '/api'; // change to an empty string to use the global namespace
             socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
-            socket.emit('join', {room: 'webroom', 'uuid': webix.storage.cookie.get('uuid')});
 
             socket.on('dataitems', function(msg) {
                 $('#value_dataitems').html(msg.msgcount);
@@ -299,7 +325,39 @@
                 webix.message({type:"error", text:"password is invalid"});
             });
 
+            socket.on('connect', function() {
+                //alert("connected")
+                connected = true;
+                clearTimeout(timeout);
+                socket.emit('join', {room: 'webroom', 'uuid': webix.storage.cookie.get('uuid')});
+                icon_connection_ok()
+            });
+
+            socket.on('disconnect', function(){
+                //alert("socket: disconnect")
+                connected = false;
+                icon_connection_nok()
+            });
+
+            socket.on('error', function(){
+                //socket.socket.reconnect();
+                //alert("socket: error")
+                connected = false;
+                icon_connection_nok()
+            });
+
 		});
+
+
+        function icon_connection_ok(){
+            $$('action_connected').config.icon = "signal"
+            $$('action_connected').refresh();
+        }
+
+        function icon_connection_nok(){
+            $$('action_connected').config.icon = "refresh fa-spin"
+            $$('action_connected').refresh();
+        }
 
         function addmsg2log(msg){
            logarr.push(msg);
@@ -388,6 +446,16 @@
 
         // ----------------------------------------------------------------
         // ---
+
+        var retryConnectOnFailure = function(retryInMilliseconds) {
+            setTimeout(function() {
+              if (!connected) {
+                socket.socket.reconnect();
+              }
+            }, retryInMilliseconds);
+          }
+
+        retryConnectOnFailure(RETRY_INTERVAL);
 
 	</script>
 </body>

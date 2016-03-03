@@ -349,6 +349,11 @@ def googlemap():
     return render_template('gtest.html')
 
 
+@app.route('/ping')
+def ping():
+    return "pong"
+
+
 @socketio.on('image', namespace='/api')
 @MessageLogging
 def sockimage(message):

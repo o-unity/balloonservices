@@ -86,7 +86,7 @@ background-image: url(http://localhost:5000/getimage?id=0);
 
 
 .image_box{
-    background-image: url(http://localhost:5000/getimage?id=213);
+    background-image: url(http://localhost:5000/getimage?id=212);
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
@@ -102,4 +102,38 @@ IMG.displayed {
     margin-left: auto;
     margin-right: auto;
     height: 100%
+}
+
+.imgnospace{
+    height: 100%;
+    position:relative;
+}
+
+.imgtimestamp{
+
+    background-color: white;
+    opacity: 0.5;
+    margin: 0px;
+    padding: 5px;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.titleconnection{
+    color: #fff;
+}
+
+.button_images .webix_template{
+    padding-left: 0px;
+    padding-top: 0px;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.click100{
+    width: 100%;
+    cursor: pointer; cursor: hand;
 }
