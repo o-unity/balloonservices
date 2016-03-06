@@ -28,6 +28,7 @@ msgcount = 0
 def MessageLogging(func):
     def wrapper(*args, **kwargs):
         db.settable("objects").map(args[0]['loggingtype'], args[0]).commit()
+        #db.settable("objects").map(args[0]['loggingtype'], args[0])
         res = func(*args, **kwargs)
         return res
     return wrapper
@@ -110,6 +111,7 @@ class WebroomData(object):
         if uuid:
             d['auth'] = usr.uuid(_uuid).isauth()
 
+        # LAST 100 RECORDS
         d['log'] = []
         for c in db.selecto("SELECT "
                                    "id, "
@@ -121,6 +123,12 @@ class WebroomData(object):
                                    "data, length(payload) as payloadsize "
                                         "FROM objects ORDER BY id DESC LIMIT 100").each():
             d['log'].append(db.viewo(c))
+
+        # LAST 9 IMAGES
+        d['img'] = []
+        query = "SELECT id FROM objects WHERE loggingtype = 'image' ORDER BY id DESC LIMIT 9"
+        for c in db.selecto(query).each():
+            d['img'].append(c.id)
 
         return d
 
@@ -138,6 +146,35 @@ class Mapping(object):
         datamapped['savetimestamp'] = time.time()
         datamapped['payload'] = base64.b64decode(data['obj']['payload'].encode())
         return datamapped
+
+    def setsystem(self, data):
+        datamapped = dict()
+        datamapped['loggingtype'] = data['loggingtype']
+        datamapped['count'] = data['count']
+        datamapped['checksum'] = data['checksum']
+        datamapped['pushtimestamp'] = data['timestamp']
+        datamapped['savetimestamp'] = time.time()
+        datamapped['data'] = "{\"usage\": \"%s\",\"space\": \"%s\",\"strength\": \"%s\"}" % \
+                             (data['obj']['usage'], data['obj']['space'], data['obj']['strength'])
+        return datamapped
+
+    def getsystem(self, data):
+        jdata = json.loads(data.data)
+        text = "%s/%s" % (str(data.id), str(data.count))
+        text = text.ljust(15)
+        text += "%s" % str(data.loggingtype).ljust(10)
+        t1 = "%s" % datetime.datetime.fromtimestamp(
+                            int(data.pushtimestamp)
+                        ).strftime('%H:%M:%S')
+        t1 += " / %s" % datetime.datetime.fromtimestamp(
+                            int(data.savetimestamp)
+                        ).strftime('%H:%M:%S')
+
+        t1 += " (%s s)" % str(data.savetimestamp - data.pushtimestamp)[:5]
+        text += t1.ljust(33)
+        text += "cpu usage: %s, free space: %s, signal: %s" % \
+                (str(jdata['usage']), str(jdata['space']), str(jdata['strength']))
+        return text
 
     def getimage(self, data):
         text = "%s/%s" % (str(data.id), str(data.count))
@@ -180,11 +217,21 @@ class Mapping(object):
         text += "remote address: %s" % str(jdata['remote_address']).ljust(10)
         return text
 
+    def getcleanup(self, data):
+        jdata = json.loads(data.data)
+        text = "%s" % str(data.id).ljust(15)
+        text += "%s" % str(data.loggingtype).ljust(10)
+        text += "%s" % datetime.datetime.fromtimestamp(
+                            int(data.savetimestamp)
+                        ).strftime('%H:%M:%S').ljust(33)
+        text += "remote address: %s" % str(jdata['remote_address']).ljust(10)
+        return text
+
     def setcleanup(self, data):
         datamapped = dict()
         datamapped['loggingtype'] = data['loggingtype']
         datamapped['savetimestamp'] = time.time()
-        datamapped['data'] = "{'remote_address:' '%s'}" % (request.remote_addr,)
+        datamapped['data'] = "{\"remote_address\": \"%s\"}" % (request.remote_addr,)
         return datamapped
 
 
@@ -250,8 +297,11 @@ class DB(Mapping):
         return self
 
     def each(self):
-        for co in self.res:
-            yield co
+        try:
+            for co in self.res:
+                yield co
+        except:
+            return False
 
     def select(self, query):
         cur = self.con.cursor()
@@ -358,11 +408,16 @@ def ping():
 @MessageLogging
 def sockimage(message):
     wrdata.incmsg()
-#    bimg.add(message['timestamp'])
-#    bimg.setcontent(message['obj']['payload']).save()
-
     emit('response', message['checksum'])
-    emit('dataitems', wrdata.dict(), room='webroom')
+#    emit('dataitems', wrdata.dict(), room='webroom')
+
+
+@socketio.on('system', namespace='/api')
+@MessageLogging
+def socksystem(message):
+    wrdata.incmsg()
+    emit('response', message['checksum'])
+#    emit('dataitems', wrdata.dict(), room='webroom')
 
 
 @socketio.on('cleanup', namespace='/api')

@@ -86,7 +86,7 @@ background-image: url(http://localhost:5000/getimage?id=0);
 
 
 .image_box{
-    background-image: url(http://localhost:5000/getimage?id=212);
+    background-image: url(http://localhost:5000/getimage?id=324);
     background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;

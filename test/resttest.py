@@ -1,12 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import unittest
-
-
-class RestTestCase(unittest.TestCase):
-    def test_test(self):
-        assert True
-
-
-if __name__ == "__main__":
-    unittest.main()
+import os
+a  = os.popen('iostat -n0 | awk \'{ print $1 }\' | tail -1').readlines()[0]
+print(a)

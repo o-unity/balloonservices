@@ -31,7 +31,6 @@ class Image(object):
 
     def __init__(self, **kwargs):
         self.attr = kwargs
-        print(kwargs)
         self.prop = {}
         self.read().resize().convertbase64()
 
@@ -53,6 +52,31 @@ class Image(object):
 
     def gettype(self):
         return "image"
+
+
+class System(object):
+
+    def __init__(self, **kwargs):
+        self.attr = kwargs
+        self.prop = {}
+        self.readcpu('iostat -n0 | awk \'{ print $1 }\' | tail -1')
+        self.readspace("df -h | grep disk1 | awk '{ print $8 }'")
+        self.readstrength("/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | grep CtlRSSI | awk '{ print $2 }'")
+
+    def readcpu(self, cmd):
+        self.attr['usage'] = os.popen(cmd).readlines()[0].rstrip()
+        return self
+
+    def readspace(self, cmd):
+        self.attr['space'] = os.popen(cmd).readlines()[0].rstrip()[:2]
+        return self
+
+    def readstrength(self, cmd):
+        self.attr['strength'] = os.popen(cmd).readlines()[0].rstrip()
+        return self
+
+    def gettype(self):
+        return "system"
 
 
 # --------------------------------------- //
@@ -100,6 +124,10 @@ class Instance(object):
 
     def image(self, **kwargs):
         self.obj = Image(**kwargs)
+        return self.obj
+
+    def system(self, **kwargs):
+        self.obj = System(**kwargs)
         return self.obj
 
 # --------------------------------------- //
@@ -276,21 +304,46 @@ class WebSocket(object):
 
 
 class ImageCollector(object):
-    def __init__(self, resize=False):
+    def __init__(self, resize=False, sleep=30):
         root.info("starting ImageCollector")
         self.resize = resize
+        self.imgpath = "/Users/andi/PycharmProjects/balloonservices/client/data/images/"
+        self.testimgct = 1
+        self.testimgctmax = 12
+        self.sleep = sleep
+        self.collect()
+
+    def collect(self):
+        ct = 0
+        if self.testimgct > self.testimgctmax:
+            self.testimgct = 1
+        while ct < 3600:
+            ct += 1
+            self.register(self.imgpath + "nspace" + str(self.testimgct) + ".jpg")
+            time.sleep(self.sleep)
+
+        self.testimgct += 1
+
+    def register(self, path):
+        sock.add().image(path=path, resize=self.resize)
+        sock.submit()
+
+
+class SystemCollector(object):
+    def __init__(self, sleep=10):
+        root.info("starting SystemCollector")
+        self.sleep = sleep
+        time.sleep(1)
         self.collect()
 
     def collect(self):
         ct = 0
         while ct < 3600:
             ct += 1
-            self.register("/Users/andi/PycharmProjects/balloonservices/client/data/images/nspace2.jpg")
-            time.sleep(10)
+            sock.add().system()
+            sock.submit()
+            time.sleep(self.sleep)
 
-    def register(self, path):
-        sock.add().image(path=path, resize=self.resize)
-        sock.submit()
 
 # --------------------------------------- //
 
@@ -307,8 +360,12 @@ ws.namespace = "/api"
 sock = ws.connect()
 
 procs = []
-p1 = Thread(target=ImageCollector, args=(True, ))
+p1 = Thread(target=ImageCollector, args=(True, 30))
 p1.start()
+
+p2 = Thread(target=SystemCollector, args=(60, ))
+p2.start()
+
 
 sock.emitdata()
 
