@@ -125,3 +125,8 @@ function addmsg2log(msg){
     $$('boxctlog').define("template","html->boxctlog");
     $$('boxctlog').refresh();
 }
+
+function addimg2main(id){
+    $('.image_box').css('backgroundImage','url(/getimage?id=' + id + ')');
+    //console.log($('.image_box').css('background-image'))
+}

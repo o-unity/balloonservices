@@ -103,13 +103,21 @@ class WebroomData(object):
     def resetlstmsg(self):
         self.obj['_lastmsg'] = time.time()
 
-    def dict(self, _uuid=""):
+    def getdict(self, _uuid=""):
         d = dict()
         for prop, value in self.obj.items():
             d[prop] = value
 
         if uuid:
             d['auth'] = usr.uuid(_uuid).isauth()
+
+        query = "SELECT id FROM objects WHERE loggingtype = 'image' ORDER BY id DESC LIMIT 1"
+        d['lastimg'] = db.select(query).id
+
+        return d
+
+    def startup(self, _uuid=""):
+        d = self.getdict(_uuid)
 
         # LAST 100 RECORDS
         d['log'] = []
@@ -409,7 +417,7 @@ def ping():
 def sockimage(message):
     wrdata.incmsg()
     emit('response', message['checksum'])
-#    emit('dataitems', wrdata.dict(), room='webroom')
+    emit('dataitems', wrdata.getdict(), room='webroom')
 
 
 @socketio.on('system', namespace='/api')
@@ -417,7 +425,7 @@ def sockimage(message):
 def socksystem(message):
     wrdata.incmsg()
     emit('response', message['checksum'])
-#    emit('dataitems', wrdata.dict(), room='webroom')
+    emit('dataitems', wrdata.getdict(), room='webroom')
 
 
 @socketio.on('cleanup', namespace='/api')
@@ -439,7 +447,7 @@ def join(message):
     join_room(message['room'])
     session['receive_count'] = session.get('receive_count', 0) + 1
     wrdata.lastmsg()
-    emit('startup', wrdata.dict(message['uuid']))
+    emit('startup', wrdata.startup(message['uuid']))
 
 
 @socketio.on('disconnect request', namespace='/api')

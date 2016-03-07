@@ -315,14 +315,15 @@ class ImageCollector(object):
 
     def collect(self):
         ct = 0
-        if self.testimgct > self.testimgctmax:
-            self.testimgct = 1
         while ct < 3600:
+            if self.testimgct > self.testimgctmax:
+                self.testimgct = 1
             ct += 1
             self.register(self.imgpath + "nspace" + str(self.testimgct) + ".jpg")
             time.sleep(self.sleep)
+            self.testimgct += 1
 
-        self.testimgct += 1
+
 
     def register(self, path):
         sock.add().image(path=path, resize=self.resize)

@@ -191,10 +191,14 @@
             socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
 
             socket.on('dataitems', function(msg) {
+                //console.log(msg)
                 $('#value_dataitems').html(msg.msgcount);
                 $$('col_dataitems').define("template","html->panel_dataitems");
                 $$('col_dataitems').refresh();
                 lastmsgrec = 0
+                if(msg.lastimg){
+                    addimg2main(msg.lastimg)
+                }
             });
 
             socket.on('startup', function(msg) {
@@ -215,6 +219,7 @@
                 for (var i = msg['log'].length-1; i > -1; i--) {
                     addmsg2log(msg['log'][i])
                 }
+                addimg2main(msg['img'][0])
 
             });
 
